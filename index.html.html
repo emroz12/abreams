@@ -1,606 +1,1415 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduGlobe Consultancy – Study Abroad Experts</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Abreams – China University Admissions & Scholarship Partner Network</title>
+<meta name="description" content="Abreams connects international students with China's top universities and scholarships. Admissions, CSCA guidance, visa support, and consultant partnerships – all in one place."/>
+<meta name="keywords" content="study in China, China university admissions, China scholarships, CSC scholarship, CSCA, educational consultant, study abroad China"/>
+<meta property="og:title" content="Abreams – Study in China with Scholarships"/>
+<meta property="og:description" content="China University Admissions and Scholarship Partner Network connecting students, educational consultants, and Chinese universities."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "name":"Abreams",
+  "description":"China University Admissions and Scholarship Partner Network",
+  "url":"https://abreams.com",
+  "sameAs":[]
+}
+</script>
 <style>
-  :root {
-    --navy: #0b1437;
-    --gold: #c9a84c;
-    --gold-light: #f0d080;
-    --cream: #fdf8f0;
-    --white: #ffffff;
-    --gray: #6b7280;
-    --light: #f4f1eb;
-    --green: #1a7a4a;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); overflow-x: hidden; }
+:root{
+  --navy:#0A1628;
+  --navy2:#112240;
+  --blue:#1A56DB;
+  --blue2:#1E429F;
+  --gold:#C9A84C;
+  --gold2:#E8C76A;
+  --gold3:#F5E6B8;
+  --white:#FFFFFF;
+  --off:#F8F9FC;
+  --gray:#6B7280;
+  --gray2:#E5E7EB;
+  --text:#1F2937;
+  --radius:12px;
+  --shadow:0 4px 24px rgba(10,22,40,0.10);
+  --shadow-lg:0 12px 48px rgba(10,22,40,0.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(11,20,55,0.96);
-    backdrop-filter: blur(12px);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-  }
-  .logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); font-weight: 700; letter-spacing: 0.5px; text-decoration: none; }
-  .logo span { color: #fff; }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.3px; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta { background: var(--gold); color: var(--navy); padding: 9px 22px; border-radius: 4px; font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-  .nav-cta:hover { background: var(--gold-light); }
+/* ── NAV ── */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray2);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(10,22,40,.10)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--blue),var(--navy2));border-radius:10px;display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);letter-spacing:-.3px}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;color:var(--navy2);transition:background .2s,color .2s}
+.nav-links a:hover{background:var(--off);color:var(--blue)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;border:none;font-family:'DM Sans',sans-serif;text-decoration:none}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,86,219,.35)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,.4)}
+.btn-outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-outline-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--gray2);padding:20px 24px;z-index:999;flex-direction:column;gap:4px;box-shadow:var(--shadow-lg)}
+.mobile-menu a{padding:12px;border-radius:8px;font-size:15px;font-weight:500;color:var(--navy2);display:block}
+.mobile-menu a:hover{background:var(--off)}
+.mobile-menu .mob-ctas{display:flex;flex-direction:column;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--gray2)}
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: var(--navy);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: 100px 5% 60px;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(26,122,74,0.08) 0%, transparent 50%);
-  }
-  .hero-grid {
-    position: absolute; inset: 0; opacity: 0.04;
-    background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  .hero-content { position: relative; z-index: 2; max-width: 680px; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3);
-    color: var(--gold); font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
-    padding: 6px 16px; border-radius: 30px; margin-bottom: 28px;
-  }
-  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: blink 1.5s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(38px, 5vw, 64px); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 20px; }
-  .hero h1 em { color: var(--gold); font-style: normal; }
-  .hero p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 520px; margin-bottom: 40px; font-weight: 300; }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary { background: var(--gold); color: var(--navy); padding: 14px 32px; border-radius: 4px; font-size: 15px; font-weight: 500; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-  .btn-outline { border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 14px 32px; border-radius: 4px; font-size: 15px; font-weight: 400; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-  .hero-stats {
-    position: absolute; right: 5%; bottom: 80px; z-index: 2;
-    display: flex; flex-direction: column; gap: 16px;
-  }
-  .stat-card {
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px; padding: 16px 24px; text-align: center;
-    backdrop-filter: blur(8px);
-  }
-  .stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold); }
-  .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; letter-spacing: 0.5px; }
+/* ── PAGES ── */
+.page{display:none;padding-top:68px}
+.page.active{display:block}
 
-  /* SECTION BASE */
-  section { padding: 90px 5%; }
-  .section-tag { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; }
-  .section-sub { font-size: 16px; color: var(--gray); line-height: 1.8; max-width: 540px; font-weight: 300; }
+/* ── SECTIONS ── */
+section{padding:80px 24px}
+.container{max-width:1280px;margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:8px;background:rgba(26,86,219,.08);color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:16px}
+.section-label span{width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2}
+.section-title{font-size:clamp(30px,4vw,44px);color:var(--navy);margin-bottom:16px}
+.section-sub{font-size:16px;color:var(--gray);max-width:560px;line-height:1.7}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
+.gold-line{display:block;width:60px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;margin:20px 0}
+.gold-line.center{margin:20px auto}
 
-  /* DESTINATIONS */
-  #destinations { background: var(--white); }
-  .dest-intro { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
-  .dest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-  .dest-card {
-    border-radius: 12px; overflow: hidden; position: relative;
-    aspect-ratio: 3/4; cursor: pointer;
-    transition: transform 0.3s;
-  }
-  .dest-card:hover { transform: translateY(-6px); }
-  .dest-card:hover .dest-overlay { background: rgba(11,20,55,0.55); }
-  .dest-bg { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .dest-color { width: 100%; height: 100%; }
-  .china { background: linear-gradient(160deg, #c0392b 0%, #8b1a1a 40%, #2c1810 100%); }
-  .uk { background: linear-gradient(160deg, #1a3a6b 0%, #0d2145 40%, #061228 100%); }
-  .malaysia { background: linear-gradient(160deg, #cc0001 0%, #006847 50%, #1a4a2e 100%); }
-  .europe { background: linear-gradient(160deg, #003399 0%, #ffcc00 50%, #1a2a60 100%); }
-  .dest-overlay {
-    position: absolute; inset: 0;
-    background: rgba(11,20,55,0.4);
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 24px; transition: background 0.3s;
-  }
-  .dest-flag { font-size: 32px; margin-bottom: 8px; }
-  .dest-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-  .dest-count { font-size: 12px; color: rgba(255,255,255,0.65); letter-spacing: 0.5px; }
-  .dest-arrow {
-    position: absolute; top: 20px; right: 20px;
-    width: 36px; height: 36px; background: rgba(255,255,255,0.12);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 16px; transition: background 0.2s;
-  }
-  .dest-card:hover .dest-arrow { background: var(--gold); color: var(--navy); }
+/* ── HERO ── */
+.hero{min-height:calc(100vh - 68px);background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 45%,#1a3a6e 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 24px}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-shape{position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%);border-radius:50%}
+.hero-shape2{position:absolute;left:-150px;bottom:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,86,219,.12) 0%,transparent 70%);border-radius:50%}
+.hero-content{max-width:1280px;margin:0 auto;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:var(--gold2);font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:24px}
+.hero-badge svg{width:14px;height:14px;fill:var(--gold)}
+.hero h1{font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:20px;line-height:1.1}
+.hero h1 span{color:var(--gold2)}
+.hero p{font-size:18px;color:rgba(255,255,255,.75);margin-bottom:36px;line-height:1.7;max-width:500px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-card{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px}
+.hero-card-title{color:rgba(255,255,255,.5);font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:20px}
+.hero-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;text-align:center}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold2);display:block;line-height:1}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.3}
+.hero-flags{display:flex;align-items:center;gap:-8px;margin-top:20px}
+.hero-flag{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.2);background:#1a3a6e;display:flex;align-items:center;justify-content:center;font-size:16px;margin-left:-8px}
+.hero-flag:first-child{margin-left:0}
+.hero-flag-text{font-size:12px;color:rgba(255,255,255,.5);margin-left:8px}
 
-  /* SERVICES */
-  #services { background: var(--light); }
-  .services-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .services-left .section-sub { margin-bottom: 32px; }
-  .service-list { display: flex; flex-direction: column; gap: 20px; }
-  .service-item { display: flex; gap: 16px; align-items: flex-start; }
-  .service-icon {
-    width: 44px; height: 44px; min-width: 44px;
-    background: var(--navy); border-radius: 10px;
-    display: flex; align-items: center; justify-content: center; font-size: 18px;
-  }
-  .service-item h3 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
-  .service-item p { font-size: 13px; color: var(--gray); line-height: 1.6; font-weight: 300; }
-  .services-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .process-card {
-    background: var(--white); border-radius: 14px; padding: 24px 20px;
-    border: 1px solid rgba(11,20,55,0.06);
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .process-card:hover { box-shadow: 0 8px 32px rgba(11,20,55,0.08); transform: translateY(-3px); }
-  .process-card.featured { background: var(--navy); }
-  .process-card.featured h3, .process-card.featured p { color: rgba(255,255,255,0.85); }
-  .process-card.featured .step-num { color: var(--gold); }
-  .step-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 12px; }
-  .process-card h3 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
-  .process-card p { font-size: 12px; color: var(--gray); line-height: 1.6; font-weight: 300; }
+/* ── STATS STRIP ── */
+.stats-strip{background:var(--navy);padding:0}
+.stats-strip-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(255,255,255,.06)}
+.stat-item{padding:36px 24px;border-right:1px solid rgba(255,255,255,.06);text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--gold2)}
+.stat-label{font-size:14px;color:rgba(255,255,255,.5);margin-top:4px}
 
-  /* WHY US */
-  #why { background: var(--navy); }
-  #why .section-title { color: #fff; }
-  #why .section-sub { color: rgba(255,255,255,0.5); }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
-  .why-card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px; padding: 28px 24px;
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .why-card:hover { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
-  .why-icon { font-size: 28px; margin-bottom: 16px; }
-  .why-card h3 { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 8px; }
-  .why-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; font-weight: 300; }
+/* ── WHY CHINA ── */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.why-card{background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:28px;transition:all .3s}
+.why-card:hover{border-color:var(--blue);box-shadow:var(--shadow);transform:translateY(-4px)}
+.why-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:24px}
+.why-icon.blue{background:rgba(26,86,219,.10)}
+.why-icon.gold{background:rgba(201,168,76,.12)}
+.why-icon.navy{background:rgba(10,22,40,.07)}
+.why-card h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px;color:var(--navy)}
+.why-card p{font-size:14px;color:var(--gray);line-height:1.6}
 
-  /* TESTIMONIALS */
-  #testimonials { background: var(--cream); }
-  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
-  .testi-card {
-    background: var(--white); border-radius: 14px; padding: 28px;
-    border: 1px solid rgba(11,20,55,0.06);
-  }
-  .testi-stars { color: var(--gold); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
-  .testi-text { font-size: 14px; color: var(--gray); line-height: 1.8; font-style: italic; font-weight: 300; margin-bottom: 20px; }
-  .testi-author { display: flex; align-items: center; gap: 12px; }
-  .testi-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #fff; }
-  .av1 { background: #c0392b; }
-  .av2 { background: #1a6b3a; }
-  .av3 { background: #1a3a6b; }
-  .testi-name { font-size: 14px; font-weight: 500; color: var(--navy); }
-  .testi-role { font-size: 12px; color: var(--gray); font-weight: 300; }
+/* ── UNIVERSITIES ── */
+.uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.uni-card{border:1px solid var(--gray2);border-radius:var(--radius);overflow:hidden;transition:all .3s;background:#fff}
+.uni-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.uni-card-header{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.uni-card-header.c1{background:linear-gradient(135deg,#0A1628,#1a3a6e)}
+.uni-card-header.c2{background:linear-gradient(135deg,#7b1e1e,#c0392b)}
+.uni-card-header.c3{background:linear-gradient(135deg,#1a4731,#27ae60)}
+.uni-card-header.c4{background:linear-gradient(135deg,#1A3352,#2980b9)}
+.uni-card-header.c5{background:linear-gradient(135deg,#4a0080,#9b59b6)}
+.uni-card-header.c6{background:linear-gradient(135deg,#7a3b00,#e67e22)}
+.uni-card-logo{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center}
+.uni-card-logo span{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff}
+.uni-card-body{padding:20px}
+.uni-card-rank{display:inline-block;background:rgba(201,168,76,.12);color:var(--gold);font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;margin-bottom:8px}
+.uni-card-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.uni-card-loc{font-size:13px;color:var(--gray);display:flex;align-items:center;gap:4px;margin-bottom:14px}
+.uni-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.uni-tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:50px;background:var(--off);color:var(--navy2);border:1px solid var(--gray2)}
+.uni-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--gray2)}
+.scholarship-badge{font-size:11px;color:#059669;font-weight:600;display:flex;align-items:center;gap:4px}
+.scholarship-badge::before{content:'✓';font-size:13px}
 
-  /* CONTACT */
-  #contact { background: var(--white); }
-  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-  .contact-info { padding-top: 8px; }
-  .contact-info .section-sub { margin-bottom: 36px; }
-  .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
-  .contact-icon { width: 42px; height: 42px; background: var(--light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-  .contact-detail-text { font-size: 14px; color: var(--navy); font-weight: 400; }
-  .contact-detail-label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 300; }
-  .contact-form { background: var(--light); border-radius: 16px; padding: 36px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-  .form-group label { font-size: 12px; font-weight: 500; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
-  .form-group input, .form-group select, .form-group textarea {
-    padding: 12px 14px; border: 1px solid rgba(11,20,55,0.12); border-radius: 8px;
-    font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--navy);
-    background: var(--white); outline: none; transition: border-color 0.2s;
-  }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-  .form-submit { width: 100%; background: var(--navy); color: #fff; padding: 14px; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
-  .form-submit:hover { background: var(--gold); color: var(--navy); }
+/* ── SCHOLARSHIPS ── */
+.sch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+.sch-card{border-radius:var(--radius);padding:32px;position:relative;overflow:hidden}
+.sch-card.featured{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
+.sch-card.regular{background:var(--off);border:1px solid var(--gray2)}
+.sch-card-badge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px}
+.sch-card.featured .sch-card-badge{background:rgba(201,168,76,.2);color:var(--gold2)}
+.sch-card.regular .sch-card-badge{background:rgba(26,86,219,.1);color:var(--blue)}
+.sch-card h3{font-size:20px;margin-bottom:10px}
+.sch-card.featured h3{color:#fff}
+.sch-card.regular h3{color:var(--navy)}
+.sch-card p{font-size:14px;line-height:1.6}
+.sch-card.featured p{color:rgba(255,255,255,.7)}
+.sch-card.regular p{color:var(--gray)}
+.sch-amount{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-top:16px}
+.sch-card.featured .sch-amount{color:var(--gold2)}
+.sch-card.regular .sch-amount{color:var(--blue)}
+.sch-card-shape{position:absolute;right:-30px;bottom:-30px;width:120px;height:120px;border-radius:50%;opacity:.06}
+.sch-card.featured .sch-card-shape{background:#fff}
+.sch-card.regular .sch-card-shape{background:var(--blue)}
 
-  /* FOOTER */
-  footer {
-    background: var(--navy); color: rgba(255,255,255,0.5);
-    padding: 48px 5% 28px;
-  }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
-  .footer-brand .logo { font-size: 20px; display: block; margin-bottom: 10px; }
-  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.4); max-width: 260px; line-height: 1.7; font-weight: 300; }
-  .footer-col h4 { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.8); margin-bottom: 14px; letter-spacing: 0.5px; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; font-weight: 300; }
-  .footer-col ul li a:hover { color: var(--gold); }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .footer-bottom p { font-size: 12px; }
+/* ── PROCESS ── */
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--blue),var(--gold));z-index:0}
+.process-step{text-align:center;position:relative;z-index:1}
+.process-num{width:56px;height:56px;background:linear-gradient(135deg,var(--blue),var(--blue2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:700;font-size:18px;color:#fff;box-shadow:0 4px 16px rgba(26,86,219,.35)}
+.process-step h4{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.process-step p{font-size:12px;color:var(--gray);padding:0 8px}
 
-  /* ANIMATIONS */
-  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+/* ── PARTNER ── */
+.partner-section{background:linear-gradient(135deg,var(--navy) 0%,#0f2344 100%);color:#fff}
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.partner-list{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.partner-item{display:flex;align-items:flex-start;gap:14px}
+.partner-icon{width:40px;height:40px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.partner-item-content h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
+.partner-item-content p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.5}
+.partner-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px}
+.partner-form h3{font-size:22px;color:#fff;margin-bottom:24px}
 
-  /* MOBILE */
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-stats { display: none; }
-    .services-layout, .contact-layout { grid-template-columns: 1fr; gap: 32px; }
-    .form-row { grid-template-columns: 1fr; }
-  }
+/* ── FORMS ── */
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:6px}
+.form-group label.dark{color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s}
+.form-group input.light,.form-group select.light,.form-group textarea.light{background:#fff;border:1.5px solid var(--gray2);color:var(--text)}
+.form-group input.light:focus,.form-group select.light:focus,.form-group textarea.light:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.form-group input.dark-field,.form-group select.dark-field,.form-group textarea.dark-field{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.12);color:#fff}
+.form-group input.dark-field:focus,.form-group select.dark-field:focus,.form-group textarea.dark-field:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.12)}
+.form-group input.dark-field::placeholder,.form-group textarea.dark-field::placeholder{color:rgba(255,255,255,.3)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.testi-card{background:#fff;border:1px solid var(--gray2);border-radius:var(--radius);padding:28px;position:relative}
+.testi-card::before{content:'"';position:absolute;top:-10px;left:24px;font-family:'Playfair Display',serif;font-size:80px;color:var(--gold);line-height:1;opacity:.3}
+.testi-stars{color:var(--gold);font-size:14px;margin-bottom:14px}
+.testi-text{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#fff}
+.testi-name{font-size:14px;font-weight:600;color:var(--navy)}
+.testi-role{font-size:12px;color:var(--gray)}
+
+/* ── CTA SECTION ── */
+.cta-section{background:linear-gradient(135deg,#0e1e40 0%,var(--blue) 60%,#1a5fa8 100%);padding:80px 24px;text-align:center}
+.cta-section h2{font-size:clamp(28px,4vw,44px);color:#fff;margin-bottom:16px}
+.cta-section p{font-size:17px;color:rgba(255,255,255,.75);margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* ── INNER PAGE HERO ── */
+.inner-hero{background:linear-gradient(135deg,var(--navy),#1a3a6e);padding:80px 24px;color:#fff}
+.inner-hero h1{font-size:clamp(32px,4vw,52px);color:#fff;margin-bottom:16px;max-width:700px}
+.inner-hero p{font-size:17px;color:rgba(255,255,255,.7);max-width:600px;line-height:1.7}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.45);margin-bottom:20px}
+.breadcrumb a{color:var(--gold2)}
+.breadcrumb span{color:rgba(255,255,255,.3)}
+
+/* ── STUDY PAGE ── */
+.programs-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.tab-btn{padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;border:1.5px solid var(--gray2);background:#fff;color:var(--navy2);transition:all .2s;font-family:'DM Sans',sans-serif}
+.tab-btn.active,.tab-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.program-card{border:1px solid var(--gray2);border-radius:var(--radius);padding:24px;background:#fff;transition:all .3s}
+.program-card:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.prog-icon{font-size:32px;margin-bottom:12px}
+.program-card h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.program-card p{font-size:13px;color:var(--gray)}
+.program-card .prog-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.prog-tag{font-size:11px;padding:3px 10px;border-radius:50px;background:rgba(26,86,219,.07);color:var(--blue);font-weight:500}
+
+/* ── COST TABLE ── */
+.cost-table{width:100%;border-collapse:collapse;margin-top:32px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.cost-table th{background:var(--navy);color:#fff;padding:16px 20px;text-align:left;font-size:13px;font-weight:600;letter-spacing:.3px}
+.cost-table td{padding:14px 20px;font-size:14px;border-bottom:1px solid var(--gray2)}
+.cost-table tr:last-child td{border-bottom:none}
+.cost-table tr:nth-child(even) td{background:var(--off)}
+.cost-table td.highlight{color:var(--blue);font-weight:600}
+
+/* ── FAQ ── */
+.faq-list{margin-top:40px;display:flex;flex-direction:column;gap:8px}
+.faq-item{border:1px solid var(--gray2);border-radius:var(--radius);overflow:hidden}
+.faq-q{padding:18px 24px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;transition:background .2s}
+.faq-q:hover{background:var(--off)}
+.faq-q .arrow{width:20px;height:20px;display:flex;align-items:center;justify-content:center;transition:transform .3s;color:var(--blue)}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s}
+.faq-item.open .faq-a{max-height:200px;padding:0 24px 18px}
+.faq-a p{font-size:14px;color:var(--gray);line-height:1.7}
+
+/* ── UNIVERSITIES SEARCH ── */
+.search-bar{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap}
+.search-bar input{flex:1;min-width:220px;padding:12px 18px;border:1.5px solid var(--gray2);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s}
+.search-bar input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.search-bar select{padding:12px 18px;border:1.5px solid var(--gray2);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#fff;cursor:pointer}
+.filter-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filter-tag{padding:7px 16px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--gray2);background:#fff;color:var(--navy2);transition:all .2s}
+.filter-tag.active,.filter-tag:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* ── CSCA PAGE ── */
+.csca-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:48px}
+.csca-subjects{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.csca-subject{background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;transition:all .3s}
+.csca-subject:hover{border-color:var(--blue);background:#fff}
+.csca-subject-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.csca-subject-name{font-size:14px;font-weight:600;color:var(--navy)}
+.csca-subject-desc{font-size:12px;color:var(--gray)}
+.timeline-list{display:flex;flex-direction:column;gap:0;margin-top:40px;position:relative}
+.timeline-list::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--blue),var(--gold))}
+.timeline-item{display:flex;gap:24px;padding-bottom:32px;position:relative}
+.timeline-dot{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;flex-shrink:0;z-index:1;position:relative}
+.timeline-content h4{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.timeline-content p{font-size:14px;color:var(--gray);line-height:1.6}
+.timeline-content .t-date{font-size:12px;color:var(--blue);font-weight:600;margin-bottom:4px}
+
+/* ── ABOUT ── */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.team-card{text-align:center}
+.team-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;border:3px solid var(--gray2)}
+.team-card h4{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.team-card p{font-size:13px;color:var(--gray)}
+.mission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.mission-card{text-align:center;padding:36px 24px}
+.mission-icon{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.mission-card h3{font-size:18px;color:var(--navy);margin-bottom:10px}
+.mission-card p{font-size:14px;color:var(--gray);line-height:1.6}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-item-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.contact-item-icon.blue{background:rgba(26,86,219,.1)}
+.contact-item-icon.gold{background:rgba(201,168,76,.12)}
+.contact-item-icon.green{background:rgba(5,150,105,.1)}
+.contact-item h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.contact-item p{font-size:14px;color:var(--gray)}
+.map-placeholder{height:220px;background:linear-gradient(135deg,#e8f0fe,#c5d8f8);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;margin-top:24px;border:1px solid var(--gray2)}
+.map-placeholder span{font-size:36px}
+.map-placeholder p{font-size:14px;color:var(--gray)}
+
+/* ── BLOG ── */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.blog-card{border:1px solid var(--gray2);border-radius:var(--radius);overflow:hidden;transition:all .3s;background:#fff}
+.blog-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.blog-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.blog-body{padding:20px}
+.blog-cat{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.blog-card h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.4}
+.blog-card p{font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:14px}
+.blog-meta{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:8px}
+
+/* ── NEWSLETTER ── */
+.newsletter{background:linear-gradient(135deg,var(--gold3),#fef9e7);border:1px solid rgba(201,168,76,.3);border-radius:16px;padding:48px;text-align:center;margin-top:60px}
+.newsletter h3{font-size:26px;color:var(--navy);margin-bottom:8px}
+.newsletter p{font-size:15px;color:var(--gray);margin-bottom:24px}
+.newsletter-form{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.newsletter-form input{flex:1;min-width:200px;padding:12px 18px;border:1.5px solid rgba(201,168,76,.4);border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#fff}
+.newsletter-form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.5);margin-top:16px;line-height:1.7;max-width:280px}
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.6);margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--gold2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;font-size:13px;color:rgba(255,255,255,.35)}
+.footer-socials{display:flex;gap:12px}
+.footer-social{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .2s;cursor:pointer}
+.footer-social:hover{background:rgba(201,168,76,.2);border-color:rgba(201,168,76,.35)}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.wa-btn{width:58px;height:58px;border-radius:50%;background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,.45);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s}
+.wa-btn:hover{transform:scale(1.08)}
+.wa-btn svg{width:30px;height:30px;fill:#fff}
+.wa-tooltip{background:var(--navy);color:#fff;font-size:13px;font-weight:500;padding:7px 14px;border-radius:8px;white-space:nowrap;box-shadow:var(--shadow)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .stats-strip-inner{grid-template-columns:repeat(2,1fr)}
+  .uni-grid,.why-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero-content{grid-template-columns:1fr}
+  .partner-grid,.csca-grid,.contact-grid,.sch-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:24px}
+  .process-steps::before{display:none}
+  .why-grid,.testi-grid,.uni-grid,.program-grid,.blog-grid,.csca-subjects,.mission-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+  section{padding:56px 20px}
+  .stats-strip-inner{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .stats-strip-inner{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#" class="logo">Edu<span>Globe</span></a>
-  <ul class="nav-links">
-    <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#testimonials">Students</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Free Consultation</a>
+<nav id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="nav-logo-text">Abreams<span>.</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('home');return false">Home</a>
+      <a href="#" onclick="showPage('study');return false">Study in China</a>
+      <a href="#" onclick="showPage('scholarships');return false">Scholarships</a>
+      <a href="#" onclick="showPage('universities');return false">Universities</a>
+      <a href="#" onclick="showPage('csca');return false">CSCA</a>
+      <a href="#" onclick="showPage('partner');return false">Partner With Us</a>
+      <a href="#" onclick="showPage('about');return false">About</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline" onclick="showPage('contact');return false">Contact</a>
+      <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply Now</a>
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Trusted by 2000+ Students</div>
-    <h1>Your Dream University<br>is <em>One Step Away</em></h1>
-    <p>Expert guidance for studying in China, UK, Malaysia & Europe. From application to visa — we handle everything so you can focus on your future.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Get Free Counselling</a>
-      <a href="#destinations" class="btn-outline">Explore Destinations</a>
-    </div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');closeMobileMenu();return false">🏠 Home</a>
+  <a href="#" onclick="showPage('study');closeMobileMenu();return false">🎓 Study in China</a>
+  <a href="#" onclick="showPage('scholarships');closeMobileMenu();return false">💰 Scholarships</a>
+  <a href="#" onclick="showPage('universities');closeMobileMenu();return false">🏛️ Universities</a>
+  <a href="#" onclick="showPage('csca');closeMobileMenu();return false">📋 CSCA</a>
+  <a href="#" onclick="showPage('partner');closeMobileMenu();return false">🤝 Partner With Us</a>
+  <a href="#" onclick="showPage('about');closeMobileMenu();return false">ℹ️ About</a>
+  <div class="mob-ctas">
+    <a href="#" class="btn btn-outline" onclick="showPage('contact');closeMobileMenu();return false">Contact Us</a>
+    <a href="#" class="btn btn-primary" onclick="showApplyModal();closeMobileMenu();return false">Apply Now</a>
   </div>
-  <div class="hero-stats">
-    <div class="stat-card">
-      <div class="stat-num">98%</div>
-      <div class="stat-label">Visa Success Rate</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">150+</div>
-      <div class="stat-label">Partner Universities</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">12+</div>
-      <div class="stat-label">Years Experience</div>
-    </div>
-  </div>
-</section>
+</div>
 
-<!-- DESTINATIONS -->
-<section id="destinations">
-  <div class="dest-intro fade-in">
-    <div>
-      <div class="section-tag">Study Destinations</div>
-      <div class="section-title">Where Will Your<br>Journey Take You?</div>
-    </div>
-    <div class="section-sub">We partner with top universities across 4 continents.</div>
-  </div>
-  <div class="dest-grid fade-in">
-    <div class="dest-card">
-      <div class="dest-color china"></div>
-      <div class="dest-overlay">
-        <div class="dest-flag">🇨🇳</div>
-        <div class="dest-name">China</div>
-        <div class="dest-count">40+ Universities · Scholarships Available</div>
-      </div>
-      <div class="dest-arrow">↗</div>
-    </div>
-    <div class="dest-card">
-      <div class="dest-color uk"></div>
-      <div class="dest-overlay">
-        <div class="dest-flag">🇬🇧</div>
-        <div class="dest-name">United Kingdom</div>
-        <div class="dest-count">35+ Universities · Top Rankings</div>
-      </div>
-      <div class="dest-arrow">↗</div>
-    </div>
-    <div class="dest-card">
-      <div class="dest-color malaysia"></div>
-      <div class="dest-overlay">
-        <div class="dest-flag">🇲🇾</div>
-        <div class="dest-name">Malaysia</div>
-        <div class="dest-count">25+ Universities · Affordable Fees</div>
-      </div>
-      <div class="dest-arrow">↗</div>
-    </div>
-    <div class="dest-card">
-      <div class="dest-color europe"></div>
-      <div class="dest-overlay">
-        <div class="dest-flag">🇪🇺</div>
-        <div class="dest-name">Europe</div>
-        <div class="dest-count">50+ Universities · Free Education Options</div>
-      </div>
-      <div class="dest-arrow">↗</div>
-    </div>
-  </div>
-</section>
+<!-- ═══════════════════════════════════════════ HOME PAGE ═══ -->
+<div id="page-home" class="page active">
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="services-layout">
-    <div class="services-left fade-in">
-      <div class="section-tag">What We Offer</div>
-      <div class="section-title">Complete Study Abroad Support</div>
-      <p class="section-sub">From the moment you dream of studying abroad to the day you land — we're with you every step.</p>
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-icon">🎓</div>
-          <div>
-            <h3>University Selection</h3>
-            <p>Personalized shortlisting based on your profile, budget, and career goals.</p>
-          </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-shape"></div>
+    <div class="hero-shape2"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>
+          Trusted by 5,000+ Students Worldwide
         </div>
-        <div class="service-item">
-          <div class="service-icon">📄</div>
-          <div>
-            <h3>Application Assistance</h3>
-            <p>SOP writing, document preparation, and complete application management.</p>
-          </div>
+        <h1>Study in China<br/>with <span>Scholarships</span></h1>
+        <p>Admissions, Scholarships, CSCA Guidance, and Consultant Partnerships – All in One Place. Your gateway to China's world-class universities.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn btn-gold" style="font-size:15px;padding:13px 28px" onclick="showApplyModal();return false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Apply Now
+          </a>
+          <a href="#" class="btn btn-outline-white" style="font-size:15px;padding:13px 28px" onclick="showPage('partner');return false">
+            Partner With Us
+          </a>
         </div>
-        <div class="service-item">
-          <div class="service-icon">✈️</div>
-          <div>
-            <h3>Visa Guidance</h3>
-            <p>Step-by-step visa filing support with a 98% success rate.</p>
-          </div>
+        <div class="hero-flags" style="margin-top:28px">
+          <div class="hero-flag">🇳🇬</div>
+          <div class="hero-flag">🇰🇪</div>
+          <div class="hero-flag">🇬🇭</div>
+          <div class="hero-flag">🇵🇰</div>
+          <div class="hero-flag">🇧🇩</div>
+          <div class="hero-flag">🇮🇳</div>
+          <span class="hero-flag-text">Students from 60+ countries</span>
         </div>
-        <div class="service-item">
-          <div class="service-icon">💰</div>
-          <div>
-            <h3>Scholarship Assistance</h3>
-            <p>We help identify and apply for scholarships that match your profile.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Our Impact at a Glance</div>
+        <div class="hero-stat-row">
+          <div class="hero-stat"><span class="hero-stat-num">5,000+</span><div class="hero-stat-label">Students Placed</div></div>
+          <div class="hero-stat"><span class="hero-stat-num">200+</span><div class="hero-stat-label">Partner Universities</div></div>
+          <div class="hero-stat"><span class="hero-stat-num">$12M+</span><div class="hero-stat-label">Scholarships Secured</div></div>
+          <div class="hero-stat"><span class="hero-stat-num">98%</span><div class="hero-stat-label">Visa Success Rate</div></div>
+        </div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)">
+          <div style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:10px">Applications open for 2025–26</div>
+          <div style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);border-radius:8px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:13px;color:var(--gold2)">🎓 CSC Scholarship Deadline</span>
+            <span style="font-size:13px;font-weight:600;color:#fff">March 2025</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="services-right fade-in">
-      <div class="process-card">
-        <div class="step-num">01</div>
-        <h3>Free Counselling</h3>
-        <p>We understand your goals and academic background in a 1-on-1 session.</p>
-      </div>
-      <div class="process-card featured">
-        <div class="step-num">02</div>
-        <h3>Course & Uni Match</h3>
-        <p>We find the perfect program for your profile and ambitions.</p>
-      </div>
-      <div class="process-card">
-        <div class="step-num">03</div>
-        <h3>Application Filed</h3>
-        <p>We prepare and submit all documents with precision.</p>
-      </div>
-      <div class="process-card">
-        <div class="step-num">04</div>
-        <h3>Visa & Fly!</h3>
-        <p>Visa approved. Accommodation arranged. Off you go!</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHY US -->
-<section id="why">
-  <div class="fade-in">
-    <div class="section-tag" style="color:var(--gold)">Why Choose Us</div>
-    <div class="section-title">We've Helped 2,000+<br>Students Change Their Lives</div>
-    <p class="section-sub">What sets EduGlobe apart from other consultancies.</p>
-  </div>
-  <div class="why-grid">
-    <div class="why-card fade-in">
-      <div class="why-icon">🏆</div>
-      <h3>12+ Years of Experience</h3>
-      <p>Hundreds of students placed in top universities since 2012. We know what works.</p>
-    </div>
-    <div class="why-card fade-in">
-      <div class="why-icon">🌍</div>
-      <h3>150+ Partner Universities</h3>
-      <p>Strong ties with reputed institutions across China, UK, Malaysia, and Europe.</p>
-    </div>
-    <div class="why-card fade-in">
-      <div class="why-icon">✅</div>
-      <h3>98% Visa Success Rate</h3>
-      <p>Our expert visa team ensures thorough documentation and near-perfect approval rates.</p>
-    </div>
-    <div class="why-card fade-in">
-      <div class="why-icon">💬</div>
-      <h3>End-to-End Support</h3>
-      <p>We don't disappear after admission. Support continues until you land safely.</p>
-    </div>
-    <div class="why-card fade-in">
-      <div class="why-icon">🎯</div>
-      <h3>Personalized Counselling</h3>
-      <p>No generic advice. Every student gets a custom roadmap tailored to their goals.</p>
-    </div>
-    <div class="why-card fade-in">
-      <div class="why-icon">💸</div>
-      <h3>Scholarship Experts</h3>
-      <p>Our team actively finds and applies for funding opportunities to reduce your costs.</p>
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-strip-inner">
+      <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Partner Universities</div></div>
+      <div class="stat-item"><div class="stat-num">60+</div><div class="stat-label">Countries Served</div></div>
+      <div class="stat-item"><div class="stat-num">$12M+</div><div class="stat-label">Scholarships Won</div></div>
+      <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Visa Approval Rate</div></div>
     </div>
   </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="fade-in" style="text-align:center; margin-bottom:0;">
-    <div class="section-tag" style="text-align:center">Student Stories</div>
-    <div class="section-title">Real Students. Real Results.</div>
-  </div>
-  <div class="testi-grid fade-in">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"EduGlobe made my dream of studying AI in China a reality. They handled everything from NUIST admission to my visa. Best decision I made."</p>
-      <div class="testi-author">
-        <div class="testi-avatar av1">R</div>
-        <div>
-          <div class="testi-name">Rahul Sharma</div>
-          <div class="testi-role">NUIST, China · AI Engineering</div>
-        </div>
+  <!-- WHY CHINA -->
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Why Choose China</div>
+        <h2 class="section-title">World-Class Education at Affordable Costs</h2>
+        <p class="section-sub">China's universities are rising rapidly in global rankings, offering cutting-edge research, scholarship opportunities, and unmatched career prospects.</p>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon blue">🏆</div><h3>Top Global Rankings</h3><p>12 Chinese universities rank in the global top 200. Tsinghua and Peking University rank among the world's top 25 in multiple fields.</p></div>
+        <div class="why-card"><div class="why-icon gold">💰</div><h3>Generous Scholarships</h3><p>Chinese Government Scholarships (CSC) cover full tuition, accommodation, living stipends, and health insurance for international students.</p></div>
+        <div class="why-card"><div class="why-icon navy">🌐</div><h3>English Programs</h3><p>Over 2,000+ programs taught entirely in English across engineering, medicine, business, and the arts.</p></div>
+        <div class="why-card"><div class="why-icon blue">🔬</div><h3>Research Excellence</h3><p>China is the world's second-largest investor in R&D, with breakthrough research opportunities in AI, biotech, and renewable energy.</p></div>
+        <div class="why-card"><div class="why-icon gold">✈️</div><h3>Strategic Location</h3><p>Gateway to Asia-Pacific's booming economy. Graduates gain access to the world's largest consumer market and manufacturing hub.</p></div>
+        <div class="why-card"><div class="why-icon navy">🤝</div><h3>Cultural Experience</h3><p>Immerse yourself in 5,000 years of history while building a truly global network of lifelong friends and professional contacts.</p></div>
       </div>
     </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"I got a full scholarship to study in Germany, all thanks to EduGlobe's guidance. They knew exactly which universities to target for my profile."</p>
-      <div class="testi-author">
-        <div class="testi-avatar av2">P</div>
-        <div>
-          <div class="testi-name">Priya Mehta</div>
-          <div class="testi-role">TU Berlin, Germany · Computer Science</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"The visa process seemed so scary but the team made it easy. Got my UK student visa approved in 2 weeks. Highly recommend to anyone planning to study abroad!"</p>
-      <div class="testi-author">
-        <div class="testi-avatar av3">A</div>
-        <div>
-          <div class="testi-name">Ayesha Khan</div>
-          <div class="testi-role">University of Manchester, UK · MBA</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-layout">
-    <div class="contact-info fade-in">
-      <div class="section-tag">Get In Touch</div>
-      <div class="section-title">Let's Plan Your Future Together</div>
-      <p class="section-sub">Book a free 30-minute counselling session. No pressure, no fees. Just honest guidance.</p>
-      <div class="contact-detail">
-        <div class="contact-icon">📞</div>
+  <!-- FEATURED UNIVERSITIES -->
+  <section>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
         <div>
-          <div class="contact-detail-label">Phone / WhatsApp</div>
-          <div class="contact-detail-text">+91 98765 43210</div>
+          <div class="section-label"><span></span>Featured Partners</div>
+          <h2 class="section-title">Top Chinese Universities</h2>
+          <div class="gold-line"></div>
         </div>
+        <a href="#" class="btn btn-outline" onclick="showPage('universities');return false">View All Universities →</a>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon">✉️</div>
-        <div>
-          <div class="contact-detail-label">Email</div>
-          <div class="contact-detail-text">info@eduglobe.in</div>
+      <div class="uni-grid">
+        <div class="uni-card">
+          <div class="uni-card-header c1"><div class="uni-card-logo"><span>PKU</span></div></div>
+          <div class="uni-card-body">
+            <div class="uni-card-rank">QS World #17</div>
+            <div class="uni-card-name">Peking University</div>
+            <div class="uni-card-loc">📍 Beijing, China</div>
+            <div class="uni-tag-row"><span class="uni-tag">Engineering</span><span class="uni-tag">Medicine</span><span class="uni-tag">Law</span></div>
+            <div class="uni-card-footer">
+              <div class="scholarship-badge">CSC Scholarship Available</div>
+              <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">📍</div>
-        <div>
-          <div class="contact-detail-label">Office</div>
-          <div class="contact-detail-text">New Delhi, India</div>
+        <div class="uni-card">
+          <div class="uni-card-header c2"><div class="uni-card-logo"><span>THU</span></div></div>
+          <div class="uni-card-body">
+            <div class="uni-card-rank">QS World #25</div>
+            <div class="uni-card-name">Tsinghua University</div>
+            <div class="uni-card-loc">📍 Beijing, China</div>
+            <div class="uni-tag-row"><span class="uni-tag">Technology</span><span class="uni-tag">Science</span><span class="uni-tag">Business</span></div>
+            <div class="uni-card-footer">
+              <div class="scholarship-badge">CSC Scholarship Available</div>
+              <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
+            </div>
+          </div>
+        </div>
+        <div class="uni-card">
+          <div class="uni-card-header c3"><div class="uni-card-logo"><span>FDU</span></div></div>
+          <div class="uni-card-body">
+            <div class="uni-card-rank">QS World #44</div>
+            <div class="uni-card-name">Fudan University</div>
+            <div class="uni-card-loc">📍 Shanghai, China</div>
+            <div class="uni-tag-row"><span class="uni-tag">Business</span><span class="uni-tag">Social Science</span></div>
+            <div class="uni-card-footer">
+              <div class="scholarship-badge">CSC Scholarship Available</div>
+              <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="contact-form fade-in">
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="Rahul">
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Your Journey</div>
+        <h2 class="section-title">From Application to Arrival in 5 Steps</h2>
+        <p class="section-sub">Our team guides you through every step of the process to ensure a smooth, stress-free journey to China.</p>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="process-steps">
+        <div class="process-step"><div class="process-num">1</div><h4>Free Consultation</h4><p>Discuss your goals, budget, and program preferences</p></div>
+        <div class="process-step"><div class="process-num">2</div><h4>University Matching</h4><p>We shortlist universities and programs that fit your profile</p></div>
+        <div class="process-step"><div class="process-num">3</div><h4>Application Support</h4><p>Document preparation, translation, and submission guidance</p></div>
+        <div class="process-step"><div class="process-num">4</div><h4>Scholarship Guidance</h4><p>Apply for CSC, provincial, and university scholarships</p></div>
+        <div class="process-step"><div class="process-num">5</div><h4>Visa & Pre-Departure</h4><p>Visa application support, housing, and orientation</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Student Stories</div>
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Hi, I am pleased to share my experience of getting an admission offer letter for a Ph.D program with the guidance of "Abreams" consultant. I was quite doubtful about the document, admission process, Scholarship and the interview but the representative helped me a lot, so i qualified for the interview easily. I am very satisfied with the response and guidance and i recommend everyone give a chance to their team to help you all to land you in your dream university.</p>
+          <div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#1A56DB,#1E429F)">AM</div><div><div class="testi-name">Veerendra Kumar</div><div class="testi-role">Ph.D Mathematics, Hefei University of Technology</div></div></div>
         </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Sharma">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">I was looking for study abroad opportunities when i found Abreams. They provide magnificent customer service, they make sure to give you suggestions based on your preferences and qualifications, Very explanatory to make sure you understand and work within the deadlines. Their followup is unmatched and provide timely feedback. I would say if you are looking to study abroad specially china and have no idea how and where to start, look no further than Abreams.</p>
+          <div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#059669,#047857)">CF</div><div><div class="testi-name">Rehema Thomas Komba</div><div class="testi-role">MS Environmental Science, Northeast Normal University</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">As an educational consultant, partnering with Abreams transformed my business. Their support system, training, and university connections are unmatched. My students' success rate is now over 95%.</p>
+          <div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#C9A84C,#E8C76A)">RK</div><div><div class="testi-name">Rashid Khan</div><div class="testi-role">Educational Consultant, India</div></div></div>
         </div>
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="you@email.com">
+    </div>
+  </section>
+
+  <!-- PARTNER CTA -->
+  <section class="partner-section">
+    <div class="container">
+      <div class="partner-grid">
+        <div>
+          <div class="section-label" style="background:rgba(201,168,76,.15);color:var(--gold2)"><span></span>Consultant Network</div>
+          <h2 class="section-title" style="color:#fff">Grow Your Study Abroad Business with China Admissions Experts</h2>
+          <div class="gold-line"></div>
+          <p style="color:rgba(255,255,255,.65);font-size:16px;margin-bottom:8px">Join 300+ consultant partners across 40 countries who trust Abreams to deliver results for their students.</p>
+          <div class="partner-list">
+            <div class="partner-item"><div class="partner-icon">💎</div><div class="partner-item-content"><h4>Revenue Sharing Model</h4><p>Earn competitive commissions on every successful placement</p></div></div>
+            <div class="partner-item"><div class="partner-icon">🎓</div><div class="partner-item-content"><h4>Free Training Programs</h4><p>Access our library of CSCA guides, admission handbooks, and webinars</p></div></div>
+            <div class="partner-item"><div class="partner-icon">🏛️</div><div class="partner-item-content"><h4>University Access</h4><p>Direct admission letters and scholarship nominations from 200+ universities</p></div></div>
+          </div>
+          <div style="margin-top:32px">
+            <a href="#" class="btn btn-gold" style="font-size:15px;padding:13px 28px" onclick="showPage('partner');return false">Apply to Become a Partner →</a>
+          </div>
+        </div>
+        <div class="partner-form">
+          <h3>Quick Partner Inquiry</h3>
+          <div class="form-grid">
+            <div class="form-group"><label>First Name</label><input class="dark-field" type="text" placeholder="John"/></div>
+            <div class="form-group"><label>Last Name</label><input class="dark-field" type="text" placeholder="Doe"/></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input class="dark-field" type="email" placeholder="you@consultancy.com"/></div>
+          <div class="form-group"><label>Country</label><select class="dark-field"><option>Select your country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Other</option></select></div>
+          <div class="form-group"><label>Number of Students per Year</label><select class="dark-field"><option>Select range</option><option>1–10</option><option>11–50</option><option>51–100</option><option>100+</option></select></div>
+          <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;font-size:15px;padding:13px">Submit Partner Application</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Phone / WhatsApp</label>
-        <input type="tel" placeholder="+91 00000 00000">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="container">
+      <div class="section-label" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);margin-bottom:20px"><span></span>Start Today</div>
+      <h2>Ready to Begin Your China Journey?</h2>
+      <p>Join thousands of students who have successfully built their futures at China's top universities with full scholarships.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-gold" style="font-size:15px;padding:14px 32px" onclick="showApplyModal();return false">Apply for Free Consultation</a>
+        <a href="#" class="btn btn-outline-white" style="font-size:15px;padding:14px 32px" onclick="showPage('scholarships');return false">Explore Scholarships</a>
       </div>
-      <div class="form-group">
-        <label>Preferred Destination</label>
-        <select>
-          <option value="">Select a country</option>
-          <option>China</option>
-          <option>United Kingdom</option>
-          <option>Malaysia</option>
-          <option>Germany</option>
-          <option>France</option>
-          <option>Other Europe</option>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <section>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
+        <div>
+          <div class="section-label"><span></span>Resources & Insights</div>
+          <h2 class="section-title">Latest from Our Blog</h2>
+          <div class="gold-line"></div>
+        </div>
+        <a href="#" class="btn btn-outline">View All Articles →</a>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#e8f0fe,#c5d8f8)">🎓</div><div class="blog-body"><div class="blog-cat">Scholarships</div><h3>Complete Guide to the Chinese Government Scholarship (CSC) 2025</h3><p>Everything you need to know about applying for the most prestigious scholarship for international students in China.</p><div class="blog-meta"><span>📅 Dec 2024</span><span>·</span><span>8 min read</span></div></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#fef9e7,#faeeda)">📋</div><div class="blog-body"><div class="blog-cat">CSCA</div><h3>What is CSCA? The Exam Every International Student Should Know</h3><p>A comprehensive breakdown of the Chinese Student/Scholar Certification Assessment and why it matters for your application.</p><div class="blog-meta"><span>📅 Nov 2024</span><span>·</span><span>6 min read</span></div></div></div>
+        <div class="blog-card"><div class="blog-img" style="background:linear-gradient(135deg,#e8fdf0,#c0f0d4)">🏙️</div><div class="blog-body"><div class="blog-cat">Student Life</div><h3>Top 10 Cities to Study in China: A Complete Comparison</h3><p>From Beijing's historic landmarks to Shanghai's modern skyline – which city is right for you?</p><div class="blog-meta"><span>📅 Oct 2024</span><span>·</span><span>10 min read</span></div></div></div>
+      </div>
+      <div class="newsletter">
+        <h3>Get Weekly Scholarship Updates</h3>
+        <p>Be the first to know about new scholarship openings, university deadlines, and study abroad tips.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email address"/>
+          <button class="btn btn-primary" style="padding:12px 24px">Subscribe Free</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════ STUDY IN CHINA ═══ -->
+<div id="page-study" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Study in China</div>
+      <h1>Study in China</h1>
+      <p>Discover world-class education, abundant scholarship opportunities, and a vibrant international student community across China's 3,000+ universities.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Academic Programs</div>
+        <h2 class="section-title">Find Your Perfect Program</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="programs-tabs" style="justify-content:center;margin-top:32px">
+        <button class="tab-btn active" onclick="filterPrograms('all',this)">All Programs</button>
+        <button class="tab-btn" onclick="filterPrograms('bachelor',this)">Bachelor's</button>
+        <button class="tab-btn" onclick="filterPrograms('master',this)">Master's</button>
+        <button class="tab-btn" onclick="filterPrograms('phd',this)">PhD</button>
+        <button class="tab-btn" onclick="filterPrograms('english',this)">English-Taught</button>
+        <button class="tab-btn" onclick="filterPrograms('chinese',this)">Chinese-Taught</button>
+      </div>
+      <div class="program-grid" id="programGrid">
+        <div class="program-card" data-cat="bachelor english"><div class="prog-icon">⚕️</div><h3>Medicine (MBBS)</h3><p>6-year medical program with clinical training. Recognized worldwide.</p><div class="prog-meta"><span class="prog-tag">Bachelor</span><span class="prog-tag">English</span><span class="prog-tag">6 Years</span></div></div>
+        <div class="program-card" data-cat="bachelor english"><div class="prog-icon">💻</div><h3>Computer Science & AI</h3><p>Cutting-edge curriculum in software engineering, machine learning, and data science.</p><div class="prog-meta"><span class="prog-tag">Bachelor</span><span class="prog-tag">English</span><span class="prog-tag">4 Years</span></div></div>
+        <div class="program-card" data-cat="bachelor english"><div class="prog-icon">🏗️</div><h3>Civil Engineering</h3><p>Learn from China's infrastructure boom. World-class practical training.</p><div class="prog-meta"><span class="prog-tag">Bachelor</span><span class="prog-tag">English</span><span class="prog-tag">4 Years</span></div></div>
+        <div class="program-card" data-cat="master english"><div class="prog-icon">📊</div><h3>MBA / Business Administration</h3><p>International MBA programs at China's top business schools.</p><div class="prog-meta"><span class="prog-tag">Master</span><span class="prog-tag">English</span><span class="prog-tag">2 Years</span></div></div>
+        <div class="program-card" data-cat="master english"><div class="prog-icon">🔬</div><h3>Biotechnology & Life Sciences</h3><p>Research-intensive programs at the frontier of biological innovation.</p><div class="prog-meta"><span class="prog-tag">Master</span><span class="prog-tag">English</span><span class="prog-tag">3 Years</span></div></div>
+        <div class="program-card" data-cat="phd english"><div class="prog-icon">🧪</div><h3>PhD in Engineering</h3><p>Fully funded PhD programs with cutting-edge lab facilities and stipends.</p><div class="prog-meta"><span class="prog-tag">PhD</span><span class="prog-tag">English</span><span class="prog-tag">4 Years</span></div></div>
+        <div class="program-card" data-cat="bachelor chinese"><div class="prog-icon">🌏</div><h3>Chinese Language & Culture</h3><p>Intensive Mandarin immersion with cultural studies and HSK preparation.</p><div class="prog-meta"><span class="prog-tag">Bachelor</span><span class="prog-tag">Chinese</span><span class="prog-tag">4 Years</span></div></div>
+        <div class="program-card" data-cat="master chinese"><div class="prog-icon">⚡</div><h3>Electrical Engineering</h3><p>Advanced power systems, electronics, and renewable energy engineering.</p><div class="prog-meta"><span class="prog-tag">Master</span><span class="prog-tag">Chinese</span><span class="prog-tag">3 Years</span></div></div>
+        <div class="program-card" data-cat="phd english"><div class="prog-icon">🤖</div><h3>Artificial Intelligence</h3><p>World-leading AI research in China's top AI labs and universities.</p><div class="prog-meta"><span class="prog-tag">PhD</span><span class="prog-tag">English</span><span class="prog-tag">4 Years</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Cost Comparison</div>
+        <h2 class="section-title">Affordable Education Compared Globally</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <table class="cost-table">
+        <thead><tr><th>Expense Category</th><th>China (per year)</th><th>USA (per year)</th><th>UK (per year)</th><th>Australia (per year)</th></tr></thead>
+        <tbody>
+          <tr><td>Tuition Fees</td><td class="highlight">$2,000 – $5,000</td><td>$25,000 – $50,000</td><td>$20,000 – $40,000</td><td>$18,000 – $35,000</td></tr>
+          <tr><td>Accommodation</td><td class="highlight">$600 – $1,800</td><td>$8,000 – $15,000</td><td>$6,000 – $12,000</td><td>$7,000 – $14,000</td></tr>
+          <tr><td>Living Expenses</td><td class="highlight">$2,400 – $4,800</td><td>$10,000 – $18,000</td><td>$9,000 – $15,000</td><td>$10,000 – $16,000</td></tr>
+          <tr><td><strong>Total Estimated Cost</strong></td><td class="highlight"><strong>$5,000 – $11,600</strong></td><td><strong>$43,000 – $83,000</strong></td><td><strong>$35,000 – $67,000</strong></td><td><strong>$35,000 – $65,000</strong></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--gray);text-align:center;margin-top:16px">*With CSC or other full scholarships, costs in China can be reduced to near zero.</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Common Questions</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="faq-list" style="max-width:760px;margin:40px auto 0">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I study in China without knowing Chinese?<span class="arrow">▼</span></div><div class="faq-a"><p>Yes! Over 2,000 programs are fully taught in English. However, learning basic Mandarin is highly recommended for daily life and future career prospects.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What are the entry requirements for Chinese universities?<span class="arrow">▼</span></div><div class="faq-a"><p>Requirements vary by university and program. Generally, you need a completed secondary or undergraduate degree, academic transcripts, a valid passport, and a language proficiency certificate (IELTS/TOEFL for English programs or HSK for Chinese programs).</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">When should I start my application?<span class="arrow">▼</span></div><div class="faq-a"><p>Most Chinese universities accept applications from October to April for the September intake. The CSC scholarship deadline is typically in March. We recommend starting the process at least 6–8 months before your desired start date.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is a Chinese degree recognized internationally?<span class="arrow">▼</span></div><div class="faq-a"><p>Yes. Degrees from China's top universities are recognized globally. Chinese university degrees carry high value in Asia, Africa, and increasingly in Europe and North America, particularly in STEM and medical fields.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does Abreams help with the application process?<span class="arrow">▼</span></div><div class="faq-a"><p>Abreams provides end-to-end support: university selection, document preparation, application submission, scholarship guidance, acceptance letter follow-up, visa application support, and pre-departure orientation.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-section">
+    <div class="container">
+      <h2>Begin Your Study in China Journey Today</h2>
+      <p>Get a free personalized consultation with our China education experts.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-gold" style="font-size:15px;padding:14px 32px" onclick="showApplyModal();return false">Get Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ SCHOLARSHIPS ═══ -->
+<div id="page-scholarships" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Scholarships</div>
+      <h1>Scholarships for<br/>International Students</h1>
+      <p>China offers some of the world's most generous scholarships. Abreams helps you navigate every option and secure the funding you deserve.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="section-label"><span></span>Scholarship Types</div>
+      <h2 class="section-title">Scholarship Opportunities</h2>
+      <div class="gold-line"></div>
+      <div class="sch-grid" style="margin-top:40px">
+        <div class="sch-card featured">
+          <div class="sch-card-shape"></div>
+          <div class="sch-card-badge">🏅 Most Prestigious</div>
+          <h3>Chinese Government Scholarship (CSC)</h3>
+          <p>Fully funded by the Chinese government – covers tuition, accommodation, medical insurance, and a monthly stipend.</p>
+          <div class="sch-amount">Full Coverage</div>
+          <ul style="margin-top:16px;padding-left:18px;color:rgba(255,255,255,.65);font-size:13px;line-height:2">
+            <li>Full tuition fee waiver</li>
+            <li>Free on-campus accommodation</li>
+            <li>Monthly living stipend ($500–$800)</li>
+            <li>Comprehensive medical insurance</li>
+            <li>One-time relocation allowance</li>
+          </ul>
+          <a href="#" class="btn btn-gold" style="margin-top:24px" onclick="showApplyModal();return false">Apply for CSC →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div class="sch-card regular">
+            <div class="sch-card-shape"></div>
+            <div class="sch-card-badge">🏛️ Provincial</div>
+            <h3>Provincial Government Scholarships</h3>
+            <p>Offered by individual Chinese provinces. Covers tuition and accommodation for select programs.</p>
+            <div class="sch-amount">Up to $8,000/yr</div>
+          </div>
+          <div class="sch-card regular">
+            <div class="sch-card-shape"></div>
+            <div class="sch-card-badge">🎓 University</div>
+            <h3>University-Specific Scholarships</h3>
+            <p>Over 200 partner universities offer their own merit-based and need-based scholarships to international applicants.</p>
+            <div class="sch-amount">20%–100% Tuition</div>
+          </div>
+          <div class="sch-card regular">
+            <div class="sch-card-shape"></div>
+            <div class="sch-card-badge">🌟 Fully Funded</div>
+            <h3>Fully Funded Programs</h3>
+            <p>Certain universities offer fully funded programs in engineering, medicine, and technology with no costs to the student.</p>
+            <div class="sch-amount">Full Coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--off)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start">
+        <div>
+          <div class="section-label"><span></span>Eligibility</div>
+          <h2 class="section-title">Who Can Apply?</h2>
+          <div class="gold-line"></div>
+          <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:50%;background:rgba(26,86,219,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex-shrink:0">✓</div><div><strong style="color:var(--navy)">Non-Chinese Nationality</strong><p style="font-size:14px;color:var(--gray);margin-top:2px">Must hold a valid passport from any country other than China</p></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:50%;background:rgba(26,86,219,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex-shrink:0">✓</div><div><strong style="color:var(--navy)">Academic Excellence</strong><p style="font-size:14px;color:var(--gray);margin-top:2px">Minimum GPA of 75% or equivalent for undergraduate; research experience for postgraduate</p></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:50%;background:rgba(26,86,219,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex-shrink:0">✓</div><div><strong style="color:var(--navy)">Age Requirements</strong><p style="font-size:14px;color:var(--gray);margin-top:2px">Under 25 for bachelor's; under 35 for master's; under 40 for PhD programs</p></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:50%;background:rgba(26,86,219,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex-shrink:0">✓</div><div><strong style="color:var(--navy)">Language Proficiency</strong><p style="font-size:14px;color:var(--gray);margin-top:2px">IELTS 6.0+ or TOEFL 80+ for English programs; HSK 4+ for Chinese programs</p></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:50%;background:rgba(26,86,219,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:700;flex-shrink:0">✓</div><div><strong style="color:var(--navy)">Good Health</strong><p style="font-size:14px;color:var(--gray);margin-top:2px">Medical examination certificate issued by a recognized hospital</p></div></div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--gray2);border-radius:16px;padding:36px">
+          <h3 style="font-size:22px;color:var(--navy);margin-bottom:8px">Scholarship Eligibility Check</h3>
+          <p style="font-size:14px;color:var(--gray);margin-bottom:24px">Fill in the form below and our team will assess your scholarship eligibility within 24 hours.</p>
+          <div class="form-group"><label class="dark">Full Name</label><input class="light" type="text" placeholder="Your full name"/></div>
+          <div class="form-grid">
+            <div class="form-group"><label class="dark">Education Level</label><select class="light"><option>Applying for</option><option>Bachelor's</option><option>Master's</option><option>PhD</option></select></div>
+            <div class="form-group"><label class="dark">GPA / Grade</label><input class="light" type="text" placeholder="e.g. 3.5/4.0"/></div>
+          </div>
+          <div class="form-group"><label class="dark">Field of Study</label><input class="light" type="text" placeholder="e.g. Computer Science"/></div>
+          <div class="form-group"><label class="dark">Email Address</label><input class="light" type="email" placeholder="you@email.com"/></div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px;font-size:15px;margin-top:8px">Check My Eligibility →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════ UNIVERSITIES ═══ -->
+<div id="page-universities" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Universities</div>
+      <h1>Partner Universities</h1>
+      <p>Browse 200+ partner universities across China. Filter by field, ranking, scholarship availability, and more.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" placeholder="🔍  Search universities..." id="uniSearch" oninput="filterUnis()"/>
+        <select id="uniCat" onchange="filterUnis()">
+          <option value="">All Categories</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Medical">Medical</option>
+          <option value="Business">Business</option>
+          <option value="Technology">Technology</option>
+          <option value="Language">Language</option>
+        </select>
+        <select id="uniCity" onchange="filterUnis()">
+          <option value="">All Cities</option>
+          <option value="Beijing">Beijing</option>
+          <option value="Shanghai">Shanghai</option>
+          <option value="Wuhan">Wuhan</option>
+          <option value="Chengdu">Chengdu</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Tell us about yourself</label>
-        <textarea placeholder="Your academic background, course of interest, budget..."></textarea>
+      <div class="filter-tags">
+        <div class="filter-tag active" onclick="filterUniTag('',this)">All Universities</div>
+        <div class="filter-tag" onclick="filterUniTag('top',this)">🏆 Top Ranked</div>
+        <div class="filter-tag" onclick="filterUniTag('scholarship',this)">💰 CSC Scholarship</div>
+        <div class="filter-tag" onclick="filterUniTag('english',this)">🌐 English Programs</div>
+        <div class="filter-tag" onclick="filterUniTag('medical',this)">⚕️ Medical</div>
       </div>
-      <button class="form-submit">Send My Enquiry →</button>
+      <div class="uni-grid" id="uniGrid">
+        <div class="uni-card" data-name="Peking University" data-cat="Engineering Technology" data-city="Beijing" data-tags="top scholarship english">
+          <div class="uni-card-header c1"><div class="uni-card-logo"><span>PKU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">QS #17</div><div class="uni-card-name">Peking University</div><div class="uni-card-loc">📍 Beijing</div><div class="uni-tag-row"><span class="uni-tag">Engineering</span><span class="uni-tag">Medicine</span><span class="uni-tag">Law</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+        <div class="uni-card" data-name="Tsinghua University" data-cat="Engineering Technology" data-city="Beijing" data-tags="top scholarship english">
+          <div class="uni-card-header c2"><div class="uni-card-logo"><span>THU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">QS #25</div><div class="uni-card-name">Tsinghua University</div><div class="uni-card-loc">📍 Beijing</div><div class="uni-tag-row"><span class="uni-tag">Technology</span><span class="uni-tag">Science</span><span class="uni-tag">Business</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+        <div class="uni-card" data-name="Fudan University" data-cat="Business" data-city="Shanghai" data-tags="top scholarship english">
+          <div class="uni-card-header c3"><div class="uni-card-logo"><span>FDU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">QS #44</div><div class="uni-card-name">Fudan University</div><div class="uni-card-loc">📍 Shanghai</div><div class="uni-tag-row"><span class="uni-tag">Business</span><span class="uni-tag">Social Science</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+        <div class="uni-card" data-name="Zhejiang University" data-cat="Engineering" data-city="Hangzhou" data-tags="top scholarship english">
+          <div class="uni-card-header c4"><div class="uni-card-logo"><span>ZJU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">QS #47</div><div class="uni-card-name">Zhejiang University</div><div class="uni-card-loc">📍 Hangzhou</div><div class="uni-tag-row"><span class="uni-tag">Engineering</span><span class="uni-tag">Agriculture</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+        <div class="uni-card" data-name="Wuhan University" data-cat="Engineering" data-city="Wuhan" data-tags="scholarship english">
+          <div class="uni-card-header c5"><div class="uni-card-logo"><span>WHU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">Top 200</div><div class="uni-card-name">Wuhan University</div><div class="uni-card-loc">📍 Wuhan</div><div class="uni-tag-row"><span class="uni-tag">Engineering</span><span class="uni-tag">Science</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+        <div class="uni-card" data-name="Capital Medical University" data-cat="Medical" data-city="Beijing" data-tags="medical scholarship english">
+          <div class="uni-card-header c6"><div class="uni-card-logo"><span>CMU</span></div></div>
+          <div class="uni-card-body"><div class="uni-card-rank">Medical Top 10</div><div class="uni-card-name">Capital Medical University</div><div class="uni-card-loc">📍 Beijing</div><div class="uni-tag-row"><span class="uni-tag">Medicine</span><span class="uni-tag">Pharmacy</span></div><div class="uni-card-footer"><div class="scholarship-badge">CSC Scholarship</div><a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a></div></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="#" class="logo">Edu<span>Globe</span></a>
-      <p>Helping Indian students build world-class careers through quality international education since 2012.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Destinations</h4>
-      <ul>
-        <li><a href="#">Study in China</a></li>
-        <li><a href="#">Study in UK</a></li>
-        <li><a href="#">Study in Malaysia</a></li>
-        <li><a href="#">Study in Europe</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#">University Selection</a></li>
-        <li><a href="#">Application Help</a></li>
-        <li><a href="#">Visa Assistance</a></li>
-        <li><a href="#">Scholarships</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Student Stories</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<!-- ═══════════════════════════════════════════ CSCA PAGE ═══ -->
+<div id="page-csca" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>CSCA</div>
+      <h1>CSCA Examination<br/>Guidance</h1>
+      <p>The Chinese Student/Scholar Certification Assessment is your key to unlocking top university admissions and government scholarships. We prepare you to excel.</p>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 EduGlobe Consultancy. All rights reserved.</p>
-    <p>Made with ❤️ for Indian students</p>
+  <section>
+    <div class="container">
+      <div class="csca-grid">
+        <div>
+          <div class="section-label"><span></span>About CSCA</div>
+          <h2 class="section-title">What is the CSCA?</h2>
+          <div class="gold-line"></div>
+          <p style="font-size:15px;color:var(--gray);margin:20px 0;line-height:1.8">The CSCA (Chinese Student/Scholar Certification Assessment) is an assessment framework used by Chinese universities and scholarship bodies to evaluate the academic aptitude, language skills, and readiness of international applicants.</p>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8">A strong CSCA profile significantly increases your chances of admission to top Chinese universities and access to full government scholarships. Abreams is one of the leading CSCA preparation and guidance providers for international students.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px">
+            <div style="background:rgba(26,86,219,.06);border:1px solid rgba(26,86,219,.15);border-radius:var(--radius);padding:16px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--blue)">85%</div><div style="font-size:13px;color:var(--gray)">Average score improvement with Abreams prep</div></div>
+            <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius);padding:16px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold)">3,000+</div><div style="font-size:13px;color:var(--gray)">Students prepared by Abreams</div></div>
+          </div>
+        </div>
+        <div style="background:var(--off);border-radius:16px;padding:36px">
+          <h3 style="color:var(--navy);margin-bottom:8px;font-size:22px">Exam Structure</h3>
+          <p style="color:var(--gray);font-size:14px;margin-bottom:24px">The CSCA consists of the following components:</p>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="background:#fff;border:1px solid var(--gray2);border-radius:10px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:600;color:var(--navy)">Academic Aptitude Test</span><span style="font-size:13px;background:rgba(26,86,219,.08);color:var(--blue);padding:3px 10px;border-radius:50px;font-weight:500">40%</span></div>
+            <div style="background:#fff;border:1px solid var(--gray2);border-radius:10px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:600;color:var(--navy)">Language Proficiency</span><span style="font-size:13px;background:rgba(26,86,219,.08);color:var(--blue);padding:3px 10px;border-radius:50px;font-weight:500">30%</span></div>
+            <div style="background:#fff;border:1px solid var(--gray2);border-radius:10px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:600;color:var(--navy)">Statement of Purpose</span><span style="font-size:13px;background:rgba(26,86,219,.08);color:var(--blue);padding:3px 10px;border-radius:50px;font-weight:500">20%</span></div>
+            <div style="background:#fff;border:1px solid var(--gray2);border-radius:10px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:600;color:var(--navy)">Recommendation Letters</span><span style="font-size:13px;background:rgba(26,86,219,.08);color:var(--blue);padding:3px 10px;border-radius:50px;font-weight:500">10%</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:60px">
+        <div class="text-center">
+          <div class="section-label"><span></span>Subject Areas</div>
+          <h2 class="section-title">Key Subjects Covered</h2>
+          <div class="gold-line center"></div>
+        </div>
+        <div class="csca-subjects" style="margin-top:40px">
+          <div class="csca-subject"><div class="csca-subject-icon">📐</div><div><div class="csca-subject-name">Mathematics</div><div class="csca-subject-desc">Calculus, Algebra, Statistics</div></div></div>
+          <div class="csca-subject"><div class="csca-subject-icon">🔬</div><div><div class="csca-subject-name">Natural Sciences</div><div class="csca-subject-desc">Physics, Chemistry, Biology</div></div></div>
+          <div class="csca-subject"><div class="csca-subject-icon">🌐</div><div><div class="csca-subject-name">English Proficiency</div><div class="csca-subject-desc">Reading, Writing, Comprehension</div></div></div>
+          <div class="csca-subject"><div class="csca-subject-icon">🇨🇳</div><div><div class="csca-subject-name">Chinese Language</div><div class="csca-subject-desc">HSK 1–6 Preparation</div></div></div>
+          <div class="csca-subject"><div class="csca-subject-icon">📊</div><div><div class="csca-subject-name">Logical Reasoning</div><div class="csca-subject-desc">Analytical & Critical Thinking</div></div></div>
+          <div class="csca-subject"><div class="csca-subject-icon">✍️</div><div><div class="csca-subject-name">Personal Statement</div><div class="csca-subject-desc">Writing & Presentation Skills</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Preparation Timeline</div>
+        <h2 class="section-title">Your CSCA Preparation Roadmap</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div style="max-width:600px;margin:0 auto">
+        <div class="timeline-list">
+          <div class="timeline-item"><div class="timeline-dot">1</div><div class="timeline-content"><div class="t-date">Month 1–2</div><h4>Foundation & Assessment</h4><p>Initial skill assessment, personalized study plan creation, and foundational materials provided.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">2</div><div class="timeline-content"><div class="t-date">Month 3–4</div><h4>Subject Mastery</h4><p>Intensive study of core subjects with Abreams study guides, video lessons, and practice questions.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">3</div><div class="timeline-content"><div class="t-date">Month 5</div><h4>Mock Examinations</h4><p>Full-length timed mock tests under exam conditions with detailed performance analysis.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">4</div><div class="timeline-content"><div class="t-date">Month 6</div><h4>Personal Statement & Documents</h4><p>Expert guidance on crafting compelling personal statements and preparing scholarship essays.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">5</div><div class="timeline-content"><div class="t-date">Month 7+</div><h4>Application Submission</h4><p>Submit applications with full Abreams support. Continue scholarship application tracking.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container" style="max-width:800px">
+      <div class="text-center">
+        <div class="section-label"><span></span>Book a Session</div>
+        <h2 class="section-title">Get Free CSCA Consultation</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div style="background:var(--off);border:1px solid var(--gray2);border-radius:16px;padding:40px;margin-top:40px">
+        <div class="form-grid">
+          <div class="form-group"><label class="dark">Full Name</label><input class="light" type="text" placeholder="Your full name"/></div>
+          <div class="form-group"><label class="dark">Email</label><input class="light" type="email" placeholder="you@email.com"/></div>
+          <div class="form-group"><label class="dark">Phone / WhatsApp</label><input class="light" type="text" placeholder="+1 234 567 8900"/></div>
+          <div class="form-group"><label class="dark">Target Program</label><select class="light"><option>Select level</option><option>Bachelor's</option><option>Master's</option><option>PhD</option></select></div>
+        </div>
+        <div class="form-group"><label class="dark">What aspect of CSCA do you need help with?</label><textarea class="light" rows="4" placeholder="Tell us about your goals and current preparation level..."></textarea></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px">Book Free CSCA Consultation →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════ PARTNER PAGE ═══ -->
+<div id="page-partner" class="page">
+  <div class="inner-hero" style="background:linear-gradient(135deg,#0A1628,#1a3a6e)">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Partner With Us</div>
+      <h1>Grow Your Study Abroad<br/>Business with China<br/>Admissions Experts</h1>
+      <p>Join 300+ consultant partners across 40 countries. Access direct university admissions, scholarship nominations, training, and a dedicated account manager.</p>
+      <a href="#partner-form" class="btn btn-gold" style="margin-top:28px;font-size:15px;padding:14px 32px">Apply to Partner →</a>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Why Partner</div>
+        <h2 class="section-title">Benefits of the Abreams Partner Network</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="why-grid" style="margin-top:48px">
+        <div class="why-card"><div class="why-icon gold">💵</div><h3>Competitive Revenue Sharing</h3><p>Earn industry-leading commissions on every successful student placement. Monthly payouts with full transparency.</p></div>
+        <div class="why-card"><div class="why-icon blue">🏛️</div><h3>Direct University Access</h3><p>Get direct admission letters, scholarship nominations, and official communications from 200+ partner universities.</p></div>
+        <div class="why-card"><div class="why-icon navy">📚</div><h3>Free Training & Certification</h3><p>Access Abreams' consultant training library: CSCA guides, admission handbooks, scholarship databases, and monthly webinars.</p></div>
+        <div class="why-card"><div class="why-icon gold">👤</div><h3>Dedicated Account Manager</h3><p>A dedicated Abreams expert handles your queries, student cases, and escalations within 24 hours.</p></div>
+        <div class="why-card"><div class="why-icon blue">📊</div><h3>Marketing Support</h3><p>Branded brochures, co-marketing materials, and social media content to help you attract more students.</p></div>
+        <div class="why-card"><div class="why-icon navy">🔗</div><h3>CRM & Portal Access</h3><p>Track student applications, document status, and scholarship progress in real time via our consultant dashboard.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Partner Testimonials</div>
+        <h2 class="section-title">What Our Partners Say</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Before partnering with Abreams, I was losing students to larger agencies. Now I have direct university access and can offer the same level of service. My business has grown 300% in 2 years.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#C9A84C,#E8C76A)">RK</div><div><div class="testi-name">Rashid Khan</div><div class="testi-role">Study Abroad Consultant, Pakistan</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">The training materials and CSCA preparation guides from Abreams are unmatched. I now confidently advise students on scholarships I previously didn't know existed. Highly recommend.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#059669,#047857)">AM</div><div><div class="testi-name">Amara Mensah</div><div class="testi-role">Education Consultant, Ghana</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">The account manager assigned to our agency responds within hours. When a student had a visa issue, Abreams resolved it within 48 hours. True partnership, not just a transaction.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#1A56DB,#1E429F)">SN</div><div><div class="testi-name">Samuel Njoku</div><div class="testi-role">Agency Director, Nigeria</div></div></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="partner-form">
+    <div class="container" style="max-width:860px">
+      <div class="text-center">
+        <div class="section-label"><span></span>Join the Network</div>
+        <h2 class="section-title">Consultant Partnership Application</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div style="background:var(--off);border:1px solid var(--gray2);border-radius:16px;padding:44px;margin-top:40px">
+        <div class="form-grid">
+          <div class="form-group"><label class="dark">First Name *</label><input class="light" type="text" placeholder="First name"/></div>
+          <div class="form-group"><label class="dark">Last Name *</label><input class="light" type="text" placeholder="Last name"/></div>
+          <div class="form-group"><label class="dark">Email Address *</label><input class="light" type="email" placeholder="you@agency.com"/></div>
+          <div class="form-group"><label class="dark">WhatsApp Number *</label><input class="light" type="text" placeholder="+1 234 567 8900"/></div>
+          <div class="form-group"><label class="dark">Country *</label><select class="light"><option>Select country</option><option>Nigeria</option><option>Kenya</option><option>Ghana</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ethiopia</option><option>Other</option></select></div>
+          <div class="form-group"><label class="dark">City</label><input class="light" type="text" placeholder="Your city"/></div>
+          <div class="form-group"><label class="dark">Agency / Company Name</label><input class="light" type="text" placeholder="Your agency name"/></div>
+          <div class="form-group"><label class="dark">Years in Education Consulting</label><select class="light"><option>Select experience</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></div>
+        </div>
+        <div class="form-group"><label class="dark">Students Sent to China per Year</label><select class="light"><option>Select range</option><option>0 (just starting)</option><option>1–5</option><option>6–20</option><option>21–50</option><option>50+</option></select></div>
+        <div class="form-group"><label class="dark">How did you hear about Abreams?</label><select class="light"><option>Select</option><option>Social Media</option><option>Referred by another consultant</option><option>Google Search</option><option>WhatsApp Group</option><option>Conference/Event</option><option>Other</option></select></div>
+        <div class="form-group"><label class="dark">Tell us about your business and goals</label><textarea class="light" rows="4" placeholder="Describe your agency, target markets, and what you hope to achieve by partnering with Abreams..."></textarea></div>
+        <button class="btn btn-gold" style="width:100%;justify-content:center;padding:14px;font-size:16px">Submit Partnership Application →</button>
+        <p style="font-size:13px;color:var(--gray);text-align:center;margin-top:14px">Our partnership team will review your application and contact you within 48 business hours.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════ ABOUT ═══ -->
+<div id="page-about" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>About Us</div>
+      <h1>About Abreams</h1>
+      <p>We are not just a study abroad consultant. We are China's premier University Admissions and Scholarship Partner Network.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+        <div>
+          <div class="section-label"><span></span>Our Story</div>
+          <h2 class="section-title">Connecting the World to China's Best Universities</h2>
+          <div class="gold-line"></div>
+          <p style="font-size:15px;color:var(--gray);margin:20px 0;line-height:1.8">Abreams was founded with a simple but powerful mission: to make quality education in China accessible to students worldwide, regardless of background or financial standing. We witnessed thousands of talented students miss life-changing opportunities simply because they lacked guidance.</p>
+          <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:24px">Today, we have evolved into a full-spectrum China education ecosystem – connecting students, educational consultants, and China's top universities through technology, expertise, and genuine partnership.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:20px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--blue)">5,000+</div><div style="font-size:13px;color:var(--gray)">Students Placed</div></div>
+            <div style="background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:20px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold)">300+</div><div style="font-size:13px;color:var(--gray)">Partner Consultants</div></div>
+            <div style="background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:20px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--blue)">200+</div><div style="font-size:13px;color:var(--gray)">Partner Universities</div></div>
+            <div style="background:var(--off);border:1px solid var(--gray2);border-radius:var(--radius);padding:20px;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold)">60+</div><div style="font-size:13px;color:var(--gray)">Countries Served</div></div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--navy),#1a3a6e);border-radius:20px;padding:44px;color:#fff">
+          <div style="margin-bottom:32px"><div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px">🎯 Our Mission</div><p style="font-size:15px;color:rgba(255,255,255,.8);line-height:1.7">To democratize access to world-class Chinese university education by providing transparent, expert, and compassionate guidance to every student who dreams of studying in China.</p></div>
+          <div style="margin-bottom:32px"><div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px">🔭 Our Vision</div><p style="font-size:15px;color:rgba(255,255,255,.8);line-height:1.7">To become the world's most trusted China education partner network, connecting 50,000 students and 1,000 consultants to China's top universities by 2030.</p></div>
+          <div><div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px">💎 Our Values</div><div style="display:flex;flex-direction:column;gap:8px"><div style="font-size:14px;color:rgba(255,255,255,.75)">✓ Transparency in all processes</div><div style="font-size:14px;color:rgba(255,255,255,.75)">✓ Student success above all else</div><div style="font-size:14px;color:rgba(255,255,255,.75)">✓ Partnership built on trust</div><div style="font-size:14px;color:rgba(255,255,255,.75)">✓ Continuous learning and improvement</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label"><span></span>Our Team</div>
+        <h2 class="section-title">Meet the Abreams Leadership Team</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,var(--blue),var(--blue2))">AD</div><h4>Dr. Abdullahi M.</h4><p>Founder & CEO</p><p style="font-size:12px;color:var(--blue);margin-top:4px">PhD, Tsinghua University</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,var(--gold),var(--gold2))">LW</div><h4>Li Wei</h4><p>Director of University Relations</p><p style="font-size:12px;color:var(--blue);margin-top:4px">15 Years in China Education</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#059669,#047857)">SO</div><h4>Sarah Okonkwo</h4><p>Head of Scholarship Guidance</p><p style="font-size:12px;color:var(--blue);margin-top:4px">MSc, Peking University</p></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#7C3AED,#5B21B6)">RK</div><h4>Raza Khan</h4><p>Head of Partner Network</p><p style="font-size:12px;color:var(--blue);margin-top:4px">300+ Consultants Onboarded</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-section">
+    <div class="container">
+      <h2>Start Your China Journey with Abreams</h2>
+      <p>Join thousands of students and consultants who trust Abreams for China education excellence.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn btn-gold" style="font-size:15px;padding:14px 32px" onclick="showApplyModal();return false">Apply Now</a>
+        <a href="#" class="btn btn-outline-white" style="font-size:15px;padding:14px 32px" onclick="showPage('contact');return false">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+<div id="page-contact" class="page">
+  <div class="inner-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Contact</div>
+      <h1>Get in Touch</h1>
+      <p>Our team of China education experts is ready to help you. Reach out via any channel – we typically respond within a few hours.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label"><span></span>Contact Details</div>
+          <h2 class="section-title">We're Here to Help</h2>
+          <div class="gold-line"></div>
+          <div class="contact-info" style="margin-top:32px">
+            <div class="contact-item"><div class="contact-item-icon green">💬</div><div><h4>WhatsApp (Fastest)</h4><p>Chat with our team directly on WhatsApp for the quickest response.</p><a href="https://wa.me/+8613228140365" style="color:var(--blue);font-weight:600;font-size:14px;margin-top:4px;display:inline-block">+86 (132) 2814-0365 →</a></div></div>
+            <div class="contact-item"><div class="contact-item-icon blue">✉️</div><div><h4>Email Us</h4><p>General inquiries, partnership applications, and document submissions.</p><a href="mailto:sizzlingroz@gmail.com" style="color:var(--blue);font-weight:600;font-size:14px;margin-top:4px;display:inline-block">sizzlingroz@gmail.com →</a></div></div>
+            <div class="contact-item"><div class="contact-item-icon gold">📍</div><div><h4>Office Location</h4><p>Abreams Education Centre<br/>No.1221, Unit 1, Building 6, Chengdu City<br/>China Operations: Sichuan, China</p></div></div>
+            <div class="contact-item"><div class="contact-item-icon blue">⏰</div><div><h4>Business Hours</h4><p>Monday – Friday: 8:00 AM – 8:00 PM (GMT+8)<br/>Saturday: 9:00 AM – 5:00 PM<br/>Sunday: Closed</p></div></div>
+          </div>
+          <div class="map-placeholder">
+            <span>🗺️</span>
+            <p style="font-weight:600;color:var(--navy)">Interactive Map</p>
+            <p>Google Maps integration placeholder</p>
+          </div>
+        </div>
+        <div style="background:var(--off);border:1px solid var(--gray2);border-radius:16px;padding:40px">
+          <h3 style="font-size:22px;color:var(--navy);margin-bottom:8px">Send Us a Message</h3>
+          <p style="font-size:14px;color:var(--gray);margin-bottom:28px">Whether you're a student, parent, or educational consultant – fill in the form and we'll get back to you within 24 hours.</p>
+          <div class="form-group"><label class="dark">Inquiry Type</label><select class="light"><option>Select type</option><option>Student Application</option><option>Scholarship Inquiry</option><option>CSCA Guidance</option><option>Consultant Partnership</option><option>University Information</option><option>Visa Support</option><option>Other</option></select></div>
+          <div class="form-grid">
+            <div class="form-group"><label class="dark">Full Name *</label><input class="light" type="text" placeholder="Your name"/></div>
+            <div class="form-group"><label class="dark">Email *</label><input class="light" type="email" placeholder="you@email.com"/></div>
+          </div>
+          <div class="form-group"><label class="dark">WhatsApp Number</label><input class="light" type="text" placeholder="+1 234 567 8900"/></div>
+          <div class="form-group"><label class="dark">Country</label><select class="light"><option>Select country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Ethiopia</option><option>Other</option></select></div>
+          <div class="form-group"><label class="dark">Message *</label><textarea class="light" rows="5" placeholder="Tell us how we can help you..."></textarea></div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px">Send Message →</button>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--gray2);text-align:center">
+            <p style="font-size:13px;color:var(--gray);margin-bottom:12px">Prefer to chat? Reach us instantly on WhatsApp</p>
+            <a href="https://wa.me/+8613228140365" class="btn btn-outline" style="background:#25D366;color:#fff;border-color:#25D366;width:100%;justify-content:center;padding:13px" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:4px">
+          <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div class="nav-logo-text">Abreams<span>.</span></div>
+        </div>
+        <p>China's premier University Admissions and Scholarship Partner Network. Connecting students, educational consultants, and Chinese universities worldwide.</p>
+        <div class="footer-socials" style="margin-top:20px">
+          <div class="footer-social">📘</div>
+          <div class="footer-social">📸</div>
+          <div class="footer-social">🐦</div>
+          <div class="footer-social">💼</div>
+          <div class="footer-social">▶️</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>For Students</h4>
+        <a href="#" onclick="showPage('study');return false">Study in China</a>
+        <a href="#" onclick="showPage('scholarships');return false">Scholarships</a>
+        <a href="#" onclick="showPage('universities');return false">Universities</a>
+        <a href="#" onclick="showPage('csca');return false">CSCA Guidance</a>
+        <a href="#">Visa Support</a>
+        <a href="#">Pre-Departure Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Consultants</h4>
+        <a href="#" onclick="showPage('partner');return false">Partner With Us</a>
+        <a href="#">Consultant Portal</a>
+        <a href="#">Training Resources</a>
+        <a href="#">Revenue Model</a>
+        <a href="#">Partner FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#" onclick="showPage('about');return false">About Us</a>
+        <a href="#" onclick="showPage('contact');return false">Contact</a>
+        <a href="#">Blog & Resources</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Abreams. All rights reserved. China University Admissions & Scholarship Partner Network.</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#" style="color:rgba(255,255,255,.35)">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,.35)">Terms</a>
+        <a href="#" style="color:rgba(255,255,255,.35)">Sitemap</a>
+      </div>
+    </div>
   </div>
 </footer>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-tooltip">💬 Chat with us on WhatsApp</div>
+  <a href="https://wa.me/+8613228140365" target="_blank" class="wa-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
 
-  document.querySelector('.form-submit').addEventListener('click', function() {
-    this.textContent = '✓ Enquiry Sent! We\'ll call you shortly.';
-    this.style.background = '#1a7a4a';
-    this.style.color = '#fff';
+<!-- APPLY MODAL -->
+<div id="applyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:16px;padding:40px;max-width:540px;width:100%;position:relative;max-height:90vh;overflow-y:auto">
+    <button onclick="closeApplyModal()" style="position:absolute;top:16px;right:16px;background:var(--off);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">✕</button>
+    <!-- FORM VIEW -->
+    <div id="applyFormView">
+      <div class="section-label" style="margin-bottom:16px"><span></span>Free Application</div>
+      <h3 style="font-size:22px;color:var(--navy);margin-bottom:6px">Start Your China Journey</h3>
+      <p style="font-size:14px;color:var(--gray);margin-bottom:24px">Complete the form below and an Abreams expert will contact you within 24 hours.</p>
+      <div class="form-grid">
+        <div class="form-group"><label class="dark">First Name *</label><input id="apply_firstName" class="light" type="text" placeholder="First name"/></div>
+        <div class="form-group"><label class="dark">Last Name *</label><input id="apply_lastName" class="light" type="text" placeholder="Last name"/></div>
+      </div>
+      <div class="form-group"><label class="dark">Email Address *</label><input id="apply_email" class="light" type="email" placeholder="you@email.com"/></div>
+      <div class="form-group"><label class="dark">WhatsApp Number *</label><input id="apply_whatsapp" class="light" type="text" placeholder="+1 234 567 8900"/></div>
+      <div class="form-grid">
+        <div class="form-group"><label class="dark">Desired Program Level</label><select id="apply_programLevel" class="light"><option value="">Select level</option><option>Bachelor's</option><option>Master's</option><option>PhD</option></select></div>
+        <div class="form-group"><label class="dark">Field of Study</label><input id="apply_fieldOfStudy" class="light" type="text" placeholder="e.g. Medicine"/></div>
+      </div>
+      <div class="form-group"><label class="dark">Are you interested in scholarships?</label><select id="apply_scholarshipNeed" class="light"><option>Yes, I need a scholarship</option><option>Partial scholarship is fine</option><option>I will self-fund</option></select></div>
+      <div id="applyError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#b91c1c;border-radius:8px;padding:10px 14px;font-size:13px;margin-top:12px"></div>
+      <button id="applySubmitBtn" onclick="submitApplyForm()" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;margin-top:12px">Submit Application →</button>
+      <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px">🔒 Your information is secure and never shared with third parties.</p>
+    </div>
+    <!-- SUCCESS VIEW -->
+    <div id="applySuccessView" style="display:none;text-align:center;padding:20px 0">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,#059669,#047857);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px">✓</div>
+      <h3 style="font-size:22px;color:var(--navy);margin-bottom:10px">Application Received!</h3>
+      <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px">Thank you! Your details have been saved. An Abreams expert will contact you on WhatsApp or email within <strong>24 hours</strong>.</p>
+      <div style="background:var(--off);border-radius:12px;padding:16px;margin-bottom:24px">
+        <p style="font-size:13px;color:var(--gray)">Want a faster response? Chat with us now:</p>
+        <a href="https://wa.me/+8613228140365" target="_blank" class="btn" style="background:#25D366;color:#fff;margin-top:10px;width:100%;justify-content:center;padding:11px;display:flex">💬 Open WhatsApp Chat</a>
+      </div>
+      <button onclick="closeApplyModal()" style="font-size:14px;color:var(--blue);background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif">Close this window</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  var el=document.getElementById('page-'+id);
+  if(el){el.classList.add('active');}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+var GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbw7p30e8qPduhoIAy4PyiU3d9tMsDNpNBEmtaLFJmrvN67Vpib--DAV69LJLPMnnfjshQ/exec';
+
+function showApplyModal(){
+  document.getElementById('applyModal').style.display='flex';
+  document.getElementById('applyFormView').style.display='block';
+  document.getElementById('applySuccessView').style.display='none';
+  document.getElementById('applyError').style.display='none';
+}
+function closeApplyModal(){
+  document.getElementById('applyModal').style.display='none';
+}
+document.getElementById('applyModal').addEventListener('click',function(e){
+  if(e.target===this)closeApplyModal();
+});
+function submitApplyForm(){
+  var firstName=document.getElementById('apply_firstName').value.trim();
+  var lastName=document.getElementById('apply_lastName').value.trim();
+  var email=document.getElementById('apply_email').value.trim();
+  var whatsapp=document.getElementById('apply_whatsapp').value.trim();
+  var program=document.getElementById('apply_programLevel').value;
+  var field=document.getElementById('apply_fieldOfStudy').value.trim();
+  var scholarship=document.getElementById('apply_scholarshipNeed').value;
+  var errEl=document.getElementById('applyError');
+  if(!firstName||!lastName){showApplyError('Please enter your full name.');return;}
+  if(!email||!email.includes('@')){showApplyError('Please enter a valid email address.');return;}
+  if(!whatsapp){showApplyError('Please enter your WhatsApp number so we can reach you.');return;}
+  var btn=document.getElementById('applySubmitBtn');
+  btn.disabled=true;btn.textContent='Submitting...';errEl.style.display='none';
+  var payload={firstName:firstName,lastName:lastName,email:email,whatsapp:whatsapp,
+    programLevel:program||'Not specified',fieldOfStudy:field||'Not specified',scholarshipNeed:scholarship};
+  fetch(GOOGLE_SHEET_URL,{method:'POST',mode:'no-cors',
+    headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+  .then(function(){
+    document.getElementById('applyFormView').style.display='none';
+    document.getElementById('applySuccessView').style.display='block';
+    ['apply_firstName','apply_lastName','apply_email','apply_whatsapp','apply_fieldOfStudy'].forEach(function(id){
+      document.getElementById(id).value='';
+    });
+    btn.disabled=false;btn.textContent='Submit Application →';
+  })
+  .catch(function(){
+    showApplyError('Something went wrong. Please try again or contact us on WhatsApp.');
+    btn.disabled=false;btn.textContent='Submit Application →';
   });
+}
+function showApplyError(msg){
+  var el=document.getElementById('applyError');
+  el.textContent='⚠️ '+msg;el.style.display='block';
+}
+function toggleMobileMenu(){
+  var m=document.getElementById('mobileMenu');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').style.display='none';
+}
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('mainNav');
+  nav.classList.toggle('scrolled',window.scrollY>30);
+});
+function toggleFaq(el){
+  var item=el.parentElement;
+  item.classList.toggle('open');
+}
+function filterPrograms(cat,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.program-card').forEach(function(card){
+    if(cat==='all'||card.dataset.cat.indexOf(cat)>-1){
+      card.style.display='';
+    }else{
+      card.style.display='none';
+    }
+  });
+}
+var activeUniTag='';
+function filterUnis(){
+  var search=document.getElementById('uniSearch').value.toLowerCase();
+  var cat=document.getElementById('uniCat').value;
+  document.querySelectorAll('#uniGrid .uni-card').forEach(function(c){
+    var name=c.dataset.name.toLowerCase();
+    var cardCat=c.dataset.cat||'';
+    var tags=c.dataset.tags||'';
+    var matchSearch=!search||name.indexOf(search)>-1;
+    var matchCat=!cat||cardCat.indexOf(cat)>-1;
+    var matchTag=!activeUniTag||tags.indexOf(activeUniTag)>-1;
+    c.style.display=(matchSearch&&matchCat&&matchTag)?'':'none';
+  });
+}
+function filterUniTag(tag,el){
+  activeUniTag=tag;
+  document.querySelectorAll('.filter-tag').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  filterUnis();
+}
+// Hide wa tooltip after 4s
+setTimeout(function(){
+  var t=document.querySelector('.wa-tooltip');
+  if(t)t.style.display='none';
+},4000);
 </script>
 </body>
 </html>
