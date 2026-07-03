@@ -756,17 +756,14 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         </div>
         <div class="partner-form">
           <h3>Quick Partner Inquiry</h3>
-          <div id="partnerQuickMsg" style="display:none;padding:12px 14px;border-radius:8px;font-size:13px;font-weight:500;margin-bottom:16px;text-align:center"></div>
-          <form id="partnerQuickForm">
           <div class="form-grid">
-            <div class="form-group"><label>First Name</label><input class="dark-field" type="text" name="First Name" placeholder="John" required/></div>
-            <div class="form-group"><label>Last Name</label><input class="dark-field" type="text" name="Last Name" placeholder="Doe" required/></div>
+            <div class="form-group"><label>First Name</label><input class="dark-field" type="text" placeholder="John"/></div>
+            <div class="form-group"><label>Last Name</label><input class="dark-field" type="text" placeholder="Doe"/></div>
           </div>
-          <div class="form-group"><label>Email Address</label><input class="dark-field" type="email" name="Email" placeholder="you@consultancy.com" required/></div>
-          <div class="form-group"><label>Country</label><select class="dark-field" name="Country"><option value="">Select your country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Other</option></select></div>
-          <div class="form-group"><label>Number of Students per Year</label><select class="dark-field" name="StudentsPerYear"><option value="">Select range</option><option>1–10</option><option>11–50</option><option>51–100</option><option>100+</option></select></div>
-          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;font-size:15px;padding:13px" id="partnerQuickBtn">Submit Partner Application</button>
-          </form>
+          <div class="form-group"><label>Email Address</label><input class="dark-field" type="email" placeholder="you@consultancy.com"/></div>
+          <div class="form-group"><label>Country</label><select class="dark-field"><option>Select your country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Other</option></select></div>
+          <div class="form-group"><label>Number of Students per Year</label><select class="dark-field"><option>Select range</option><option>1–10</option><option>11–50</option><option>51–100</option><option>100+</option></select></div>
+          <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;font-size:15px;padding:13px">Submit Partner Application</button>
         </div>
       </div>
     </div>
@@ -3532,14 +3529,14 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <script>
-// Google Apps Script Web App URL — receives partner form submissions into a Google Sheet
+// Google Apps Script Web App URL — receives Partner With Us submissions into a Google Sheet
 const PARTNER_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxbnvAjgnIvK_qLFZkuwT5pD2PCygqGcZe40PE1Nsf8KL_VA9Xh-JY6lk8aCAlTPs0zw/exec";
 
-function wirePartnerForm(formId, btnId, msgId, successText){
-  var form = document.getElementById(formId);
+document.addEventListener('DOMContentLoaded', function(){
+  var form = document.getElementById('partnerFullForm');
   if(!form) return;
-  var btn = document.getElementById(btnId);
-  var msg = document.getElementById(msgId);
+  var btn = document.getElementById('partnerFullBtn');
+  var msg = document.getElementById('partnerFullMsg');
   var btnLabel = btn.textContent;
 
   form.addEventListener('submit', function(e){
@@ -3551,20 +3548,28 @@ function wirePartnerForm(formId, btnId, msgId, successText){
     var data = new FormData(form);
 
     fetch(PARTNER_SCRIPT_URL, { method: 'POST', body: data })
-      .then(function(res){ return res.json(); })
-      .then(function(res){
+      .then(function(res){ return res.text(); })
+      .then(function(text){
+        var res;
+        try {
+          res = JSON.parse(text);
+        } catch(parseErr){
+          console.error('Partner form: non-JSON response from script:', text);
+          throw new Error('The form endpoint did not return valid data (likely a deployment or permissions issue).');
+        }
         if(res.result === 'success'){
           msg.style.display = 'block';
           msg.style.background = 'rgba(5,150,105,.1)';
           msg.style.color = '#047857';
           msg.style.border = '1px solid rgba(5,150,105,.25)';
-          msg.textContent = successText;
+          msg.textContent = "Thank you! Your application has been submitted. Our partnership team will reach out within 48 business hours.";
           form.reset();
         } else {
           throw new Error(res.error || 'Unknown error');
         }
       })
-      .catch(function(){
+      .catch(function(err){
+        console.error('Partner form submit error:', err);
         msg.style.display = 'block';
         msg.style.background = 'rgba(220,38,38,.08)';
         msg.style.color = '#B91C1C';
@@ -3576,11 +3581,6 @@ function wirePartnerForm(formId, btnId, msgId, successText){
         btn.textContent = btnLabel;
       });
   });
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-  wirePartnerForm('partnerQuickForm', 'partnerQuickBtn', 'partnerQuickMsg', "Thanks! We've received your inquiry and will be in touch soon.");
-  wirePartnerForm('partnerFullForm', 'partnerFullBtn', 'partnerFullMsg', "Thank you! Your application has been submitted. Our partnership team will reach out within 48 business hours.");
 });
 </script>
 
