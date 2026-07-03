@@ -756,14 +756,17 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         </div>
         <div class="partner-form">
           <h3>Quick Partner Inquiry</h3>
+          <div id="partnerQuickMsg" style="display:none;padding:12px 14px;border-radius:8px;font-size:13px;font-weight:500;margin-bottom:16px;text-align:center"></div>
+          <form id="partnerQuickForm">
           <div class="form-grid">
-            <div class="form-group"><label>First Name</label><input class="dark-field" type="text" placeholder="John"/></div>
-            <div class="form-group"><label>Last Name</label><input class="dark-field" type="text" placeholder="Doe"/></div>
+            <div class="form-group"><label>First Name</label><input class="dark-field" type="text" name="First Name" placeholder="John" required/></div>
+            <div class="form-group"><label>Last Name</label><input class="dark-field" type="text" name="Last Name" placeholder="Doe" required/></div>
           </div>
-          <div class="form-group"><label>Email Address</label><input class="dark-field" type="email" placeholder="you@consultancy.com"/></div>
-          <div class="form-group"><label>Country</label><select class="dark-field"><option>Select your country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Other</option></select></div>
-          <div class="form-group"><label>Number of Students per Year</label><select class="dark-field"><option>Select range</option><option>1–10</option><option>11–50</option><option>51–100</option><option>100+</option></select></div>
-          <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;font-size:15px;padding:13px">Submit Partner Application</button>
+          <div class="form-group"><label>Email Address</label><input class="dark-field" type="email" name="Email" placeholder="you@consultancy.com" required/></div>
+          <div class="form-group"><label>Country</label><select class="dark-field" name="Country"><option value="">Select your country</option><option>Nigeria</option><option>Kenya</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ghana</option><option>Other</option></select></div>
+          <div class="form-group"><label>Number of Students per Year</label><select class="dark-field" name="StudentsPerYear"><option value="">Select range</option><option>1–10</option><option>11–50</option><option>51–100</option><option>100+</option></select></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;font-size:15px;padding:13px" id="partnerQuickBtn">Submit Partner Application</button>
+          </form>
         </div>
       </div>
     </div>
@@ -2836,41 +2839,24 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         <div class="gold-line center"></div>
       </div>
       <div style="background:var(--off);border:1px solid var(--gray2);border-radius:16px;padding:44px;margin-top:40px">
-
-        <!-- FORM VIEW -->
-        <div id="partnerFormView">
-          <div class="form-grid">
-            <div class="form-group"><label class="dark">First Name *</label><input id="p_firstName" class="light" type="text" placeholder="First name"/></div>
-            <div class="form-group"><label class="dark">Last Name *</label><input id="p_lastName" class="light" type="text" placeholder="Last name"/></div>
-            <div class="form-group"><label class="dark">Email Address *</label><input id="p_email" class="light" type="email" placeholder="you@agency.com"/></div>
-            <div class="form-group"><label class="dark">WhatsApp Number *</label><input id="p_whatsapp" class="light" type="text" placeholder="+1 234 567 8900"/></div>
-            <div class="form-group"><label class="dark">Country *</label><select id="p_country" class="light"><option value="">Select country</option><option>Nigeria</option><option>Kenya</option><option>Ghana</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ethiopia</option><option>Indonesia</option><option>Egypt</option><option>Sudan</option><option>Uganda</option><option>Tanzania</option><option>Other</option></select></div>
-            <div class="form-group"><label class="dark">City</label><input id="p_city" class="light" type="text" placeholder="Your city"/></div>
-            <div class="form-group"><label class="dark">Agency / Company Name</label><input id="p_agency" class="light" type="text" placeholder="Your agency name"/></div>
-            <div class="form-group"><label class="dark">Years in Education Consulting</label><select id="p_experience" class="light"><option value="">Select experience</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></div>
-          </div>
-          <div class="form-group"><label class="dark">Students Sent to China per Year</label><select id="p_students" class="light"><option value="">Select range</option><option>0 (just starting)</option><option>1–5</option><option>6–20</option><option>21–50</option><option>50+</option></select></div>
-          <div class="form-group"><label class="dark">How did you hear about Abreams?</label><select id="p_source" class="light"><option value="">Select</option><option>Social Media</option><option>Referred by another consultant</option><option>Google Search</option><option>WhatsApp Group</option><option>Conference/Event</option><option>Other</option></select></div>
-          <div class="form-group"><label class="dark">Tell us about your business and goals</label><textarea id="p_message" class="light" rows="4" placeholder="Describe your agency, target markets, and what you hope to achieve by partnering with Abreams..."></textarea></div>
-          <div id="partnerError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#b91c1c;border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:14px"></div>
-          <button id="partnerSubmitBtn" onclick="submitPartnerForm()" class="btn btn-gold" style="width:100%;justify-content:center;padding:14px;font-size:16px">Submit Partnership Application →</button>
-          <p style="font-size:13px;color:var(--gray);text-align:center;margin-top:14px">Our partnership team will review your application and contact you within 48 business hours.</p>
+        <div id="partnerFullMsg" style="display:none;padding:14px 16px;border-radius:10px;font-size:14px;font-weight:500;margin-bottom:20px;text-align:center"></div>
+        <form id="partnerFullForm">
+        <div class="form-grid">
+          <div class="form-group"><label class="dark">First Name *</label><input class="light" type="text" name="First Name" placeholder="First name" required/></div>
+          <div class="form-group"><label class="dark">Last Name *</label><input class="light" type="text" name="Last Name" placeholder="Last name" required/></div>
+          <div class="form-group"><label class="dark">Email Address *</label><input class="light" type="email" name="Email" placeholder="you@agency.com" required/></div>
+          <div class="form-group"><label class="dark">WhatsApp Number *</label><input class="light" type="text" name="WhatsApp" placeholder="+1 234 567 8900" required/></div>
+          <div class="form-group"><label class="dark">Country *</label><select class="light" name="Country" required><option value="">Select country</option><option>Nigeria</option><option>Kenya</option><option>Ghana</option><option>Pakistan</option><option>Bangladesh</option><option>India</option><option>Ethiopia</option><option>Other</option></select></div>
+          <div class="form-group"><label class="dark">City</label><input class="light" type="text" name="City" placeholder="Your city"/></div>
+          <div class="form-group"><label class="dark">Agency / Company Name</label><input class="light" type="text" name="Agency" placeholder="Your agency name"/></div>
+          <div class="form-group"><label class="dark">Years in Education Consulting</label><select class="light" name="Experience"><option value="">Select experience</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select></div>
         </div>
-
-        <!-- SUCCESS VIEW -->
-        <div id="partnerSuccessView" style="display:none;text-align:center;padding:32px 0">
-          <div style="width:80px;height:80px;background:linear-gradient(135deg,#059669,#047857);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:36px">✓</div>
-          <h3 style="font-size:24px;color:var(--navy);margin-bottom:12px">Application Received!</h3>
-          <p style="font-size:15px;color:var(--gray);line-height:1.7;max-width:480px;margin:0 auto 28px">Thank you for your interest in partnering with Abreams! Our partnership team will review your application and contact you within <strong>48 business hours</strong>.</p>
-          <div style="background:#fff;border:1px solid var(--gray2);border-radius:12px;padding:20px;margin-bottom:24px;max-width:400px;margin:0 auto 24px">
-            <p style="font-size:13px;color:var(--gray);margin-bottom:12px">Want a faster response? Chat with us directly:</p>
-            <a href="https://wa.me/918507805776" target="_blank" class="btn" style="background:#25D366;color:#fff;width:100%;justify-content:center;padding:12px;display:flex;gap:8px;text-decoration:none;border-radius:8px">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-
+        <div class="form-group"><label class="dark">Students Sent to China per Year</label><select class="light" name="StudentsPerYear"><option value="">Select range</option><option>0 (just starting)</option><option>1–5</option><option>6–20</option><option>21–50</option><option>50+</option></select></div>
+        <div class="form-group"><label class="dark">How did you hear about Abreams?</label><select class="light" name="Source"><option value="">Select</option><option>Social Media</option><option>Referred by another consultant</option><option>Google Search</option><option>WhatsApp Group</option><option>Conference/Event</option><option>Other</option></select></div>
+        <div class="form-group"><label class="dark">Tell us about your business and goals</label><textarea class="light" name="Message" rows="4" placeholder="Describe your agency, target markets, and what you hope to achieve by partnering with Abreams..."></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:14px;font-size:16px" id="partnerFullBtn">Submit Partnership Application →</button>
+        <p style="font-size:13px;color:var(--gray);text-align:center;margin-top:14px">Our partnership team will review your application and contact you within 48 business hours.</p>
+        </form>
       </div>
     </div>
   </section>
@@ -3542,6 +3528,59 @@ document.addEventListener('DOMContentLoaded', function(){
       openUniModal(name, meta);
     });
   });
+});
+</script>
+
+<script>
+// Google Apps Script Web App URL — receives partner form submissions into a Google Sheet
+const PARTNER_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxbnvAjgnIvK_qLFZkuwT5pD2PCygqGcZe40PE1Nsf8KL_VA9Xh-JY6lk8aCAlTPs0zw/exec";
+
+function wirePartnerForm(formId, btnId, msgId, successText){
+  var form = document.getElementById(formId);
+  if(!form) return;
+  var btn = document.getElementById(btnId);
+  var msg = document.getElementById(msgId);
+  var btnLabel = btn.textContent;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    msg.style.display = 'none';
+
+    var data = new FormData(form);
+
+    fetch(PARTNER_SCRIPT_URL, { method: 'POST', body: data })
+      .then(function(res){ return res.json(); })
+      .then(function(res){
+        if(res.result === 'success'){
+          msg.style.display = 'block';
+          msg.style.background = 'rgba(5,150,105,.1)';
+          msg.style.color = '#047857';
+          msg.style.border = '1px solid rgba(5,150,105,.25)';
+          msg.textContent = successText;
+          form.reset();
+        } else {
+          throw new Error(res.error || 'Unknown error');
+        }
+      })
+      .catch(function(){
+        msg.style.display = 'block';
+        msg.style.background = 'rgba(220,38,38,.08)';
+        msg.style.color = '#B91C1C';
+        msg.style.border = '1px solid rgba(220,38,38,.2)';
+        msg.textContent = "Something went wrong submitting your application. Please try again or email us directly.";
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.textContent = btnLabel;
+      });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  wirePartnerForm('partnerQuickForm', 'partnerQuickBtn', 'partnerQuickMsg', "Thanks! We've received your inquiry and will be in touch soon.");
+  wirePartnerForm('partnerFullForm', 'partnerFullBtn', 'partnerFullMsg', "Thank you! Your application has been submitted. Our partnership team will reach out within 48 business hours.");
 });
 </script>
 
