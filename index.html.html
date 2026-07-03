@@ -2837,6 +2837,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       </div>
       <div style="background:var(--off);border:1px solid var(--gray2);border-radius:16px;padding:44px;margin-top:40px">
         <div id="partnerFullMsg" style="display:none;padding:14px 16px;border-radius:10px;font-size:14px;font-weight:500;margin-bottom:20px;text-align:center"></div>
+        <iframe name="partner_hidden_iframe" id="partner_hidden_iframe" style="display:none"></iframe>
         <form id="partnerFullForm">
         <div class="form-grid">
           <div class="form-group"><label class="dark">First Name *</label><input class="light" type="text" name="First Name" placeholder="First name" required/></div>
@@ -3537,49 +3538,37 @@ document.addEventListener('DOMContentLoaded', function(){
   if(!form) return;
   var btn = document.getElementById('partnerFullBtn');
   var msg = document.getElementById('partnerFullMsg');
+  var iframe = document.getElementById('partner_hidden_iframe');
   var btnLabel = btn.textContent;
+  var submitting = false;
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
+  // Point the form straight at the Apps Script URL, targeting the hidden iframe.
+  // This is a real browser form POST, not fetch/XHR — it is not subject to
+  // the CORS response-reading restrictions that block fetch() with Apps Script.
+  form.setAttribute('action', PARTNER_SCRIPT_URL);
+  form.setAttribute('method', 'POST');
+  form.setAttribute('target', 'partner_hidden_iframe');
+
+  // Fires once the hidden iframe finishes loading the script's response.
+  iframe.addEventListener('load', function(){
+    if(!submitting) return; // ignore the iframe's initial blank load
+    submitting = false;
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+    msg.style.display = 'block';
+    msg.style.background = 'rgba(5,150,105,.1)';
+    msg.style.color = '#047857';
+    msg.style.border = '1px solid rgba(5,150,105,.25)';
+    msg.textContent = "Thank you! Your application has been submitted. Our partnership team will reach out within 48 business hours.";
+    form.reset();
+  });
+
+  form.addEventListener('submit', function(){
+    // Let the browser submit normally to the hidden iframe — do NOT preventDefault.
+    submitting = true;
     btn.disabled = true;
     btn.textContent = 'Submitting...';
     msg.style.display = 'none';
-
-    var data = new FormData(form);
-
-    fetch(PARTNER_SCRIPT_URL, { method: 'POST', body: data })
-      .then(function(res){ return res.text(); })
-      .then(function(text){
-        var res;
-        try {
-          res = JSON.parse(text);
-        } catch(parseErr){
-          console.error('Partner form: non-JSON response from script:', text);
-          throw new Error('The form endpoint did not return valid data (likely a deployment or permissions issue).');
-        }
-        if(res.result === 'success'){
-          msg.style.display = 'block';
-          msg.style.background = 'rgba(5,150,105,.1)';
-          msg.style.color = '#047857';
-          msg.style.border = '1px solid rgba(5,150,105,.25)';
-          msg.textContent = "Thank you! Your application has been submitted. Our partnership team will reach out within 48 business hours.";
-          form.reset();
-        } else {
-          throw new Error(res.error || 'Unknown error');
-        }
-      })
-      .catch(function(err){
-        console.error('Partner form submit error:', err);
-        msg.style.display = 'block';
-        msg.style.background = 'rgba(220,38,38,.08)';
-        msg.style.color = '#B91C1C';
-        msg.style.border = '1px solid rgba(220,38,38,.2)';
-        msg.textContent = "Something went wrong submitting your application. Please try again or email us directly.";
-      })
-      .finally(function(){
-        btn.disabled = false;
-        btn.textContent = btnLabel;
-      });
   });
 });
 </script>
