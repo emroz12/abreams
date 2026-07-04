@@ -3283,7 +3283,7 @@ setTimeout(function(){
 <div class="uni-modal-overlay" id="uniModal" onclick="closeUniModal(event)">
   <div class="uni-modal">
     <div class="uni-modal-header">
-      <button class="uni-modal-close" onclick="closeUniModal()">✕</button>
+      <button class="uni-modal-close" onclick="document.getElementById('uniModal').classList.remove('open');document.body.style.overflow=''">✕</button>
       <div class="uni-modal-logo-row">
         <div class="uni-modal-logo" id="umLogo"></div>
         <div>
@@ -3498,17 +3498,33 @@ function openUniModal(name, meta) {
   pills('umDuration',  d.duration,   'gold');
   pills('umScholarship',d.scholarship,'green');
 
-  document.getElementById('uniModal').classList.add('open');
-  document.body.style.overflow='hidden';
+  var modalEl = document.getElementById('uniModal');
+  if(modalEl){
+    modalEl.classList.add('open');
+    document.body.style.overflow='hidden';
+  } else {
+    console.error('uniModal element not found');
+  }
 }
 
 function closeUniModal(e){
-  if(e && e.target !== document.getElementById('uniModal')) return;
+  // If called from overlay click, only close if clicking the overlay itself (not modal content)
+  if(e && e.target && e.target !== document.getElementById('uniModal')) return;
   document.getElementById('uniModal').classList.remove('open');
   document.body.style.overflow='';
 }
 
 // Attach click to every uni-row
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){
+    var m=document.getElementById('uniModal');
+    if(m && m.classList.contains('open')){
+      m.classList.remove('open');
+      document.body.style.overflow='';
+    }
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function(){
   // Set correct university count on page load
   var total = document.querySelectorAll('#uniGrid .uni-row, #uniListWrap .uni-row').length;
