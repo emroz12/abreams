@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta name="theme-color" content="#0A1628"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Abreams – China University Admissions & Scholarship Partner Network</title>
 <meta name="description" content="Abreams connects international students with China's top universities and scholarships. Admissions, CSCA guidance, visa support, and consultant partnerships – all in one place."/>
@@ -11,6 +11,10 @@
 <meta property="og:description" content="China University Admissions and Scholarship Partner Network connecting students, educational consultants, and Chinese universities."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://logo.clearbit.com">
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -473,7 +477,8 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 <body>
 
 <!-- NAV -->
-<nav id="mainNav">
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--blue);color:#fff;padding:8px 16px;z-index:9999;border-radius:0 0 8px 0;font-weight:600;text-decoration:none;transition:top .2s" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">
       <div class="nav-logo-icon">
@@ -483,7 +488,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
     </div>
     <div class="nav-links">
       <a href="#" onclick="showPage('home');return false">Home</a>
-      <div class="nav-dropdown" id="studyDropdown">
+      <div class="nav-dropdown" id="studyDropdown" role="navigation" aria-label="Study in China submenu">
         <a href="#" onclick="showPage('overview');return false" style="padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;color:var(--navy2)">
           Study in China
           <svg class="dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -521,14 +526,14 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       <a href="#" class="btn btn-outline" onclick="showPage('contact');return false">Contact</a>
       <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply Now</a>
     </div>
-    <div class="hamburger" onclick="toggleMobileMenu()" id="hamburger">
+    <div class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-controls="mobileMenu" aria-expanded="false" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="menu" aria-label="Mobile navigation">
   <a href="#" onclick="showPage('home');closeMobileMenu();return false">🏠 Home</a>
   <div>
     <div class="mob-dd-toggle" onclick="toggleMobStudyDD(this)">
@@ -552,7 +557,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 </div>
 
 <!-- ═══════════════════════════════════════════ HOME PAGE ═══ -->
-<div id="page-home" class="page active">
+<main id="main-content"><div id="page-home" class="page active">
 
   <!-- HERO -->
   <section class="hero">
@@ -1559,12 +1564,12 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <!-- Search -->
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:8px">Search University</label>
-            <input type="text" id="uniSearch" oninput="filterUnis()" placeholder="🔍  e.g. Peking, Tsinghua…" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;box-sizing:border-box" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--gray2)'"/>
+            <input type="text" id="uniSearch" aria-label="Search universities" oninput="filterUnis()" placeholder="🔍  e.g. Peking, Tsinghua…" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;box-sizing:border-box" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--gray2)'"/>
           </div>
           <!-- Level of Study -->
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:8px">Level of Study</label>
-            <select id="uniLevel" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
+            <select id="uniLevel" aria-label="Filter by level of study" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
               <option value="">All Levels</option>
               <option value="bachelor">🎓 Bachelor</option>
               <option value="master">📚 Master</option>
@@ -1575,7 +1580,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <!-- Stream -->
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:8px">Stream</label>
-            <select id="uniStream" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
+            <select id="uniStream" aria-label="Filter by stream" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
               <option value="">All Streams</option>
               <option value="engineering">⚙️ Engineering</option>
               <option value="medicine">⚕️ Medicine / MBBS</option>
@@ -1589,7 +1594,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <!-- Duration -->
           <div>
             <label style="font-size:12px;font-weight:600;color:var(--gray);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:8px">Duration</label>
-            <select id="uniDuration" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
+            <select id="uniDuration" aria-label="Filter by duration" onchange="filterUnis()" style="width:100%;padding:10px 14px;border:1px solid var(--gray2);border-radius:10px;font-size:14px;color:var(--navy);outline:none;background:#fff;cursor:pointer">
               <option value="">Any Duration</option>
               <option value="4">4 Years</option>
               <option value="5">5 Years</option>
@@ -1602,7 +1607,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       </div>
       <!-- Results count -->
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-        <div id="uniCount" style="font-size:14px;color:var(--gray)">Showing <strong id="uniCountNum" style="color:var(--navy)">all</strong> universities</div>
+        <div id="uniCount" aria-live="polite" aria-atomic="true" style="font-size:14px;color:var(--gray)">Showing <strong id="uniCountNum" style="color:var(--navy)">all</strong> universities</div>
 
       </div>
       <!-- QS RANKED LIST -->
@@ -2116,7 +2121,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         <!-- ── MBA UNIVERSITIES ── -->
         <div class="uni-row" data-name="Ningbo University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">34</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/nbu.edu.cn" alt="NBU" onerror="this.parentNode.textContent='NBU'"></div><div><div class="uni-row-name" onclick="openUniModal('Ningbo University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Ningbo University</div><div class="uni-row-meta">📍 Ningbo, Zhejiang</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/nbu.edu.cn" alt="NBU" onerror="this.parentNode.textContent='NBU'"></div><div><div class="uni-row-name" onclick="openUniModal('Ningbo University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Ningbo University</div><div class="uni-row-meta">📍 Ningbo, Zhejiang</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2125,7 +2130,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Zhejiang Normal University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">35</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/zjnu.edu.cn" alt="ZJNU" onerror="this.parentNode.textContent='ZJNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Zhejiang Normal University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Zhejiang Normal University</div><div class="uni-row-meta">📍 Jinhua, Zhejiang</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/zjnu.edu.cn" alt="ZJNU" onerror="this.parentNode.textContent='ZJNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Zhejiang Normal University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Zhejiang Normal University</div><div class="uni-row-meta">📍 Jinhua, Zhejiang</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2134,7 +2139,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Chongqing University" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">36</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/cqu.edu.cn" alt="CQU" onerror="this.parentNode.textContent='CQU'"></div><div><div class="uni-row-name" onclick="openUniModal('Chongqing University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Chongqing University</div><div class="uni-row-meta">📍 Chongqing · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/cqu.edu.cn" alt="CQU" onerror="this.parentNode.textContent='CQU'"></div><div><div class="uni-row-name" onclick="openUniModal('Chongqing University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Chongqing University</div><div class="uni-row-meta">📍 Chongqing · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2143,7 +2148,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Tianjin University" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">37</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/tju.edu.cn" alt="TJU" onerror="this.parentNode.textContent='TJU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin University</div><div class="uni-row-meta">📍 Tianjin · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/tju.edu.cn" alt="TJU" onerror="this.parentNode.textContent='TJU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin University</div><div class="uni-row-meta">📍 Tianjin · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2152,7 +2157,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Shanghai University of Finance and Economics" data-tags="english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">38</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/sufe.edu.cn" alt="SUFE" onerror="this.parentNode.textContent='SUFE'"></div><div><div class="uni-row-name" onclick="openUniModal('Shanghai Univ. of Finance & Economics',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Shanghai Univ. of Finance & Economics</div><div class="uni-row-meta">📍 Shanghai</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/sufe.edu.cn" alt="SUFE" onerror="this.parentNode.textContent='SUFE'"></div><div><div class="uni-row-name" onclick="openUniModal('Shanghai Univ. of Finance & Economics',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Shanghai Univ. of Finance & Economics</div><div class="uni-row-meta">📍 Shanghai</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Finance</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2161,7 +2166,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Tongji University" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">39</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/tongji.edu.cn" alt="TJU" onerror="this.parentNode.textContent='TJU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tongji University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tongji University</div><div class="uni-row-meta">📍 Shanghai · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/tongji.edu.cn" alt="TJU" onerror="this.parentNode.textContent='TJU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tongji University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tongji University</div><div class="uni-row-meta">📍 Shanghai · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Engineering</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2170,7 +2175,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Shanghai Jiao Tong University" data-tags="top scholarship english" data-level="bachelor master phd" data-stream="business engineering medicine" data-duration="2 4">
           <div class="uni-row-rank">40</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/sjtu.edu.cn" alt="SJTU" onerror="this.parentNode.textContent='SJTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Shanghai Jiao Tong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Shanghai Jiao Tong University</div><div class="uni-row-meta">📍 Shanghai · QS #51 · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/sjtu.edu.cn" alt="SJTU" onerror="this.parentNode.textContent='SJTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Shanghai Jiao Tong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Shanghai Jiao Tong University</div><div class="uni-row-meta">📍 Shanghai · QS #51 · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span><span class="uri-pill blue">Master</span><span class="uri-pill blue">PhD</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Engineering</span><span class="uri-pill gray">Medicine</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2–4 Yrs</span></div>
@@ -2179,7 +2184,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Dalian Maritime University" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">41</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/dlmu.edu.cn" alt="DMU" onerror="this.parentNode.textContent='DMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Dalian Maritime University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Dalian Maritime University</div><div class="uni-row-meta">📍 Dalian, Liaoning</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/dlmu.edu.cn" alt="DMU" onerror="this.parentNode.textContent='DMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Dalian Maritime University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Dalian Maritime University</div><div class="uni-row-meta">📍 Dalian, Liaoning</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2188,7 +2193,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Central China Normal University" data-tags="english" data-level="master" data-stream="business arts" data-duration="2">
           <div class="uni-row-rank">42</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/ccnu.edu.cn" alt="CCNU" onerror="this.parentNode.textContent='CCNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Central China Normal University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Central China Normal University</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/ccnu.edu.cn" alt="CCNU" onerror="this.parentNode.textContent='CCNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Central China Normal University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Central China Normal University</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2197,7 +2202,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Wuhan Textile University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">43</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/wtu.edu.cn" alt="WTU" onerror="this.parentNode.textContent='WTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Wuhan Textile University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Wuhan Textile University</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/wtu.edu.cn" alt="WTU" onerror="this.parentNode.textContent='WTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Wuhan Textile University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Wuhan Textile University</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2206,7 +2211,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Zhongnan University of Economics and Law" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">44</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/zuel.edu.cn" alt="ZUEL" onerror="this.parentNode.textContent='ZUEL'"></div><div><div class="uni-row-name" onclick="openUniModal('Zhongnan Univ. of Economics & Law',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Zhongnan Univ. of Economics & Law</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/zuel.edu.cn" alt="ZUEL" onerror="this.parentNode.textContent='ZUEL'"></div><div><div class="uni-row-name" onclick="openUniModal('Zhongnan Univ. of Economics & Law',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Zhongnan Univ. of Economics & Law</div><div class="uni-row-meta">📍 Wuhan, Hubei</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Law</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2215,7 +2220,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="South China University of Technology" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">45</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/scut.edu.cn" alt="SCUT" onerror="this.parentNode.textContent='SCUT'"></div><div><div class="uni-row-name" onclick="openUniModal('South China Univ. of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">South China Univ. of Technology</div><div class="uni-row-meta">📍 Guangzhou · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/scut.edu.cn" alt="SCUT" onerror="this.parentNode.textContent='SCUT'"></div><div><div class="uni-row-name" onclick="openUniModal('South China Univ. of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">South China Univ. of Technology</div><div class="uni-row-meta">📍 Guangzhou · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Engineering</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2224,7 +2229,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="North China University of Technology" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">46</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/ncut.edu.cn" alt="NCUT" onerror="this.parentNode.textContent='NCUT'"></div><div><div class="uni-row-name" onclick="openUniModal('North China Univ. of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">North China Univ. of Technology</div><div class="uni-row-meta">📍 Beijing</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/ncut.edu.cn" alt="NCUT" onerror="this.parentNode.textContent='NCUT'"></div><div><div class="uni-row-name" onclick="openUniModal('North China Univ. of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">North China Univ. of Technology</div><div class="uni-row-meta">📍 Beijing</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2233,7 +2238,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Beijing Technology and Business University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">47</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/btbu.edu.cn" alt="BTBU" onerror="this.parentNode.textContent='BTBU'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Technology & Business Univ.',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Technology & Business Univ.</div><div class="uni-row-meta">📍 Beijing</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/btbu.edu.cn" alt="BTBU" onerror="this.parentNode.textContent='BTBU'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Technology & Business Univ.',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Technology & Business Univ.</div><div class="uni-row-meta">📍 Beijing</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2242,7 +2247,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Renmin University of China" data-tags="english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">48</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/ruc.edu.cn" alt="RUC" onerror="this.parentNode.textContent='RUC'"></div><div><div class="uni-row-name" onclick="openUniModal('Renmin University of China',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Renmin University of China</div><div class="uni-row-meta">📍 Beijing · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/ruc.edu.cn" alt="RUC" onerror="this.parentNode.textContent='RUC'"></div><div><div class="uni-row-name" onclick="openUniModal('Renmin University of China',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Renmin University of China</div><div class="uni-row-meta">📍 Beijing · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Economics</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2251,7 +2256,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Beijing Institute of Technology" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">49</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/bit.edu.cn" alt="BIT" onerror="this.parentNode.textContent='BIT'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Institute of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Institute of Technology</div><div class="uni-row-meta">📍 Beijing · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/bit.edu.cn" alt="BIT" onerror="this.parentNode.textContent='BIT'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Institute of Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Institute of Technology</div><div class="uni-row-meta">📍 Beijing · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Engineering</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2260,7 +2265,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Beijing Jiaotong University" data-tags="scholarship english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">50</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/bjtu.edu.cn" alt="BJTU" onerror="this.parentNode.textContent='BJTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Jiaotong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Jiaotong University</div><div class="uni-row-meta">📍 Beijing · Project 211</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/bjtu.edu.cn" alt="BJTU" onerror="this.parentNode.textContent='BJTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Jiaotong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Jiaotong University</div><div class="uni-row-meta">📍 Beijing · Project 211</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Engineering</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2269,7 +2274,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="University of International Business and Economics" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">51</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/uibe.edu.cn" alt="UIBE" onerror="this.parentNode.textContent='UIBE'"></div><div><div class="uni-row-name" onclick="openUniModal('University of International Business and Economics'l Business & Economics',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Univ. of Int'l Business & Economics</div><div class="uni-row-meta">📍 Beijing · Project 211</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/uibe.edu.cn" alt="UIBE" onerror="this.parentNode.textContent='UIBE'"></div><div><div class="uni-row-name" onclick="openUniModal('University of International Business and Economics'l Business & Economics',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Univ. of Int'l Business & Economics</div><div class="uni-row-meta">📍 Beijing · Project 211</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Trade</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2278,7 +2283,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Jilin University" data-tags="scholarship english" data-level="bachelor master phd" data-stream="business engineering medicine" data-duration="2 4">
           <div class="uni-row-rank">52</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/jlu.edu.cn" alt="JLU" onerror="this.parentNode.textContent='JLU'"></div><div><div class="uni-row-name" onclick="openUniModal('Jilin University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Jilin University</div><div class="uni-row-meta">📍 Changchun, Jilin · Project 985</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/jlu.edu.cn" alt="JLU" onerror="this.parentNode.textContent='JLU'"></div><div><div class="uni-row-name" onclick="openUniModal('Jilin University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Jilin University</div><div class="uni-row-meta">📍 Changchun, Jilin · Project 985</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span><span class="uri-pill blue">Master</span><span class="uri-pill blue">PhD</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Engineering</span><span class="uri-pill gray">MBA</span><span class="uri-pill gray">Medicine</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2–4 Yrs</span></div>
@@ -2287,7 +2292,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Jinan University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">53</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/jnu.edu.cn" alt="JNU" onerror="this.parentNode.textContent='JNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Jinan University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Jinan University</div><div class="uni-row-meta">📍 Guangzhou, Guangdong</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/jnu.edu.cn" alt="JNU" onerror="this.parentNode.textContent='JNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Jinan University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Jinan University</div><div class="uni-row-meta">📍 Guangzhou, Guangdong</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2296,7 +2301,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="China Europe International Business School" data-tags="english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">54</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/ceibs.edu" alt="CEIBS" onerror="this.parentNode.textContent='CEIBS'"></div><div><div class="uni-row-name" onclick="openUniModal('China Europe International Business School'l Business School',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">China Europe Int'l Business School</div><div class="uni-row-meta">📍 Shanghai</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/ceibs.edu" alt="CEIBS" onerror="this.parentNode.textContent='CEIBS'"></div><div><div class="uni-row-name" onclick="openUniModal('China Europe International Business School'l Business School',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">China Europe Int'l Business School</div><div class="uni-row-meta">📍 Shanghai</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">16 Mon</span></div>
@@ -2305,7 +2310,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Tianjin University of Science and Technology" data-tags="english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">55</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/tust.edu.cn" alt="TUST" onerror="this.parentNode.textContent='TUST'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin Univ. of Science & Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin Univ. of Science & Technology</div><div class="uni-row-meta">📍 Tianjin</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/tust.edu.cn" alt="TUST" onerror="this.parentNode.textContent='TUST'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin Univ. of Science & Technology',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin Univ. of Science & Technology</div><div class="uni-row-meta">📍 Tianjin</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2314,7 +2319,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Xidian University" data-tags="english" data-level="bachelor master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">56</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/xidian.edu.cn" alt="XDU" onerror="this.parentNode.textContent='XDU'"></div><div><div class="uni-row-name" onclick="openUniModal('Xidian University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Xidian University</div><div class="uni-row-meta">📍 Xi'an, Shaanxi</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/xidian.edu.cn" alt="XDU" onerror="this.parentNode.textContent='XDU'"></div><div><div class="uni-row-name" onclick="openUniModal('Xidian University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Xidian University</div><div class="uni-row-meta">📍 Xi'an, Shaanxi</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">Engineering</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2–4 Yrs</span></div>
@@ -2323,7 +2328,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Nanjing University of Posts and Telecommunications" data-tags="english" data-level="master" data-stream="business engineering" data-duration="2">
           <div class="uni-row-rank">57</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/njupt.edu.cn" alt="NJUPT" onerror="this.parentNode.textContent='NJUPT'"></div><div><div class="uni-row-name" onclick="openUniModal('Nanjing Univ. of Post & Telecom',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Nanjing Univ. of Post & Telecom</div><div class="uni-row-meta">📍 Nanjing, Jiangsu</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/njupt.edu.cn" alt="NJUPT" onerror="this.parentNode.textContent='NJUPT'"></div><div><div class="uni-row-name" onclick="openUniModal('Nanjing Univ. of Post & Telecom',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Nanjing Univ. of Post & Telecom</div><div class="uni-row-meta">📍 Nanjing, Jiangsu</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2332,7 +2337,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Beijing Normal University Zhuhai" data-tags="scholarship english" data-level="master" data-stream="business arts" data-duration="2">
           <div class="uni-row-rank">58</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/bnuz.edu.cn" alt="BNUZ" onerror="this.parentNode.textContent='BNUZ'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Normal University (Zhuhai)',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Normal University (Zhuhai)</div><div class="uni-row-meta">📍 Zhuhai, Guangdong</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/bnuz.edu.cn" alt="BNUZ" onerror="this.parentNode.textContent='BNUZ'"></div><div><div class="uni-row-name" onclick="openUniModal('Beijing Normal University (Zhuhai)',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Beijing Normal University (Zhuhai)</div><div class="uni-row-meta">📍 Zhuhai, Guangdong</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2341,7 +2346,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Sanya Institute of China Agricultural University" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2">
           <div class="uni-row-rank">59</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/cau.edu.cn" alt="CAU" onerror="this.parentNode.textContent='CAU'"></div><div><div class="uni-row-name" onclick="openUniModal('Sanya Inst. of China Agricultural Univ.',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Sanya Inst. of China Agricultural Univ.</div><div class="uni-row-meta">📍 Sanya, Hainan</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/cau.edu.cn" alt="CAU" onerror="this.parentNode.textContent='CAU'"></div><div><div class="uni-row-name" onclick="openUniModal('Sanya Inst. of China Agricultural Univ.',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Sanya Inst. of China Agricultural Univ.</div><div class="uni-row-meta">📍 Sanya, Hainan</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
@@ -2351,7 +2356,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         <!-- ── MBBS-ONLY UNIVERSITIES (not already listed) ── -->
         <div class="uni-row" data-name="Harbin Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">60</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/hrbmu.edu.cn" alt="HMU" onerror="this.parentNode.textContent='HMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Harbin Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Harbin Medical University</div><div class="uni-row-meta">📍 Harbin, Heilongjiang</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/hrbmu.edu.cn" alt="HMU" onerror="this.parentNode.textContent='HMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Harbin Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Harbin Medical University</div><div class="uni-row-meta">📍 Harbin, Heilongjiang</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2360,7 +2365,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="North Sichuan Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">61</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/nsmc.edu.cn" alt="NSMC" onerror="this.parentNode.textContent='NSMC'"></div><div><div class="uni-row-name" onclick="openUniModal('North Sichuan Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">North Sichuan Medical University</div><div class="uni-row-meta">📍 Nanchong, Sichuan</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/nsmc.edu.cn" alt="NSMC" onerror="this.parentNode.textContent='NSMC'"></div><div><div class="uni-row-name" onclick="openUniModal('North Sichuan Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">North Sichuan Medical University</div><div class="uni-row-meta">📍 Nanchong, Sichuan</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2369,7 +2374,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Southwest Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">62</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/swmu.edu.cn" alt="SWMU" onerror="this.parentNode.textContent='SWMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Southwest Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Southwest Medical University</div><div class="uni-row-meta">📍 Luzhou, Sichuan</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/swmu.edu.cn" alt="SWMU" onerror="this.parentNode.textContent='SWMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Southwest Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Southwest Medical University</div><div class="uni-row-meta">📍 Luzhou, Sichuan</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2378,7 +2383,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Tianjin Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">63</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/tmu.edu.cn" alt="TMU" onerror="this.parentNode.textContent='TMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin Medical University</div><div class="uni-row-meta">📍 Tianjin</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/tmu.edu.cn" alt="TMU" onerror="this.parentNode.textContent='TMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Tianjin Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Tianjin Medical University</div><div class="uni-row-meta">📍 Tianjin</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2387,7 +2392,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Xinjiang Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">64</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/xjmu.edu.cn" alt="XJMU" onerror="this.parentNode.textContent='XJMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Xinjiang Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Xinjiang Medical University</div><div class="uni-row-meta">📍 Urumqi, Xinjiang</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/xjmu.edu.cn" alt="XJMU" onerror="this.parentNode.textContent='XJMU'"></div><div><div class="uni-row-name" onclick="openUniModal('Xinjiang Medical University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Xinjiang Medical University</div><div class="uni-row-meta">📍 Urumqi, Xinjiang</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2396,7 +2401,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
         <div class="uni-row" data-name="Nantong University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6">
           <div class="uni-row-rank">65</div>
-          <div class="uni-row-main"><div class="uni-row-logo"><img src="https://logo.clearbit.com/ntu.edu.cn" alt="NTU" onerror="this.parentNode.textContent='NTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Nantong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Nantong University</div><div class="uni-row-meta">📍 Nantong, Jiangsu</div></div></div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/ntu.edu.cn" alt="NTU" onerror="this.parentNode.textContent='NTU'"></div><div><div class="uni-row-name" onclick="openUniModal('Nantong University',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Nantong University</div><div class="uni-row-meta">📍 Nantong, Jiangsu</div></div></div>
           <div class="uni-row-cell"><span class="uri-pill blue">Bachelor</span></div>
           <div class="uni-row-cell"><span class="uri-pill gray">MBBS</span></div>
           <div class="uni-row-cell"><span class="uri-pill navy">6 Yrs</span></div>
@@ -2962,7 +2967,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px">Send Message →</button>
           <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--gray2);text-align:center">
             <p style="font-size:13px;color:var(--gray);margin-bottom:12px">Prefer to chat? Reach us instantly on WhatsApp</p>
-            <a href="https://wa.me/918507805776" class="btn btn-outline" style="background:#25D366;color:#fff;border-color:#25D366;width:100%;justify-content:center;padding:13px" target="_blank">
+            <a href="https://wa.me/918507805776" class="btn btn-outline" style="background:#25D366;color:#fff;border-color:#25D366;width:100%;justify-content:center;padding:13px" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Chat on WhatsApp
             </a>
@@ -2974,7 +2979,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 </div>
 
 <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
-<footer>
+<footer role="contentinfo" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -3045,13 +3050,13 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 <!-- WHATSAPP FLOAT -->
 <div class="wa-float">
   <div class="wa-tooltip">💬 Chat with us on WhatsApp</div>
-  <a href="https://wa.me/918507805776" target="_blank" class="wa-btn">
+  <a href="https://wa.me/918507805776" target="_blank" rel="noopener noreferrer" class="wa-btn">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
 
 <!-- APPLY MODAL -->
-<div id="applyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;align-items:center;justify-content:center;padding:20px">
+<div id="applyModal" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;align-items:center;justify-content:center;padding:20px">
   <div style="background:#fff;border-radius:16px;padding:40px;max-width:540px;width:100%;position:relative;max-height:90vh;overflow-y:auto">
     <button onclick="closeApplyModal()" style="position:absolute;top:16px;right:16px;background:var(--off);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center">✕</button>
     <!-- FORM VIEW -->
@@ -3081,7 +3086,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px">Thank you! Your details have been saved. An Abreams expert will contact you on WhatsApp or email within <strong>24 hours</strong>.</p>
       <div style="background:var(--off);border-radius:12px;padding:16px;margin-bottom:24px">
         <p style="font-size:13px;color:var(--gray)">Want a faster response? Chat with us now:</p>
-        <a href="https://wa.me/918507805776" target="_blank" class="btn" style="background:#25D366;color:#fff;margin-top:10px;width:100%;justify-content:center;padding:11px;display:flex">💬 Open WhatsApp Chat</a>
+        <a href="https://wa.me/918507805776" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366;color:#fff;margin-top:10px;width:100%;justify-content:center;padding:11px;display:flex">💬 Open WhatsApp Chat</a>
       </div>
       <button onclick="closeApplyModal()" style="font-size:14px;color:var(--blue);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif">Close this window</button>
     </div>
@@ -3090,13 +3095,15 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
 <script>
 function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var el=document.getElementById('page-'+id);
-  if(el){el.classList.add('active');}
-  window.scrollTo({top:0,behavior:'smooth'});
-  if(id==='universities') filterUnis();
+  try{
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    let el=document.getElementById('page-'+id);
+    if(el){el.classList.add('active');}
+    window.scrollTo({top:0,behavior:'smooth'});
+    if(id==='universities') filterUnis();
+  } catch(e){ console.error('showPage error:',e); }
 }
-var GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbw7p30e8qPduhoIAy4PyiU3d9tMsDNpNBEmtaLFJmrvN67Vpib--DAV69LJLPMnnfjshQ/exec';
+let GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbw7p30e8qPduhoIAy4PyiU3d9tMsDNpNBEmtaLFJmrvN67Vpib--DAV69LJLPMnnfjshQ/exec';
 
 function showApplyModal(){
   document.getElementById('applyModal').style.display='flex';
@@ -3111,20 +3118,20 @@ document.getElementById('applyModal').addEventListener('click',function(e){
   if(e.target===this)closeApplyModal();
 });
 function submitApplyForm(){
-  var firstName=document.getElementById('apply_firstName').value.trim();
-  var lastName=document.getElementById('apply_lastName').value.trim();
-  var email=document.getElementById('apply_email').value.trim();
-  var whatsapp=document.getElementById('apply_whatsapp').value.trim();
-  var program=document.getElementById('apply_programLevel').value;
-  var field=document.getElementById('apply_fieldOfStudy').value.trim();
-  var scholarship=document.getElementById('apply_scholarshipNeed').value;
-  var errEl=document.getElementById('applyError');
+  let firstName=document.getElementById('apply_firstName').value.trim();
+  let lastName=document.getElementById('apply_lastName').value.trim();
+  let email=document.getElementById('apply_email').value.trim();
+  let whatsapp=document.getElementById('apply_whatsapp').value.trim();
+  let program=document.getElementById('apply_programLevel').value;
+  let field=document.getElementById('apply_fieldOfStudy').value.trim();
+  let scholarship=document.getElementById('apply_scholarshipNeed').value;
+  let errEl=document.getElementById('applyError');
   if(!firstName||!lastName){showApplyError('Please enter your full name.');return;}
   if(!email||!email.includes('@')){showApplyError('Please enter a valid email address.');return;}
   if(!whatsapp){showApplyError('Please enter your WhatsApp number so we can reach you.');return;}
-  var btn=document.getElementById('applySubmitBtn');
+  let btn=document.getElementById('applySubmitBtn');
   btn.disabled=true;btn.textContent='Submitting...';errEl.style.display='none';
-  var payload={firstName:firstName,lastName:lastName,email:email,whatsapp:whatsapp,
+  let payload={firstName:firstName,lastName:lastName,email:email,whatsapp:whatsapp,
     programLevel:program||'Not specified',fieldOfStudy:field||'Not specified',scholarshipNeed:scholarship};
   fetch(GOOGLE_SHEET_URL,{method:'POST',mode:'no-cors',
     headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
@@ -3142,33 +3149,33 @@ function submitApplyForm(){
   });
 }
 function showApplyError(msg){
-  var el=document.getElementById('applyError');
+  let el=document.getElementById('applyError');
   el.textContent='⚠️ '+msg;el.style.display='block';
 }
 function toggleMobileMenu(){
-  var m=document.getElementById('mobileMenu');
+  let m=document.getElementById('mobileMenu');
   m.style.display=m.style.display==='flex'?'none':'flex';
 }
 function closeMobileMenu(){
   document.getElementById('mobileMenu').style.display='none';
 }
 function toggleMobStudyDD(el){
-  var sub=document.getElementById('mobStudySub');
-  var arrow=el.querySelector('.dd-arrow');
+  let sub=document.getElementById('mobStudySub');
+  let arrow=el.querySelector('.dd-arrow');
   sub.classList.toggle('open');
   arrow.style.transform=sub.classList.contains('open')?'rotate(180deg)':'rotate(0deg)';
 }
 // Close desktop dropdown when clicking outside
 document.addEventListener('click',function(e){
-  var dd=document.getElementById('studyDropdown');
+  let dd=document.getElementById('studyDropdown');
   if(dd&&!dd.contains(e.target))dd.classList.remove('open');
 });
 window.addEventListener('scroll',function(){
-  var nav=document.getElementById('mainNav');
+  let nav=document.getElementById('mainNav');
   nav.classList.toggle('scrolled',window.scrollY>30);
 });
 function toggleFaq(el){
-  var item=el.parentElement;
+  let item=el.parentElement;
   item.classList.toggle('open');
 }
 function filterPrograms(cat,btn){
@@ -3182,64 +3189,64 @@ function filterPrograms(cat,btn){
     }
   });
 }
-var activeUniTag='';
-function filterUnis(){
-  var search=(document.getElementById('uniSearch').value||'').toLowerCase().trim();
-  var level=(document.getElementById('uniLevel').value||'').toLowerCase().trim();
-  var stream=(document.getElementById('uniStream').value||'').toLowerCase().trim();
-  var duration=(document.getElementById('uniDuration').value||'').trim();
-  var shown=0;
+let activeUniTag='';
+function filterUnis(){try{
+  let search=(document.getElementById('uniSearch').value||'').toLowerCase().trim();
+  let level=(document.getElementById('uniLevel').value||'').toLowerCase().trim();
+  let stream=(document.getElementById('uniStream').value||'').toLowerCase().trim();
+  let duration=(document.getElementById('uniDuration').value||'').trim();
+  let shown=0;
 
   // Loop every uni-row in both containers and show/hide
   document.querySelectorAll('#uniGrid .uni-row, #uniListWrap .uni-row').forEach(function(row){
-    var name   = (row.dataset.name     || '').toLowerCase();
-    var rTags  = (row.dataset.tags     || '').toLowerCase();
-    var rLevel = (row.dataset.level    || '').toLowerCase();
-    var rStream= (row.dataset.stream   || '').toLowerCase();
-    var rDur   = (row.dataset.duration || '');
+    let name   = (row.dataset.name     || '').toLowerCase();
+    let rTags  = (row.dataset.tags     || '').toLowerCase();
+    let rLevel = (row.dataset.level    || '').toLowerCase();
+    let rStream= (row.dataset.stream   || '').toLowerCase();
+    let rDur   = (row.dataset.duration || '');
 
     // Search: match name OR tags OR meta text
-    var metaEl = row.querySelector('.uni-row-meta');
-    var meta   = metaEl ? metaEl.textContent.toLowerCase() : '';
-    var matchSearch = !search ||
+    let metaEl = row.querySelector('.uni-row-meta');
+    let meta   = metaEl ? metaEl.textContent.toLowerCase() : '';
+    let matchSearch = !search ||
       name.includes(search) ||
       meta.includes(search) ||
       rTags.includes(search);
 
     // Level: data-level may contain multiple e.g. "bachelor master phd"
-    var matchLevel = !level || rLevel.split(/[\s,]+/).indexOf(level) !== -1;
+    let matchLevel = !level || rLevel.split(/[\s,]+/).indexOf(level) !== -1;
 
     // Stream: data-stream may contain multiple e.g. "engineering medicine"
-    var matchStream = !stream || rStream.split(/[\s,]+/).indexOf(stream) !== -1;
+    let matchStream = !stream || rStream.split(/[\s,]+/).indexOf(stream) !== -1;
 
     // Duration: data-duration may contain multiple e.g. "4 5 6"
-    var matchDuration = !duration || rDur.split(/[\s,]+/).indexOf(duration) !== -1;
+    let matchDuration = !duration || rDur.split(/[\s,]+/).indexOf(duration) !== -1;
 
-    var visible = matchSearch && matchLevel && matchStream && matchDuration;
+    let visible = matchSearch && matchLevel && matchStream && matchDuration;
     row.style.display = visible ? '' : 'none';
     if(visible) shown++;
   });
 
   // Show/hide empty state
-  var empty = document.getElementById('uniEmpty');
+  let empty = document.getElementById('uniEmpty');
   if(empty) empty.style.display = shown === 0 ? 'block' : 'none';
 
   // Update count
-  var countEl = document.getElementById('uniCountNum');
+  let countEl = document.getElementById('uniCountNum');
   if(countEl) countEl.textContent = shown === 0 ? '0' : shown;
 
   // Update active filter pills
-  var pills = document.getElementById('activePills');
+  let pills = document.getElementById('activePills');
   if(pills){
     pills.innerHTML = '';
-    var labels = {
+    let labels = {
       'level':    {'bachelor':'Bachelor','master':'Master','phd':'PhD','chinese':'Chinese Language'},
       'stream':   {'engineering':'Engineering','medicine':'Medicine / MBBS','business':'Business','technology':'Technology','science':'Science','arts':'Arts & Humanities','language':'Language'},
       'duration': {'4':'4 Years','5':'5 Years','6':'6 Years'}
     };
     [['level',level],['stream',stream],['duration',duration]].forEach(function(pair){
       if(pair[1]){
-        var pill = document.createElement('span');
+        let pill = document.createElement('span');
         pill.style.cssText = 'background:var(--blue);color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;cursor:pointer';
         pill.innerHTML = (labels[pair[0]][pair[1]] || pair[1]) + ' <span style="opacity:.7">✕</span>';
         pill.onclick = (function(id){ return function(){ document.getElementById(id).value=''; filterUnis(); }; })('uni' + pair[0].charAt(0).toUpperCase() + pair[0].slice(1));
@@ -3248,13 +3255,14 @@ function filterUnis(){
     });
     // Search pill
     if(search){
-      var spill = document.createElement('span');
+      let spill = document.createElement('span');
       spill.style.cssText = 'background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;cursor:pointer';
       spill.innerHTML = '🔍 ' + search + ' <span style="opacity:.7">✕</span>';
       spill.onclick = function(){ document.getElementById('uniSearch').value=''; filterUnis(); };
       pills.appendChild(spill);
     }
   }
+  } catch(e){ console.error('filterUnis error:',e); }
 }
 function filterUniTag(tag,el){
   activeUniTag=tag;
@@ -3269,18 +3277,18 @@ function resetUniFilters(){
   document.getElementById('uniDuration').value='';
   activeUniTag='';
   document.querySelectorAll('.filter-tag').forEach(t=>t.classList.remove('active'));
-  var first=document.querySelector('.filter-tag');
+  let first=document.querySelector('.filter-tag');
   if(first)first.classList.add('active');
   filterUnis();
 }
 // Hide wa tooltip after 4s
 setTimeout(function(){
-  var t=document.querySelector('.wa-tooltip');
+  let t=document.querySelector('.wa-tooltip');
   if(t)t.style.display='none';
 },4000);
 </script>
 <!-- ═══════════════════ UNIVERSITY PROFILE MODAL ═══════════════════ -->
-<div class="uni-modal-overlay" id="uniModal" onclick="closeUniModal(event)">
+<div class="uni-modal-overlay" id="uniModal" role="dialog" aria-modal="true" aria-labelledby="umName" onclick="closeUniModal(event)">
   <div class="uni-modal">
     <div class="uni-modal-header">
       <button class="uni-modal-close" onclick="closeUniModal()">✕</button>
@@ -3462,7 +3470,7 @@ var uniData = {
   'Xian Jiaotong University': {loc:"📍 Xi'an, Shaanxi",qs:'QS Top 200',tier:'Project 985',levels:['Bachelor','Master','PhD'],streams:['Engineering','Medicine','Business'],duration:['4 Years','6 Years'],scholarship:['CSC Scholarship','Freshman Scholarship (up to 100% Full Tuition)'],programs:['MBBS (6 Yrs)','BDS (6 Yrs)','Electrical Engineering and Automation','Intelligent Manufacturing Engineering','Energy and Power Engineering','Materials Science and Engineering','MBA'],logo:'https://logo.clearbit.com/xjtu.edu.cn'},
 };
 
-function openUniModal(name, meta) {
+function openUniModal(name, meta) { try {
   var d = uniData[name] || {};
   var loc = d.loc || meta.loc || '📍 China';
   var qs  = d.qs  || meta.qs  || '';
@@ -3471,7 +3479,7 @@ function openUniModal(name, meta) {
   // Logo
   var logoEl = document.getElementById('umLogo');
   if(d.logo){
-    logoEl.innerHTML = '<img src="'+d.logo+'" alt="'+name+'" onerror="this.parentNode.innerHTML=\''+name.split(' ').map(function(w){return w[0]}).join('').substring(0,3)+'\'">';
+    logoEl.innerHTML = '<img loading="lazy" src="'+d.logo+'" alt="'+name+'" onerror="this.parentNode.innerHTML=\''+name.split(' ').map(function(w){return w[0]}).join('').substring(0,3)+'\'">';
   } else {
     logoEl.textContent = name.split(' ').map(function(w){return w[0]}).join('').substring(0,3);
   }
@@ -3500,6 +3508,7 @@ function openUniModal(name, meta) {
 
   document.getElementById('uniModal').classList.add('open');
   document.body.style.overflow='hidden';
+  } catch(e){ console.error("openUniModal error:",e); }
 }
 
 function closeUniModal(e){
@@ -3534,13 +3543,13 @@ document.addEventListener('DOMContentLoaded', function(){
 const PARTNER_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxbnvAjgnIvK_qLFZkuwT5pD2PCygqGcZe40PE1Nsf8KL_VA9Xh-JY6lk8aCAlTPs0zw/exec";
 
 document.addEventListener('DOMContentLoaded', function(){
-  var form = document.getElementById('partnerFullForm');
+  let form = document.getElementById('partnerFullForm');
   if(!form) return;
-  var btn = document.getElementById('partnerFullBtn');
-  var msg = document.getElementById('partnerFullMsg');
-  var iframe = document.getElementById('partner_hidden_iframe');
-  var btnLabel = btn.textContent;
-  var submitting = false;
+  let btn = document.getElementById('partnerFullBtn');
+  let msg = document.getElementById('partnerFullMsg');
+  let iframe = document.getElementById('partner_hidden_iframe');
+  let btnLabel = btn.textContent;
+  let submitting = false;
 
   // Point the form straight at the Apps Script URL, targeting the hidden iframe.
   // This is a real browser form POST, not fetch/XHR — it is not subject to
