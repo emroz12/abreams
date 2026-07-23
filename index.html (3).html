@@ -212,6 +212,71 @@ h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.2}
 .process-step h4{font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px}
 .process-step p{font-size:12px;color:var(--gray);padding:0 8px}
 
+/* ── SERVICES / JOURNEY MAP ── */
+.tier-toggle{display:flex;justify-content:center;gap:10px;margin:48px 0 8px;flex-wrap:wrap}
+.tier-btn{position:relative;background:#fff;border:1.5px solid var(--gray2);border-radius:50px;padding:12px 26px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:var(--navy2);cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}
+.tier-btn:hover{border-color:var(--blue)}
+.tier-btn .tb-price{font-weight:700;color:var(--blue)}
+.tier-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 8px 24px rgba(10,22,40,.25)}
+.tier-btn.active .tb-price{color:var(--gold2)}
+.tier-btn-badge{position:absolute;top:-10px;right:-6px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-size:9px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 8px;border-radius:50px;box-shadow:0 3px 10px rgba(201,168,76,.4)}
+
+/* journey path */
+.journey-outer{margin-top:56px;overflow-x:auto;padding-bottom:8px}
+.journey-track{position:relative;display:flex;min-width:900px;padding:50px 20px 0}
+.journey-line-bg{position:absolute;top:69px;left:44px;right:44px;height:3px;background:var(--gray2);border-radius:2px}
+.journey-plane{position:absolute;top:52px;left:44px;font-size:22px;transform:translate(-50%,0) scaleX(-1);transition:left .5s cubic-bezier(.4,0,.2,1);filter:drop-shadow(0 3px 6px rgba(10,22,40,.3));z-index:3}
+.journey-stop{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;z-index:2}
+.journey-node{width:34px;height:34px;border-radius:50%;background:#fff;border:3px solid var(--gray2);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--gray);transition:all .4s;flex-shrink:0}
+.journey-stop.included .journey-node{border-color:var(--gold);background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 4px 14px rgba(201,168,76,.4);transform:scale(1.08)}
+.journey-stop-label{font-size:12px;font-weight:600;color:var(--gray);margin-top:14px;max-width:96px;line-height:1.35;transition:color .3s}
+.journey-stop.included .journey-stop-label{color:var(--navy)}
+.journey-stop-gap{font-size:10px;color:var(--gray2);margin-top:4px;font-weight:600;letter-spacing:.3px;text-transform:uppercase;visibility:hidden}
+.journey-stop.skipped .journey-stop-gap{visibility:visible;color:#c0392b}
+
+/* detail panel beneath map */
+.journey-detail{margin-top:56px;background:linear-gradient(150deg,var(--navy) 0%,#132b52 55%,#0f2344 100%);border-radius:24px;padding:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.journey-detail::before{content:'';position:absolute;right:-80px;top:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%);border-radius:50%}
+.jd-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold2);margin-bottom:14px}
+.jd-title{font-size:28px;font-weight:700;color:#fff;margin-bottom:12px}
+.jd-desc{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:440px;margin-bottom:24px}
+.jd-best-for{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px;max-width:440px}
+.jd-best-for b{color:var(--gold2);font-size:13px}
+.jd-best-for p{color:rgba(255,255,255,.6);font-size:13px;margin-top:2px;line-height:1.5}
+.jd-right{text-align:right;position:relative;z-index:1}
+.jd-price-label{font-size:12px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.6px;font-weight:600;margin-bottom:2px}
+.jd-price{font-family:'Inter',sans-serif;font-size:56px;font-weight:800;color:var(--gold2);letter-spacing:-1.5px;line-height:1}
+.jd-price span{font-size:22px;font-weight:700;vertical-align:top}
+.jd-count{font-size:13px;color:rgba(255,255,255,.5);margin:10px 0 22px}
+.jd-count b{color:#fff}
+
+/* full comparison disclosure */
+.compare-details{margin-top:40px}
+.compare-details summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--blue);margin:0 auto;width:fit-content;padding:10px 0}
+.compare-details summary::-webkit-details-marker{display:none}
+.compare-details summary .cd-arrow{transition:transform .25s}
+.compare-details[open] summary .cd-arrow{transform:rotate(180deg)}
+.compare-details-inner{text-align:center}
+.compare-wrap{margin:24px auto 0;border:1px solid var(--gray2);border-radius:16px;overflow:hidden;background:#fff;text-align:left;max-width:760px}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th,.compare-table td{padding:14px 20px;text-align:center;border-bottom:1px solid var(--gray2);font-size:13px}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table thead th{background:var(--navy);color:#fff;font-size:12px;letter-spacing:.4px;text-transform:uppercase;font-weight:700}
+.compare-table thead th:first-child{text-align:left}
+.compare-table td:first-child{text-align:left;color:var(--navy);font-weight:600;background:var(--off)}
+.compare-table thead th.hl{color:var(--gold2)}
+.compare-yes{color:#059669;font-weight:700;font-size:16px}
+.compare-no{color:var(--gray2);font-size:16px}
+
+@media(max-width:900px){
+  .journey-detail{grid-template-columns:1fr;text-align:center}
+  .jd-desc,.jd-best-for{margin-left:auto;margin-right:auto}
+  .jd-right{text-align:center}
+  .compare-wrap{overflow-x:auto}
+  .compare-table{min-width:520px}
+}
+
+/* ── PARTNER ── */
 /* ── PARTNER ── */
 .partner-section{background:linear-gradient(135deg,var(--navy) 0%,#0f2344 100%);color:#fff}
 .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -532,6 +597,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         </div>
       </div>
       <a href="#" onclick="showPage('universities');return false">Universities</a>
+      <a href="#" onclick="showPage('services');return false">Our Services</a>
       <a href="#" onclick="showPage('csca');return false">CSCA</a>
       <a href="#" onclick="showPage('partner');return false">Partner With Us</a>
       <a href="#" onclick="showPage('about');return false">About</a>
@@ -561,6 +627,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
     </div>
   </div>
   <a href="#" onclick="showPage('universities');closeMobileMenu();return false">🏛️ Universities</a>
+  <a href="#" onclick="showPage('services');closeMobileMenu();return false">🧭 Our Services</a>
   <a href="#" onclick="showPage('csca');closeMobileMenu();return false">📋 CSCA</a>
   <a href="#" onclick="showPage('partner');closeMobileMenu();return false">🤝 Partner With Us</a>
   <a href="#" onclick="showPage('about');closeMobileMenu();return false">ℹ️ About</a>
@@ -4219,6 +4286,174 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
   </section>
 </div>
 
+<!-- ═══════════════════════════════════════════ SERVICES PAGE ═══ -->
+<div id="page-services" class="page">
+  <div class="inner-hero" style="background:linear-gradient(rgba(5,12,30,0.62),rgba(10,22,40,0.78)),url('https://raw.githubusercontent.com/emroz12/abreams/main/images/csca.jpg') center/cover no-repeat;min-height:380px;display:flex;align-items:center">
+    <div class="container">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span>Our Services</div>
+      <h1>Your Journey to China,<br/>Mapped Out</h1>
+      <p>Nine steps stand between where you are and your first day on campus. Pick how far you want us to walk it with you.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label" style="margin:0 auto 16px;display:flex;width:fit-content"><span></span>Service Packages</div>
+        <h2 class="section-title">Choose How Far We Walk With You</h2>
+        <div class="gold-line center"></div>
+        <p class="section-sub">Every package follows the same path. The difference is how many steps we handle for you — and how far past the classroom door we go.</p>
+      </div>
+
+      <!-- TIER TOGGLE -->
+      <div class="tier-toggle" role="tablist" aria-label="Select a service package">
+        <button class="tier-btn" id="tierBtn-basic" onclick="setServiceTier('basic')" role="tab">Basic <span class="tb-price">$420</span></button>
+        <button class="tier-btn active" id="tierBtn-standard" onclick="setServiceTier('standard')" role="tab">Standard <span class="tb-price">$550</span><span class="tier-btn-badge">Most Chosen</span></button>
+        <button class="tier-btn" id="tierBtn-premium" onclick="setServiceTier('premium')" role="tab">Premium <span class="tb-price">$850</span></button>
+      </div>
+
+      <!-- JOURNEY MAP -->
+      <div class="journey-outer">
+        <div class="journey-track" id="journeyTrack">
+          <div class="journey-line-bg"></div>
+          <div class="journey-plane" id="journeyPlane">✈️</div>
+
+          <div class="journey-stop" data-tiers="basic standard premium">
+            <div class="journey-node">1</div>
+            <div class="journey-stop-label">Consultation</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="basic standard premium">
+            <div class="journey-node">2</div>
+            <div class="journey-stop-label">University Shortlisting</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="basic standard premium">
+            <div class="journey-node">3</div>
+            <div class="journey-stop-label">Scholarship Guidance</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="standard premium">
+            <div class="journey-node">4</div>
+            <div class="journey-stop-label">CSCA Preparation</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="basic standard premium">
+            <div class="journey-node">5</div>
+            <div class="journey-stop-label">Application</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="basic standard premium">
+            <div class="journey-node">6</div>
+            <div class="journey-stop-label">Interview Preparation</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="premium">
+            <div class="journey-node">7</div>
+            <div class="journey-stop-label">Visa Support</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="premium">
+            <div class="journey-node">8</div>
+            <div class="journey-stop-label">Airport Pickup</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+          <div class="journey-stop" data-tiers="premium">
+            <div class="journey-node">9</div>
+            <div class="journey-stop-label">Accommodation</div>
+            <div class="journey-stop-gap">skipped</div>
+          </div>
+
+        </div>
+      </div>
+      <p style="text-align:center;font-size:12px;color:var(--gray);margin-top:8px">Gold stops are handled by our team. Basic skips CSCA exam prep — Standard and Premium include it.</p>
+
+      <!-- DETAIL PANEL (3 pre-rendered, toggled by JS) -->
+      <div class="journey-detail" id="jd-basic" style="display:none">
+        <div>
+          <div class="jd-eyebrow">Basic Package</div>
+          <div class="jd-title">Get the paperwork right</div>
+          <div class="jd-desc">You already know where you're headed. We handle the shortlisting, the scholarship angle, and make sure your application and interview don't trip you up.</div>
+          <div class="jd-best-for"><span style="font-size:18px">🧭</span><div><b>Best for:</b><p>Independent students who mainly need expert review, not full hand-holding.</p></div></div>
+        </div>
+        <div class="jd-right">
+          <div class="jd-price-label">Starting at</div>
+          <div class="jd-price"><span>$</span>420</div>
+          <div class="jd-count">Covers <b>5 of 9</b> steps — skips CSCA Preparation</div>
+          <a href="#" class="btn btn-outline" onclick="showApplyModal();return false">Start with Basic →</a>
+        </div>
+      </div>
+
+      <div class="journey-detail" id="jd-standard" style="display:grid">
+        <div>
+          <div class="jd-eyebrow">★ Standard Package — Most Chosen</div>
+          <div class="jd-title">Walk in fully prepared</div>
+          <div class="jd-desc">Everything in Basic, plus dedicated CSCA exam preparation — the step most students underestimate until it's too late. This is the package most of our students choose.</div>
+          <div class="jd-best-for"><span style="font-size:18px">⭐</span><div><b>Best for:</b><p>Most students — complete guidance from first call through to acceptance.</p></div></div>
+        </div>
+        <div class="jd-right">
+          <div class="jd-price-label">Starting at</div>
+          <div class="jd-price"><span>$</span>550</div>
+          <div class="jd-count">Covers <b>6 of 9</b> steps — through Interview Preparation</div>
+          <a href="#" class="btn btn-gold" onclick="showApplyModal();return false">Start with Standard →</a>
+        </div>
+      </div>
+
+      <div class="journey-detail" id="jd-premium" style="display:none">
+        <div>
+          <div class="jd-eyebrow">Premium Package</div>
+          <div class="jd-title">We meet you at the gate</div>
+          <div class="jd-desc">The complete route — admissions, funding, exam prep, visa support, and someone waiting for you at the airport with keys to your accommodation.</div>
+          <div class="jd-best-for"><span style="font-size:18px">👑</span><div><b>Best for:</b><p>Students who want zero logistics to think about between home and their dorm room.</p></div></div>
+        </div>
+        <div class="jd-right">
+          <div class="jd-price-label">Starting at</div>
+          <div class="jd-price"><span>$</span>850</div>
+          <div class="jd-count">Covers <b>9 of 9</b> steps — the entire journey</div>
+          <a href="#" class="btn btn-gold" onclick="showApplyModal();return false">Start with Premium →</a>
+        </div>
+      </div>
+
+      <!-- FULL COMPARISON (collapsed) -->
+      <details class="compare-details">
+        <summary style="display:flex;justify-content:center"><span>See the full side-by-side comparison</span><svg class="cd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="compare-details-inner">
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr><th>What's Included</th><th>Basic</th><th class="hl">Standard</th><th>Premium</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Consultation</td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>University Shortlisting</td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Scholarship Guidance</td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>CSCA Preparation</td><td><span class="compare-no">—</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Application</td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Interview Preparation</td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Visa Support</td><td><span class="compare-no">—</span></td><td><span class="compare-no">—</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Airport Pickup</td><td><span class="compare-no">—</span></td><td><span class="compare-no">—</span></td><td><span class="compare-yes">✓</span></td></tr>
+                <tr><td>Accommodation</td><td><span class="compare-no">—</span></td><td><span class="compare-no">—</span></td><td><span class="compare-yes">✓</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section style="background:var(--off);padding:64px 24px">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px">
+      <div>
+        <h3 style="font-size:22px;color:var(--navy);margin-bottom:6px">Not sure which package fits you?</h3>
+        <p style="font-size:14px;color:var(--gray)">Talk to our admissions team — we'll recommend a package based on your goals, in under 24 hours.</p>
+      </div>
+      <a href="#" class="btn btn-primary" onclick="showPage('contact');return false" style="flex-shrink:0">Talk to an Advisor →</a>
+    </div>
+  </section>
+</div>
+
 <!-- ═══════════════════════════════════════════ CSCA PAGE ═══ -->
 <div id="page-csca" class="page">
   <div class="inner-hero" style="background:linear-gradient(rgba(5,12,30,0.62),rgba(10,22,40,0.76)),url('https://raw.githubusercontent.com/emroz12/abreams/main/images/csca.jpg') center/cover no-repeat;min-height:380px;display:flex;align-items:center">
@@ -4531,6 +4766,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         <a href="#" onclick="showPage('study');return false">Study in China</a>
         <a href="#" onclick="showPage('scholarships');return false">Scholarships</a>
         <a href="#" onclick="showPage('universities');return false">Universities</a>
+        <a href="#" onclick="showPage('services');return false">Our Services</a>
         <a href="#" onclick="showPage('csca');return false">CSCA Guidance</a>
         <a href="#">Visa Support</a>
         <a href="#">Pre-Departure Guide</a>
@@ -4618,8 +4854,61 @@ function showPage(id){
     if(el){el.classList.add('active');}
     window.scrollTo({top:0,behavior:'smooth'});
     if(id==='universities') filterUnis();
+    if(id==='services') setTimeout(()=>positionJourneyPlane(),50);
   } catch(e){ console.error('showPage error:',e); }
 }
+
+/* ── SERVICES: JOURNEY MAP ── */
+let currentServiceTier = 'standard';
+
+function setServiceTier(tier){
+  currentServiceTier = tier;
+
+  // toggle tab buttons
+  document.querySelectorAll('.tier-btn').forEach(btn=>btn.classList.remove('active'));
+  let activeBtn = document.getElementById('tierBtn-'+tier);
+  if(activeBtn) activeBtn.classList.add('active');
+
+  // toggle detail panels
+  ['basic','standard','premium'].forEach(t=>{
+    let panel = document.getElementById('jd-'+t);
+    if(panel) panel.style.display = (t===tier) ? 'grid' : 'none';
+  });
+
+  // toggle journey stop states
+  document.querySelectorAll('.journey-stop').forEach(stop=>{
+    let tiers = (stop.getAttribute('data-tiers')||'').split(' ');
+    let included = tiers.includes(tier);
+    stop.classList.toggle('included', included);
+    // "skipped" only makes sense for stops that exist in a higher tier but not this one
+    stop.classList.toggle('skipped', !included);
+  });
+
+  positionJourneyPlane();
+}
+
+function positionJourneyPlane(){
+  let track = document.getElementById('journeyTrack');
+  let plane = document.getElementById('journeyPlane');
+  if(!track || !plane) return;
+
+  let includedStops = track.querySelectorAll('.journey-stop.included');
+  if(includedStops.length === 0) return;
+
+  let lastStop = includedStops[includedStops.length - 1];
+  let trackRect = track.getBoundingClientRect();
+  let nodeEl = lastStop.querySelector('.journey-node');
+  let nodeRect = nodeEl.getBoundingClientRect();
+
+  let leftPx = (nodeRect.left - trackRect.left) + (nodeRect.width/2);
+  plane.style.left = leftPx + 'px';
+}
+
+window.addEventListener('resize', ()=>{ if(document.getElementById('page-services').classList.contains('active')) positionJourneyPlane(); });
+
+document.addEventListener('DOMContentLoaded', function(){
+  setServiceTier('standard');
+});
 let GOOGLE_SHEET_URL='https://script.google.com/macros/s/AKfycbw7p30e8qPduhoIAy4PyiU3d9tMsDNpNBEmtaLFJmrvN67Vpib--DAV69LJLPMnnfjshQ/exec';
 
 function showApplyModal(){
