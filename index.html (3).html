@@ -183,6 +183,27 @@ h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.2}
 .scholarship-badge{font-size:11px;color:#059669;font-weight:600;display:flex;align-items:center;gap:4px}
 .scholarship-badge::before{content:'✓';font-size:13px}
 
+/* rank ribbon + flagship/expand block (homepage featured cards) */
+.uni-card-header{padding:20px}
+.uni-rank-ribbon{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.16);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:11px;font-weight:700;letter-spacing:.3px;padding:5px 12px;border-radius:50px}
+.uni-card-header.c7{background:linear-gradient(140deg,var(--navy) 0%,#132b52 55%,#0f2344 100%)}
+.uni-flagship-label{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);margin:16px 0 8px}
+.uni-flagship-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.4}
+.uni-spec-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.uni-spec{background:var(--off);border-radius:8px;padding:8px 10px}
+.uni-spec-k{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--gray);margin-bottom:2px}
+.uni-spec-v{font-size:12.5px;font-weight:600;color:var(--navy2)}
+.uni-spec-v.tbd{color:var(--gray);font-weight:500;font-style:italic}
+.uni-sch-note{font-size:12px;color:#059669;background:rgba(5,150,105,.07);border:1px solid rgba(5,150,105,.18);border-radius:8px;padding:8px 10px;margin-bottom:14px;line-height:1.5}
+.uni-expand{margin-bottom:14px}
+.uni-expand summary{cursor:pointer;list-style:none;font-size:12.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:6px}
+.uni-expand summary::-webkit-details-marker{display:none}
+.uni-expand summary .ux-arrow{transition:transform .25s;font-size:10px}
+.uni-expand[open] summary .ux-arrow{transform:rotate(180deg)}
+.uni-expand-inner{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+.uni-more-program{border-top:1px dashed var(--gray2);padding-top:10px}
+.uni-more-program-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px}
+
 /* ── SCHOLARSHIPS ── */
 .sch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
 .sch-card{border-radius:var(--radius);padding:32px;position:relative;overflow:hidden}
@@ -733,38 +754,138 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       </div>
       <div class="uni-grid">
         <div class="uni-card">
-          <div class="uni-card-header c1"><div class="uni-card-logo"><span>PKU</span></div></div>
+          <div class="uni-card-header c1"><div class="uni-card-logo"><span>SCU</span></div><div class="uni-rank-ribbon">QS World #324</div></div>
           <div class="uni-card-body">
-            <div class="uni-card-rank">QS World #17</div>
-            <div class="uni-card-name">Peking University</div>
-            <div class="uni-card-loc">📍 Beijing, China</div>
-            <div class="uni-tag-row"><span class="uni-tag">Engineering</span><span class="uni-tag">Medicine</span><span class="uni-tag">Law</span></div>
+            <div class="uni-card-name">Sichuan University</div>
+            <div class="uni-card-loc">📍 Chengdu, Sichuan, China</div>
+
+            <div class="uni-flagship-label">Flagship Program</div>
+            <div class="uni-flagship-name">Software Engineering</div>
+            <div class="uni-spec-row">
+              <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v">22,000 RMB</div></div>
+            </div>
+            <div class="uni-sch-note">🏅 University Scholarship — 20,000 RMB/Year · Jiang'an Campus · Deadline 31 May 2026</div>
+
+            <details class="uni-expand">
+              <summary>+3 more programs <span class="ux-arrow">▾</span></summary>
+              <div class="uni-expand-inner">
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Civil Engineering</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v">22,000 RMB</div></div>
+                  </div>
+                </div>
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Business Management</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v tbd">Confirm</div></div>
+                  </div>
+                </div>
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Tourism Management</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v tbd">Confirm</div></div>
+                  </div>
+                </div>
+              </div>
+            </details>
+
             <div class="uni-card-footer">
               <div class="scholarship-badge">CSC Scholarship Available</div>
               <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
             </div>
           </div>
         </div>
+
         <div class="uni-card">
-          <div class="uni-card-header c2"><div class="uni-card-logo"><span>THU</span></div></div>
+          <div class="uni-card-header c4"><div class="uni-card-logo"><span>ZJU</span></div><div class="uni-rank-ribbon">QS World #47</div></div>
           <div class="uni-card-body">
-            <div class="uni-card-rank">QS World #25</div>
-            <div class="uni-card-name">Tsinghua University</div>
-            <div class="uni-card-loc">📍 Beijing, China</div>
-            <div class="uni-tag-row"><span class="uni-tag">Technology</span><span class="uni-tag">Science</span><span class="uni-tag">Business</span></div>
+            <div class="uni-card-name">Zhejiang University</div>
+            <div class="uni-card-loc">📍 Hangzhou, Zhejiang, China</div>
+
+            <div class="uni-flagship-label">Flagship Program</div>
+            <div class="uni-flagship-name">Electrical Engineering and Automation</div>
+            <div class="uni-spec-row">
+              <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v">80,000 RMB</div></div>
+            </div>
+            <div class="uni-sch-note">📅 Application Deadline: 28 Feb 2026</div>
+
+            <details class="uni-expand">
+              <summary>+3 more programs <span class="ux-arrow">▾</span></summary>
+              <div class="uni-expand-inner">
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Electronic Science and Technology</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v tbd">Confirm</div></div>
+                  </div>
+                </div>
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Information Engineering</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v tbd">Confirm</div></div>
+                  </div>
+                </div>
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Optical Information Science and Engineering</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v tbd">Confirm</div></div>
+                  </div>
+                </div>
+              </div>
+            </details>
+
             <div class="uni-card-footer">
               <div class="scholarship-badge">CSC Scholarship Available</div>
               <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
             </div>
           </div>
         </div>
+
         <div class="uni-card">
-          <div class="uni-card-header c3"><div class="uni-card-logo"><span>FDU</span></div></div>
+          <div class="uni-card-header c7"><div class="uni-card-logo"><span>TJU</span></div><div class="uni-rank-ribbon">QS World #177</div></div>
           <div class="uni-card-body">
-            <div class="uni-card-rank">QS World #44</div>
-            <div class="uni-card-name">Fudan University</div>
+            <div class="uni-card-name">Tongji University</div>
             <div class="uni-card-loc">📍 Shanghai, China</div>
-            <div class="uni-tag-row"><span class="uni-tag">Business</span><span class="uni-tag">Social Science</span></div>
+
+            <div class="uni-flagship-label">Flagship Program</div>
+            <div class="uni-flagship-name">Civil Engineering</div>
+            <div class="uni-spec-row">
+              <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+              <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v">35,000 RMB</div></div>
+            </div>
+            <div class="uni-sch-note">🏅 University Scholarship — Tuition + Medical + Accommodation + Stipend (2,500 RMB/Month)</div>
+
+            <details class="uni-expand">
+              <summary>+1 more program <span class="ux-arrow">▾</span></summary>
+              <div class="uni-expand-inner">
+                <div class="uni-more-program">
+                  <div class="uni-more-program-name">Architecture</div>
+                  <div class="uni-spec-row">
+                    <div class="uni-spec"><div class="uni-spec-k">Duration</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Language</div><div class="uni-spec-v tbd">Confirm</div></div>
+                    <div class="uni-spec"><div class="uni-spec-k">Annual Fee</div><div class="uni-spec-v">33,800 RMB</div></div>
+                  </div>
+                </div>
+              </div>
+            </details>
+
             <div class="uni-card-footer">
               <div class="scholarship-badge">CSC Scholarship Available</div>
               <a href="#" class="btn btn-primary" style="padding:7px 16px;font-size:12px" onclick="showApplyModal();return false">Apply</a>
