@@ -162,6 +162,31 @@ h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.2}
 
 /* ── UNIVERSITIES ── */
 .uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+
+/* homepage quick finder */
+.qf-card{background:#fff;border:1px solid var(--gray2);border-radius:20px;padding:32px 36px;box-shadow:0 10px 40px rgba(10,22,40,.07);margin-bottom:56px;position:relative;overflow:hidden}
+.qf-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,.09) 0%,transparent 70%);border-radius:50%}
+.qf-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;position:relative;z-index:1}
+.qf-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--navy),#1a3a6e);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.qf-title{font-size:17px;font-weight:700;color:var(--navy)}
+.qf-sub{font-size:13px;color:var(--gray)}
+.qf-fields{display:grid;grid-template-columns:1.3fr 1.3fr 1fr auto;gap:14px;align-items:end;position:relative;z-index:1}
+.qf-field label{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:8px}
+.qf-field input,.qf-field select{width:100%;padding:12px 14px;border:1.5px solid var(--gray2);border-radius:12px;font-size:14px;color:var(--navy);outline:none;font-family:'Inter',sans-serif;box-sizing:border-box;transition:border-color .2s;background:#fff}
+.qf-field input:focus,.qf-field select:focus{border-color:var(--blue)}
+.qf-btn{padding:12px 26px;border-radius:12px;background:linear-gradient(135deg,var(--navy),#132b52);color:#fff;border:none;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:6px}
+.qf-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,22,40,.25)}
+.qf-chips{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:20px;position:relative;z-index:1}
+.qf-chips-label{font-size:12px;color:var(--gray);font-weight:600;margin-right:4px}
+.qf-chip{font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;background:var(--off);color:var(--navy2);border:1px solid var(--gray2);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:5px}
+.qf-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(max-width:900px){
+  .qf-fields{grid-template-columns:1fr 1fr}
+  .qf-btn{grid-column:1/-1;justify-content:center}
+}
+@media(max-width:560px){
+  .qf-fields{grid-template-columns:1fr}
+}
 .uni-card{border:1px solid var(--gray2);border-radius:var(--radius);overflow:hidden;transition:all .3s;background:#fff}
 .uni-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
 .uni-card-header{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
@@ -173,6 +198,8 @@ h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.2}
 .uni-card-header.c6{background:linear-gradient(135deg,#7a3b00,#e67e22)}
 .uni-card-logo{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center}
 .uni-card-logo span{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#fff}
+.uni-card-logo.solid{background:#fff;border-color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.uni-card-logo img{width:68%;height:68%;object-fit:contain}
 .uni-card-body{padding:20px}
 .uni-card-rank{display:inline-block;background:rgba(201,168,76,.12);color:var(--gold);font-size:11px;font-weight:600;padding:3px 10px;border-radius:50px;margin-bottom:8px}
 .uni-card-name{font-family:'Inter',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:4px}
@@ -744,6 +771,56 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
   <!-- FEATURED UNIVERSITIES -->
   <section>
     <div class="container">
+
+      <!-- QUICK FINDER -->
+      <div class="qf-card">
+        <div class="qf-head">
+          <div class="qf-icon">🎓</div>
+          <div>
+            <div class="qf-title">Find Your Program in China</div>
+            <div class="qf-sub">Search across 191 partner universities in seconds</div>
+          </div>
+        </div>
+        <div class="qf-fields">
+          <div class="qf-field">
+            <label>University or Program</label>
+            <input type="text" id="qfKeyword" placeholder="e.g. Peking, MBBS, Engineering…" onkeydown="if(event.key==='Enter')quickFinderGo()"/>
+          </div>
+          <div class="qf-field">
+            <label>Level of Study</label>
+            <select id="qfLevel">
+              <option value="">All Levels</option>
+              <option value="bachelor">🎓 Bachelor</option>
+              <option value="master">📚 Master</option>
+              <option value="phd">🔬 PhD</option>
+              <option value="chinese">🇨🇳 Chinese Language</option>
+            </select>
+          </div>
+          <div class="qf-field">
+            <label>Stream</label>
+            <select id="qfStream">
+              <option value="">All Streams</option>
+              <option value="engineering">⚙️ Engineering</option>
+              <option value="medicine">⚕️ Medicine / MBBS</option>
+              <option value="business">💼 Business</option>
+              <option value="technology">💻 Technology</option>
+              <option value="science">🔭 Science</option>
+              <option value="arts">🎨 Arts & Humanities</option>
+              <option value="language">🗣️ Language</option>
+            </select>
+          </div>
+          <button class="qf-btn" onclick="quickFinderGo()">🔍 Search</button>
+        </div>
+        <div class="qf-chips">
+          <span class="qf-chips-label">Popular:</span>
+          <span class="qf-chip" onclick="quickFinderChip('mbbs','','')">⚕️ MBBS</span>
+          <span class="qf-chip" onclick="quickFinderChip('','','engineering')">⚙️ Engineering</span>
+          <span class="qf-chip" onclick="quickFinderChip('','','business')">💼 Business</span>
+          <span class="qf-chip" onclick="quickFinderChip('','bachelor','')">🎓 Bachelor's</span>
+          <span class="qf-chip" onclick="quickFinderChip('scholarship','','')">🏅 Scholarship Available</span>
+        </div>
+      </div>
+
       <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
         <div>
           <div class="section-label"><span></span>Featured Partners</div>
@@ -754,7 +831,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       </div>
       <div class="uni-grid">
         <div class="uni-card">
-          <div class="uni-card-header c1"><div class="uni-card-logo"><span>SCU</span></div><div class="uni-rank-ribbon">QS World #324</div></div>
+          <div class="uni-card-header c1"><div class="uni-card-logo solid"><img src="images/logos/sichuan.svg" alt="Sichuan University logo" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=&quot;color:var(--navy)&quot;>SCU</span>'"/></div><div class="uni-rank-ribbon">QS World #324</div></div>
           <div class="uni-card-body">
             <div class="uni-card-name">Sichuan University</div>
             <div class="uni-card-loc">📍 Chengdu, Sichuan, China</div>
@@ -806,7 +883,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         </div>
 
         <div class="uni-card">
-          <div class="uni-card-header c4"><div class="uni-card-logo"><span>ZJU</span></div><div class="uni-rank-ribbon">QS World #47</div></div>
+          <div class="uni-card-header c4"><div class="uni-card-logo solid"><img src="images/logos/zhejiang.svg" alt="Zhejiang University logo" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=&quot;color:var(--navy)&quot;>ZJU</span>'"/></div><div class="uni-rank-ribbon">QS World #47</div></div>
           <div class="uni-card-body">
             <div class="uni-card-name">Zhejiang University</div>
             <div class="uni-card-loc">📍 Hangzhou, Zhejiang, China</div>
@@ -858,7 +935,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         </div>
 
         <div class="uni-card">
-          <div class="uni-card-header c7"><div class="uni-card-logo"><span>TJU</span></div><div class="uni-rank-ribbon">QS World #177</div></div>
+          <div class="uni-card-header c7"><div class="uni-card-logo"><img src="images/logos/tongji.svg" alt="Tongji University logo" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='<span>TJU</span>'"/></div><div class="uni-rank-ribbon">QS World #177</div></div>
           <div class="uni-card-body">
             <div class="uni-card-name">Tongji University</div>
             <div class="uni-card-loc">📍 Shanghai, China</div>
@@ -5117,6 +5194,46 @@ function filterPrograms(cat,btn){
   });
 }
 let activeUniTag='';
+/* ── HOMEPAGE QUICK FINDER ── */
+function quickFinderGo(){
+  let keyword = (document.getElementById('qfKeyword').value || '').trim();
+  let level   = document.getElementById('qfLevel').value;
+  let stream  = document.getElementById('qfStream').value;
+
+  showPage('universities');
+
+  document.getElementById('uniLevel').value    = level;
+  document.getElementById('uniStream').value   = stream;
+  document.getElementById('uniDuration').value = '';
+
+  function runWith(searchVal, programVal){
+    document.getElementById('uniSearch').value  = searchVal;
+    document.getElementById('uniProgram').value = programVal;
+    filterUnis();
+    let countEl = document.getElementById('uniCountNum');
+    return countEl ? parseInt(countEl.textContent, 10) : 1;
+  }
+
+  if(!keyword){
+    runWith('', '');
+    return;
+  }
+
+  // A keyword could be a university name ("Peking") or a program name
+  // ("MBBS") — filterUnis requires both fields to match if both are set,
+  // so try combined first, then each field alone, until something matches.
+  if(runWith(keyword, keyword) > 0) return;
+  if(runWith('', keyword) > 0) return;
+  runWith(keyword, '');
+}
+
+function quickFinderChip(keyword, level, stream){
+  document.getElementById('qfKeyword').value = keyword;
+  document.getElementById('qfLevel').value = level;
+  document.getElementById('qfStream').value = stream;
+  quickFinderGo();
+}
+
 function filterUnis(){try{
   let search  = (document.getElementById('uniSearch').value  || '').toLowerCase().trim();
   let program = (document.getElementById('uniProgram').value || '').toLowerCase().trim();
