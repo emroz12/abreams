@@ -164,45 +164,28 @@ h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.2}
 .uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 
 /* homepage quick finder */
-.qf-wrap{position:relative;z-index:5;margin-top:-92px;margin-bottom:8px}
-.qf-card{background:#fff;border:1px solid var(--gray2);border-radius:24px;padding:40px 44px;box-shadow:0 24px 64px rgba(10,22,40,.18);position:relative;overflow:hidden}
-.qf-card::before{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;background:radial-gradient(circle,rgba(201,168,76,.10) 0%,transparent 70%);border-radius:50%}
-.qf-head{display:flex;align-items:center;gap:14px;margin-bottom:26px;position:relative;z-index:1}
-.qf-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy),#1a3a6e);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 8px 20px rgba(10,22,40,.25)}
-.qf-title{font-size:23px;font-weight:800;color:var(--navy);line-height:1.2}
-.qf-sub{font-size:14px;color:var(--gray);margin-top:2px}
-.qf-fields{display:grid;grid-template-columns:1.5fr 1fr 1fr auto;gap:16px;align-items:end;position:relative;z-index:6}
-.qf-field{position:relative}
-.qf-field label{font-size:11.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:9px}
-.qf-field input,.qf-field select{width:100%;padding:15px 16px;border:1.5px solid var(--gray2);border-radius:12px;font-size:15px;color:var(--navy);outline:none;font-family:'Inter',sans-serif;box-sizing:border-box;transition:border-color .2s,box-shadow .2s;background:#fff}
-.qf-field input:focus,.qf-field select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,86,219,.10)}
-.qf-btn{padding:16px 30px;border-radius:12px;background:linear-gradient(135deg,var(--navy),#132b52);color:#fff;border:none;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px}
-.qf-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,22,40,.28)}
-.qf-auto{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--gray2);border-radius:14px;box-shadow:0 16px 40px rgba(10,22,40,.16);z-index:20;overflow:hidden;display:none}
-.qf-auto.open{display:block}
-.qf-auto-item{display:flex;align-items:center;gap:10px;padding:11px 16px;cursor:pointer;font-size:13.5px;color:var(--navy);border-bottom:1px solid var(--off)}
-.qf-auto-item:last-child{border-bottom:none}
-.qf-auto-item:hover,.qf-auto-item.active{background:var(--off)}
-.qf-auto-item .qai-type{margin-left:auto;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--gray);background:var(--off);padding:2px 8px;border-radius:50px}
-.qf-auto-item:hover .qai-type,.qf-auto-item.active .qai-type{background:#fff}
-.qf-mini-stats{display:flex;align-items:center;gap:28px;margin-top:22px;padding-top:22px;border-top:1px solid var(--gray2);position:relative;z-index:1;flex-wrap:wrap}
-.qf-mini-stat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray)}
-.qf-mini-stat b{color:var(--navy);font-size:15px}
-.qf-chips{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:22px;position:relative;z-index:1}
-.qf-chips-label{font-size:13px;color:var(--gray);font-weight:600;margin-right:4px}
-.qf-chip{font-size:13px;font-weight:600;padding:8px 16px;border-radius:50px;background:var(--off);color:var(--navy2);border:1px solid var(--gray2);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
-.qf-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-1px)}
+.qf-card{background:#fff;border:1px solid var(--gray2);border-radius:20px;padding:32px 36px;box-shadow:0 10px 40px rgba(10,22,40,.07);margin-bottom:56px;position:relative;overflow:hidden}
+.qf-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,.09) 0%,transparent 70%);border-radius:50%}
+.qf-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;position:relative;z-index:1}
+.qf-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--navy),#1a3a6e);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.qf-title{font-size:17px;font-weight:700;color:var(--navy)}
+.qf-sub{font-size:13px;color:var(--gray)}
+.qf-fields{display:grid;grid-template-columns:1.3fr 1.3fr 1fr auto;gap:14px;align-items:end;position:relative;z-index:1}
+.qf-field label{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:8px}
+.qf-field input,.qf-field select{width:100%;padding:12px 14px;border:1.5px solid var(--gray2);border-radius:12px;font-size:14px;color:var(--navy);outline:none;font-family:'Inter',sans-serif;box-sizing:border-box;transition:border-color .2s;background:#fff}
+.qf-field input:focus,.qf-field select:focus{border-color:var(--blue)}
+.qf-btn{padding:12px 26px;border-radius:12px;background:linear-gradient(135deg,var(--navy),#132b52);color:#fff;border:none;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:6px}
+.qf-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,22,40,.25)}
+.qf-chips{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:20px;position:relative;z-index:1}
+.qf-chips-label{font-size:12px;color:var(--gray);font-weight:600;margin-right:4px}
+.qf-chip{font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;background:var(--off);color:var(--navy2);border:1px solid var(--gray2);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:5px}
+.qf-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 @media(max-width:900px){
-  .qf-wrap{margin-top:-56px}
-  .qf-card{padding:30px 26px}
   .qf-fields{grid-template-columns:1fr 1fr}
   .qf-btn{grid-column:1/-1;justify-content:center}
-  .qf-title{font-size:20px}
 }
 @media(max-width:560px){
-  .qf-wrap{margin-top:-40px}
   .qf-fields{grid-template-columns:1fr}
-  .qf-mini-stats{gap:16px}
 }
 .uni-card{border:1px solid var(--gray2);border-radius:var(--radius);overflow:hidden;transition:all .3s;background:#fff}
 .uni-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
@@ -755,8 +738,21 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
     </div>
   </section>
 
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-strip-inner">
+      <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Partner Universities</div></div>
+      <div class="stat-item"><div class="stat-num">60+</div><div class="stat-label">Countries Served</div></div>
+      <div class="stat-item"><div class="stat-num">$12M+</div><div class="stat-label">Scholarships Won</div></div>
+      <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Visa Approval Rate</div></div>
+    </div>
+  </div>
+
+  <!-- FEATURED UNIVERSITIES -->
+  <section>
+    <div class="container">
+
       <!-- QUICK FINDER -->
-      <div class="qf-wrap">
       <div class="qf-card">
         <div class="qf-head">
           <div class="qf-icon">🎓</div>
@@ -768,8 +764,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
         <div class="qf-fields">
           <div class="qf-field">
             <label>University or Program</label>
-            <input type="text" id="qfKeyword" autocomplete="off" placeholder="e.g. Peking, MBBS, Engineering…" onkeydown="qfHandleKey(event)" oninput="qfAutocomplete()" onfocus="qfAutocomplete()" onblur="setTimeout(function(){document.getElementById('qfAuto').classList.remove('open')},150)"/>
-            <div class="qf-auto" id="qfAuto"></div>
+            <input type="text" id="qfKeyword" placeholder="e.g. Peking, MBBS, Engineering…" onkeydown="if(event.key==='Enter')quickFinderGo()"/>
           </div>
           <div class="qf-field">
             <label>Level of Study</label>
@@ -804,13 +799,6 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <span class="qf-chip" onclick="quickFinderChip('','bachelor','')">🎓 Bachelor's</span>
           <span class="qf-chip" onclick="quickFinderChip('scholarship','','')">🏅 Scholarship Available</span>
         </div>
-        <div class="qf-mini-stats">
-          <div class="qf-mini-stat">🏫 <b>200+</b>&nbsp;Universities</div>
-          <div class="qf-mini-stat">🌍 <b>60+</b>&nbsp;Countries Served</div>
-          <div class="qf-mini-stat">💰 <b>$12M+</b>&nbsp;Scholarships Won</div>
-          <div class="qf-mini-stat">✅ <b>98%</b>&nbsp;Visa Success</div>
-        </div>
-      </div>
       </div>
 
       <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px">
@@ -5311,83 +5299,6 @@ function filterPrograms(cat,btn){
 }
 let activeUniTag='';
 /* ── HOMEPAGE QUICK FINDER ── */
-let qfIndex = null;
-function qfBuildIndex(){
-  if(qfIndex) return qfIndex;
-  qfIndex = [];
-  document.querySelectorAll('.uni-row').forEach(function(row){
-    var name = row.getAttribute('data-name');
-    if(name) qfIndex.push({label:name, type:'University'});
-    var progs = (row.getAttribute('data-programs')||'').split(',');
-    progs.forEach(function(p){
-      p = p.trim();
-      if(p) qfIndex.push({label:p.replace(/\b\w/g, function(c){return c.toUpperCase()}), type:'Program'});
-    });
-  });
-  return qfIndex;
-}
-
-let qfActiveIdx = -1;
-function qfAutocomplete(){
-  var val = document.getElementById('qfKeyword').value.trim().toLowerCase();
-  var box = document.getElementById('qfAuto');
-  qfActiveIdx = -1;
-  if(!val){ box.classList.remove('open'); box.innerHTML=''; return; }
-  var idx = qfBuildIndex();
-  var seen = {};
-  var matches = [];
-  for(var i=0;i<idx.length && matches.length<8;i++){
-    var item = idx[i];
-    var key = item.type+':'+item.label.toLowerCase();
-    if(seen[key]) continue;
-    if(item.label.toLowerCase().indexOf(val) !== -1){
-      seen[key]=true;
-      matches.push(item);
-    }
-  }
-  if(!matches.length){ box.classList.remove('open'); box.innerHTML=''; return; }
-  box.innerHTML = matches.map(function(m,i){
-    return '<div class="qf-auto-item" data-i="'+i+'" onmousedown="qfPick('+i+')">'+
-      (m.type==='University' ? '🏫 ' : '📘 ') + m.label +
-      '<span class="qai-type">'+m.type+'</span></div>';
-  }).join('');
-  box.classList.add('open');
-  box._matches = matches;
-}
-
-function qfPick(i){
-  var box = document.getElementById('qfAuto');
-  var m = box._matches[i];
-  document.getElementById('qfKeyword').value = m.label;
-  box.classList.remove('open');
-  quickFinderGo();
-}
-
-function qfHighlight(items){
-  items.forEach(function(it,i){ it.classList.toggle('active', i===qfActiveIdx); });
-}
-
-function qfHandleKey(e){
-  var box = document.getElementById('qfAuto');
-  var items = box.querySelectorAll('.qf-auto-item');
-  if(e.key === 'ArrowDown'){
-    e.preventDefault();
-    if(items.length){ qfActiveIdx = Math.min(qfActiveIdx+1, items.length-1); qfHighlight(items); }
-  } else if(e.key === 'ArrowUp'){
-    e.preventDefault();
-    if(items.length){ qfActiveIdx = Math.max(qfActiveIdx-1, 0); qfHighlight(items); }
-  } else if(e.key === 'Enter'){
-    if(qfActiveIdx >= 0 && box._matches && box._matches[qfActiveIdx]){
-      qfPick(qfActiveIdx);
-    } else {
-      box.classList.remove('open');
-      quickFinderGo();
-    }
-  } else if(e.key === 'Escape'){
-    box.classList.remove('open');
-  }
-}
-
 function quickFinderGo(){
   let keyword = (document.getElementById('qfKeyword').value || '').trim();
   let level   = document.getElementById('qfLevel').value;
