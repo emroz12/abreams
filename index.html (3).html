@@ -1687,7 +1687,16 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
   <td style="padding:10px 16px;font-size:12px;color:#059669">CSC, China Agricultural University Scholarship</td>
   <td style="padding:10px 16px;text-align:center"><a href="#" onclick="showApplyModal();return false" style="background:#1A56DB;color:#fff;padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;white-space:nowrap">Apply</a></td>
 </tr>
-
+<tr style="border-bottom:1px solid #e5e7eb;">
+  <td style="padding:10px 16px;color:#6b7280;font-size:12px">32</td>
+  <td style="padding:10px 16px;font-weight:600;color:#0A1628"><a href="#" onclick="openUniModal('Jinan University (SiMBA).',{});return false;" style="color:#0A1628;text-decoration:none;border-bottom:1px dashed var(--blue);cursor:pointer;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='#0A1628'">Jinan University (SiMBA).</a></td>
+  <td style="padding:10px 16px;text-align:center;font-weight:600;color:#059669">39,000 RMB/Year</td>
+  <td style="padding:10px 16px;text-align:center;color:#6b7280">500 RMB</td>
+  <td style="padding:10px 16px;text-align:center;color:#c0392b;font-weight:600">—</td>
+  <td style="padding:10px 16px;text-align:center;color:#059669;font-weight:600;font-size:12px">Optional</td>
+  <td style="padding:10px 16px;font-size:12px;color:#059669">CSC Outstanding International Student Scholarship, Guangdong Government Scholarship</td>
+  <td style="padding:10px 16px;text-align:center"><a href="#" onclick="showApplyModal();return false" style="background:#1A56DB;color:#fff;padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;white-space:nowrap">Apply</a></td>
+</tr>
       </tbody>
     </table>
   </div>
@@ -2648,6 +2657,15 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
           <div class="uni-row-cell"><span class="uri-pill green">✓ CSC Scholarship</span><button class="uni-apply-btn" onclick="showApplyModal()">Apply →</button></div>
         </div>
+
+        <div class="uni-row" data-name="Jinan University (SiMBA)" data-tags="scholarship english" data-level="master" data-stream="business" data-duration="2" data-programs="mba">
+          <div class="uni-row-rank">201</div>
+          <div class="uni-row-main"><div class="uni-row-logo"><img loading="lazy" src="https://logo.clearbit.com/cau.edu.cn" alt="JNU" onerror="this.parentNode.textContent='JNU'"></div><div><div class="uni-row-name" onclick="openUniModal('Jinan University (SiMBA).',{})" style="cursor:pointer;border-bottom:1px dashed var(--blue);display:inline-block;transition:color .2s" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color=''">Jinan University (SiMBA).</div><div class="uni-row-meta">📍 Guangzhou, Guangdong</div></div></div>
+          <div class="uni-row-cell"><span class="uri-pill blue">Master</span></div>
+          <div class="uni-row-cell"><span class="uri-pill gray">Business</span><span class="uri-pill gray">MBA</span></div>
+          <div class="uni-row-cell"><span class="uri-pill navy">2 Yrs</span></div>
+          <div class="uni-row-cell"><span class="uri-pill green">✓ CSC Outstanding International Student Scholarship, Guangdong Government Scholarship</span><button class="uni-apply-btn" onclick="showApplyModal()">Apply →</button></div>
+        </div>  
 
         <!-- ── MBBS-ONLY UNIVERSITIES (not already listed) ── -->
         <div class="uni-row" data-name="Harbin Medical University" data-tags="medical scholarship" data-level="bachelor" data-stream="medicine" data-duration="6" data-programs="mbbs (6 yrs)">
@@ -5788,6 +5806,7 @@ var uniData = {
   'Shanghai Normal University': {loc:'📍 Shanghai',qs:'Key University',tier:'Provincial Key',levels:['Bachelor'],streams:['Science'],duration:['4 Years'],scholarship:['Shanghai Government Scholarship'],programs:['Applied Chemistry','Human Geography and Urban-Rural Planning'],logo:'https://logo.clearbit.com/shnu.edu.cn'},
   'Ningbo University of Technology': {loc:'📍 Ningbo, Zhejiang',qs:'Key University',tier:'Provincial Key',levels:['Bachelor'],streams:['Engineering','Technology','Business','Science'],duration:['4 Years'],scholarship:['Ningbo Government Scholarship'],programs:['Intelligent Construction','Applied Chemistry','International Business','Internet and New Media','Artificial Intelligence'],logo:'https://logo.clearbit.com/nbut.edu.cn'},
   'Communication University of Zhejiang': {loc:'📍 Hangzhou, Zhejiang',qs:'Top Media University',tier:'Provincial Key',levels:['Bachelor'],streams:['Arts'],duration:['4 Years'],scholarship:['Zhejiang Government Scholarship & University Scholarship'],programs:['Radio & TV Directing','International Journalism & Communication'],logo:'https://logo.clearbit.com/cuz.edu.cn'},
+  'Jinan University (SiMBA)':{loc:'📍 Guangzhou, Guangdong',qs:'Key University',tier:'Provincial Key',levels:['Master'],streams:['Business'],duration:['2 Years'],scholarship:['CSC Outstanding International Student Scholarship, Guangdong Government Scholarship'],programs:['MBA'],logo:'https://logo.clearbit.com/jnu.edu.cn'},
 };
 
 function openUniModal(name, meta) { try {
