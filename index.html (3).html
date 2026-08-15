@@ -599,6 +599,80 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
   .uni-filter-grid{grid-template-columns:1fr !important}
 }
 
+
+/* ── TOP UNIVERSITIES PAGE (bright theme) ── */
+.tu-hero{background:linear-gradient(160deg,#FFFFFF 0%,#FDF9EF 55%,#FBF3DA 100%);padding:64px 0 48px;position:relative;overflow:hidden;border-bottom:1px solid var(--gray2)}
+.tu-hero::before{content:'';position:absolute;top:-120px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(201,168,76,.14) 0%,transparent 70%);border-radius:50%}
+.tu-hero::after{content:'';position:absolute;bottom:-140px;left:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(26,86,219,.06) 0%,transparent 70%);border-radius:50%}
+.tu-breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray);margin-bottom:22px;position:relative;z-index:1}
+.tu-breadcrumb a{color:var(--gray);text-decoration:none}
+.tu-breadcrumb a:hover{color:var(--blue)}
+.tu-hero-label{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);color:#9c7a1f;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:18px;position:relative;z-index:1}
+.tu-hero-label span{width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block}
+.tu-hero-title{font-size:clamp(32px,4.2vw,48px);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:16px;position:relative;z-index:1}
+.tu-hero-sub{font-size:16px;color:var(--gray);max-width:620px;line-height:1.65;margin-bottom:36px;position:relative;z-index:1}
+.tu-stats-row{display:flex;gap:0;flex-wrap:wrap;position:relative;z-index:1}
+.tu-stat{padding:0 32px 0 0;margin-right:32px;border-right:1px solid var(--gray2)}
+.tu-stat:last-child{border-right:none}
+.tu-stat-num{font-size:26px;font-weight:800;color:var(--navy);line-height:1.1}
+.tu-stat-lbl{font-size:12.5px;color:var(--gray);margin-top:4px}
+
+.tu-list{display:flex;flex-direction:column;gap:16px;padding:48px 0 32px}
+.tu-card{background:#fff;border:1px solid var(--gray2);border-radius:16px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.tu-card:hover{box-shadow:0 8px 28px rgba(10,22,40,.08)}
+.tu-card-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;flex-wrap:wrap}
+.tu-rank-gold,.tu-rank-blue{flex-shrink:0;min-width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;padding:0 8px}
+.tu-rank-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
+.tu-rank-blue{background:var(--off);color:var(--navy);border:1.5px solid var(--gray2)}
+.tu-card-head-main{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
+.tu-card-logo{width:44px;height:44px;border-radius:10px;background:var(--off);border:1px solid var(--gray2);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-size:11px;font-weight:700;color:var(--navy)}
+.tu-card-logo img{width:100%;height:100%;object-fit:contain;padding:7px}
+.tu-card-name{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.tu-card-meta{font-size:12.5px;color:var(--gray)}
+.tu-card-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tu-badge{font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:50px;white-space:nowrap}
+.tu-badge-green{background:#ECFDF5;color:#059669}
+.tu-badge-gray{background:var(--off);color:var(--gray);border:1px solid var(--gray2)}
+.tu-badge-outline{background:#fff;color:var(--navy2);border:1px solid var(--gray2)}
+.tu-chevron{width:20px;height:20px;color:var(--gray);flex-shrink:0;transition:transform .25s;margin-left:auto}
+.tu-card.open .tu-chevron{transform:rotate(180deg)}
+.tu-card-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.tu-card-body-inner{padding:0 24px 26px;border-top:1px solid var(--gray2);padding-top:22px;margin-top:2px}
+
+.tu-req-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:22px;border:1px solid var(--gray2);border-radius:12px;overflow:hidden}
+.tu-req-item{padding:14px 16px;border-left:1px solid var(--gray2);background:var(--off)}
+.tu-req-item:first-child{border-left:none}
+.tu-req-label{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:5px}
+.tu-req-val{font-size:13.5px;color:var(--navy);font-weight:600;line-height:1.4}
+
+.tu-table-wrap{overflow-x:auto;border:1px solid var(--gray2);border-radius:12px;margin-bottom:20px}
+.tu-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+.tu-table thead th{background:var(--navy);color:#fff;text-align:left;padding:11px 16px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.tu-table tbody td{padding:11px 16px;border-top:1px solid var(--gray2);color:var(--text)}
+.tu-table tbody tr:nth-child(even){background:var(--off)}
+
+.tu-sch-box{background:#FFFBEB;border:1px solid #F5E6B8;border-radius:12px;padding:16px 18px}
+.tu-sch-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.tu-sch-list li{font-size:13px;color:var(--text);line-height:1.55}
+
+.tu-bottom-cta{margin-top:8px;background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:20px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tu-bottom-cta > div:first-child > div:first-child{color:#fff !important}
+.tu-bottom-cta > div:first-child > div:last-child{color:rgba(255,255,255,.7) !important}
+
+@media(max-width:900px){
+  .tu-req-grid{grid-template-columns:repeat(2,1fr)}
+  .tu-req-item:nth-child(3){border-left:none}
+}
+@media(max-width:640px){
+  .tu-card-head{gap:12px}
+  .tu-card-badges{width:100%;order:3}
+  .tu-req-grid{grid-template-columns:1fr}
+  .tu-req-item{border-left:none !important;border-top:1px solid var(--gray2)}
+  .tu-req-item:first-child{border-top:none}
+  .tu-stats-row{gap:20px 0}
+  .tu-stat{margin-right:20px;padding-right:20px}
+}
+
 </style>
 </head>
 <body>
@@ -644,7 +718,28 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
       </div>
-      <a href="#" onclick="showPage('universities');return false">Universities</a>
+      <div class="nav-dropdown" id="uniDropdown" role="navigation" aria-label="Universities submenu">
+        <a href="#" onclick="showPage('universities');return false" style="padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;color:var(--navy2)">
+          Universities
+          <svg class="dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dd-menu">
+          <div class="dd-item" onclick="showPage('universities')">
+            <span class="dd-item-icon">🏛️</span>
+            <div>
+              <div style="font-weight:600;font-size:14px;color:var(--navy)">All Universities</div>
+              <div style="font-size:12px;color:var(--gray);margin-top:1px">Browse &amp; filter 200+ universities</div>
+            </div>
+          </div>
+          <div class="dd-item" onclick="showPage('topuniversities')">
+            <span class="dd-item-icon">🏅</span>
+            <div>
+              <div style="font-weight:600;font-size:14px;color:var(--navy)">Top Universities</div>
+              <div style="font-size:12px;color:var(--gray);margin-top:1px">11 QS Top-1000 ranked schools</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <a href="#" onclick="showPage('services');return false">Our Services</a>
       <a href="#" onclick="showPage('csca');return false">CSCA</a>
       <a href="#" onclick="showPage('partner');return false">Partner With Us</a>
@@ -674,7 +769,16 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       <a href="#" onclick="showPage('scholarships');closeMobileMenu();return false">Scholarship</a>
     </div>
   </div>
-  <a href="#" onclick="showPage('universities');closeMobileMenu();return false">🏛️ Universities</a>
+  <div>
+    <div class="mob-dd-toggle" onclick="toggleMobUniDD(this)">
+      🏛️ Universities
+      <svg class="dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="mob-dd-sub" id="mobUniSub">
+      <a href="#" onclick="showPage('universities');closeMobileMenu();return false">All Universities</a>
+      <a href="#" onclick="showPage('topuniversities');closeMobileMenu();return false">Top Universities</a>
+    </div>
+  </div>
   <a href="#" onclick="showPage('services');closeMobileMenu();return false">🧭 Our Services</a>
   <a href="#" onclick="showPage('csca');closeMobileMenu();return false">📋 CSCA</a>
   <a href="#" onclick="showPage('partner');closeMobileMenu();return false">🤝 Partner With Us</a>
@@ -4638,6 +4742,891 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
   </section>
 </div>
 
+<!-- ═══════════════════════════════════════════ TOP UNIVERSITIES PAGE ═══ -->
+<div id="page-topuniversities" class="page">
+  <div class="tu-hero">
+    <div class="container">
+      <div class="tu-breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span><a href="#" onclick="showPage('universities');return false">Universities</a><span>›</span>Top Universities</div>
+      <div class="tu-hero-label"><span></span>QS World Ranked</div>
+      <h1 class="tu-hero-title">Top Chinese Universities</h1>
+      <p class="tu-hero-sub">11 QS Top-1000 ranked universities offering English-taught bachelor's programs — real tuition, requirements, and scholarships, all in one place.</p>
+      <div class="tu-stats-row">
+        <div class="tu-stat"><div class="tu-stat-num">11</div><div class="tu-stat-lbl">Universities</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">Top 1000</div><div class="tu-stat-lbl">QS World Ranking</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">55+</div><div class="tu-stat-lbl">Programs Listed</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">100%</div><div class="tu-stat-lbl">English-Taught</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--off)">
+    <div class="container">
+      <div class="tu-list">
+
+        <div class="tu-card" id="tuCard0">
+          <div class="tu-card-head" onclick="toggleTopUni(0)">
+            <div class="tu-rank-gold">#26</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/fudan.edu.cn" alt="" onerror="this.parentNode.innerHTML='FU'"></div>
+              <div>
+                <div class="tu-card-name">Fudan University</div>
+                <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #26 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-gray">Contact Us for Scholarships</span>
+              <span class="tu-badge tu-badge-outline">📅 6th March 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody0">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#c0392b;font-weight:700">Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>International Organizations and Global Governance</td>
+              <td style="color:#059669;font-weight:700">100,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>6th March 2026</td>
+            </tr>
+            <tr>
+              <td>Economics (UIPE)</td>
+              <td style="color:#059669;font-weight:700">80,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>6th March 2026</td>
+            </tr>
+            <tr>
+              <td>Data Science and Big Data Technology (UIPDB)</td>
+              <td style="color:#059669;font-weight:700">80,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>6th March 2026</td>
+            </tr>
+            <tr>
+              <td>Global Fintech (GBF)</td>
+              <td style="color:#059669;font-weight:700">80,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>6th March 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <p style="font-size:13px;color:var(--gray);margin:0">No scholarship listed for this university — contact us for current funding options.</p>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Fudan University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard1">
+          <div class="tu-card-head" onclick="toggleTopUni(1)">
+            <div class="tu-rank-gold">#36</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/sjtu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SH'"></div>
+              <div>
+                <div class="tu-card-name">Shanghai Jiao Tong University</div>
+                <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #36 &nbsp;·&nbsp; 8 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st March 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody1">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#c0392b;font-weight:700">Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Civil Engineering (Smart and Sustainable Construction)</td>
+              <td style="color:#059669;font-weight:700">80,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>B.E. (Sustainable and Health Science & Technology)</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Mechanical Engineering</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Electrical and Computer Engineering</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Materials Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Automation</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Power and Energy Engineering</td>
+              <td style="color:#059669;font-weight:700">120,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Merit Based Scholarship — 1st Class: Tuition, Accommodation, Medical & Stipend (1,500 RMB/Month); 2nd Class: 50% Tuition, Accommodation & Medical; 3rd Class: 25% Tuition & Medical</li>
+<li>SGS & University Scholarship — 1st Class: Tuition, Accommodation, Medical & Stipend (2,500 RMB/Month); 2nd Class: 50% Tuition, Accommodation & Medical; 3rd Class: 25% Tuition & Medical</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Shanghai Jiao Tong University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard2">
+          <div class="tu-card-head" onclick="toggleTopUni(2)">
+            <div class="tu-rank-gold">#47</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zju.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
+              <div>
+                <div class="tu-card-name">Zhejiang University</div>
+                <div class="tu-card-meta">📍 Hangzhou, Zhejiang &nbsp;·&nbsp; QS World #47 &nbsp;·&nbsp; 2 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 28th February 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody2">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Haining Campus · approx. 8,000 RMB/Year</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Global Communication and Management</td>
+              <td style="color:#059669;font-weight:700">65,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>28th February 2026</td>
+            </tr>
+            <tr>
+              <td>Biomedical Engineering</td>
+              <td style="color:#059669;font-weight:700">42,800 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>28th February 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>ZIBS Hai Scholarship — 5,000 to 30,000 RMB</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Zhejiang University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard3">
+          <div class="tu-card-head" onclick="toggleTopUni(3)">
+            <div class="tu-rank-blue">#146</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/tongji.edu.cn" alt="" onerror="this.parentNode.innerHTML='TO'"></div>
+              <div>
+                <div class="tu-card-name">Tongji University</div>
+                <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #146 &nbsp;·&nbsp; 2 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st March – 30th April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody3">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#b8860b;font-weight:700">Optional</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">35,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+            <tr>
+              <td>Architecture</td>
+              <td style="color:#059669;font-weight:700">33,800 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st March 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>University Scholarship — Tuition, Medical, Accommodation & Stipend (2,500 RMB/Month)</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Tongji University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard4">
+          <div class="tu-card-head" onclick="toggleTopUni(4)">
+            <div class="tu-rank-blue">#165</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/whu.edu.cn" alt="" onerror="this.parentNode.innerHTML='WU'"></div>
+              <div>
+                <div class="tu-card-name">Wuhan University</div>
+                <div class="tu-card-meta">📍 Wuhan, Hubei &nbsp;·&nbsp; QS World #165 &nbsp;·&nbsp; 11 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-gray">Contact Us for Scholarships</span>
+              <span class="tu-badge tu-badge-outline">📅 15th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody4">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 9,600 RMB/Year</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Insurance</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>International Economy and Trade</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Accounting</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Geographical Science</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Human Resource Management</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Marketing</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Software Engineering</td>
+              <td style="color:#059669;font-weight:700">28,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Electronic Commerce</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Finance</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Financial Management</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>University Scholarship — 4,000 RMB</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Wuhan University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard5">
+          <div class="tu-card-head" onclick="toggleTopUni(5)">
+            <div class="tu-rank-blue">#190</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/hit.edu.cn" alt="" onerror="this.parentNode.innerHTML='HA'"></div>
+              <div>
+                <div class="tu-card-name">Harbin Institute of Technology</div>
+                <div class="tu-card-meta">📍 Harbin, Heilongjiang &nbsp;·&nbsp; QS World #190 &nbsp;·&nbsp; 6 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody5">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 800 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Intelligent Medical Engineering</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Architecture</td>
+              <td style="color:#059669;font-weight:700">26,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>HIT Scholarship — Elite: Full Tuition; First: Half Tuition; Second: 30% of Tuition; Third: 20% of Tuition</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Harbin Institute of Technology →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard6">
+          <div class="tu-card-head" onclick="toggleTopUni(6)">
+            <div class="tu-rank-blue">#235</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/tju.edu.cn" alt="" onerror="this.parentNode.innerHTML='TI'"></div>
+              <div>
+                <div class="tu-card-name">Tianjin University</div>
+                <div class="tu-card-meta">📍 Tianjin &nbsp;·&nbsp; QS World #235 &nbsp;·&nbsp; 3 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 1st April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody6">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#b8860b;font-weight:700">Optional</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">420 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Weijin Road / Peiyang Park campuses · approx. 40–60 RMB/Day</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Environmental Engineering</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st April 2026</td>
+            </tr>
+            <tr>
+              <td>Pharmaceutical Science</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st April 2026</td>
+            </tr>
+            <tr>
+              <td>Chemical Engineering and Technology</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st April 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Tianjin University International Student Scholarship — Type A: Tuition + Living Allowance (1,400 RMB/Month); Type B: Tuition; Type C: 10,000 RMB; Type D: 6,000 RMB</li>
+<li>Qiushi Scholarship — Tuition, Accommodation & Living Allowance (2,500 RMB/Month)</li>
+<li>Tianjin Government Scholarship — First Prize: Tuition, Medical & Stipend (1,400 RMB/Month for 10 months); Second Prize: Tuition</li>
+<li>Chemical Engineering Scholarship — Full: Tuition & Stipend (1,400 RMB/Month for 10 months); Partial: Tuition</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Tianjin University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard7">
+          <div class="tu-card-head" onclick="toggleTopUni(7)">
+            <div class="tu-rank-blue">#243</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/bit.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
+              <div>
+                <div class="tu-card-name">Beijing Institute of Technology</div>
+                <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #243 &nbsp;·&nbsp; 8 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 1st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody7">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Zhongguancun / Liangxiang / Zhuhai campuses · approx. 500–1,200 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Aeronautical and Astronautical Engineering</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Automation</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Mechatronics Engineering</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Electronic Science and Technology</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Mechanical Engineering</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>International Economics and Trade</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td style="color:#059669;font-weight:700">30,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>BIT University Scholarship (4-Year) — 1st Prize: Tuition, Accommodation, Medical & Stipend (2,500 RMB/Month); 2nd Prize: Tuition & Accommodation; 3rd Prize: Tuition</li>
+<li>BIT University Scholarship (1-Year) — 1st Prize: Tuition & Accommodation; 2nd Prize: Tuition; 3rd Prize: 50% Tuition; 4th Prize: 25% Tuition</li>
+<li>Beijing Government Scholarship — Type A: Tuition, Accommodation, Stipend & Medical; Type B: Tuition, Accommodation & Medical; Type C: Tuition & Medical</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Beijing Institute of Technology →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard8">
+          <div class="tu-card-head" onclick="toggleTopUni(8)">
+            <div class="tu-rank-blue">#296</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/xjtu.edu.cn" alt="" onerror="this.parentNode.innerHTML='XI'"></div>
+              <div>
+                <div class="tu-card-name">Xi&#39;an Jiaotong University</div>
+                <div class="tu-card-meta">📍 Xi'an, Shaanxi &nbsp;·&nbsp; QS World #296 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-gray">Contact Us for Scholarships</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody8">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Electrical Engineering and Automation</td>
+              <td style="color:#059669;font-weight:700">180,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Intelligent Manufacturing Engineering</td>
+              <td style="color:#059669;font-weight:700">180,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Energy and Power Engineering</td>
+              <td style="color:#059669;font-weight:700">180,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Materials Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">180,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Freshman Scholarship — Highest: 100% Tuition; 1st Class: 75% Tuition; 2nd Class: 50% Tuition; 3rd Class: 25% Tuition; Merit: 10% Tuition</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Xi&#39;an Jiaotong University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard9">
+          <div class="tu-card-head" onclick="toggleTopUni(9)">
+            <div class="tu-rank-blue">#300</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/scu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SI'"></div>
+              <div>
+                <div class="tu-card-name">Sichuan University</div>
+                <div class="tu-card-meta">📍 Chengdu, Sichuan &nbsp;·&nbsp; QS World #300 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody9">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Jiang'an Campus · approx. 4,500 RMB/Year</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Software Engineering</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Business Management</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Tourism Management</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>University Scholarship — 20,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Sichuan University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard10">
+          <div class="tu-card-head" onclick="toggleTopUni(10)">
+            <div class="tu-rank-blue">#303</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/xmu.edu.cn" alt="" onerror="this.parentNode.innerHTML='XI'"></div>
+              <div>
+                <div class="tu-card-name">Xiamen University</div>
+                <div class="tu-card-meta">📍 Xiamen, Fujian &nbsp;·&nbsp; QS World #303 &nbsp;·&nbsp; 3 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-gray">Contact Us for Scholarships</span>
+              <span class="tu-badge tu-badge-outline">📅 10th April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody10">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#6B7280;font-weight:700">Not Specified</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Visual Communication Design</td>
+              <td style="color:#059669;font-weight:700">90,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>10th April 2026</td>
+            </tr>
+            <tr>
+              <td>Environmental Design</td>
+              <td style="color:#059669;font-weight:700">90,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>10th April 2026</td>
+            </tr>
+            <tr>
+              <td>Digital Media Art</td>
+              <td style="color:#059669;font-weight:700">90,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>10th April 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <p style="font-size:13px;color:var(--gray);margin:0">No scholarship listed for this university — contact us for current funding options.</p>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Xiamen University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tu-bottom-cta">
+        <div>
+          <div style="font-size:19px;font-weight:800;color:var(--navy);margin-bottom:4px">Not sure which university fits you?</div>
+          <div style="font-size:14px;color:var(--gray)">Talk to our consultants — we'll match you to the right program based on your budget, scores, and goals.</div>
+        </div>
+        <a href="#" class="btn btn-primary" onclick="showApplyModal();return false" style="white-space:nowrap">Get Free Consultation →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ═══════════════════════════════════════════ SERVICES PAGE ═══ -->
 <div id="page-services" class="page">
   <div class="inner-hero" style="background:linear-gradient(rgba(5,12,30,0.55),rgba(10,22,40,0.72)),url('images/our-services-hero.jpg') center 25%/cover no-repeat;min-height:420px;display:flex;align-items:center">
@@ -5317,8 +6306,27 @@ function toggleMobileMenu(){
 function closeMobileMenu(){
   document.getElementById('mobileMenu').style.display='none';
 }
+function toggleTopUni(i){
+  let card = document.getElementById('tuCard'+i);
+  let body = document.getElementById('tuBody'+i);
+  if(!card || !body) return;
+  let isOpen = card.classList.contains('open');
+  if(isOpen){
+    card.classList.remove('open');
+    body.style.maxHeight = null;
+  } else {
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
 function toggleMobStudyDD(el){
   let sub=document.getElementById('mobStudySub');
+  let arrow=el.querySelector('.dd-arrow');
+  sub.classList.toggle('open');
+  arrow.style.transform=sub.classList.contains('open')?'rotate(180deg)':'rotate(0deg)';
+}
+function toggleMobUniDD(el){
+  let sub=document.getElementById('mobUniSub');
   let arrow=el.querySelector('.dd-arrow');
   sub.classList.toggle('open');
   arrow.style.transform=sub.classList.contains('open')?'rotate(180deg)':'rotate(0deg)';
@@ -5327,6 +6335,8 @@ function toggleMobStudyDD(el){
 document.addEventListener('click',function(e){
   let dd=document.getElementById('studyDropdown');
   if(dd&&!dd.contains(e.target))dd.classList.remove('open');
+  let dd2=document.getElementById('uniDropdown');
+  if(dd2&&!dd2.contains(e.target))dd2.classList.remove('open');
 });
 window.addEventListener('scroll',function(){
   let nav=document.getElementById('mainNav');
