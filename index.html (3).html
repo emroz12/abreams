@@ -625,8 +625,8 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 .tu-rank-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
 .tu-rank-blue{background:var(--off);color:var(--navy);border:1.5px solid var(--gray2)}
 .tu-card-head-main{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
-.tu-card-logo{width:56px;height:56px;border-radius:12px;background:#fff;border:1.5px solid #e5e7eb;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-size:11px;font-weight:700;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-.tu-card-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+.tu-card-logo{width:44px;height:44px;border-radius:10px;background:var(--off);border:1px solid var(--gray2);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-size:11px;font-weight:700;color:var(--navy)}
+.tu-card-logo img{width:100%;height:100%;object-fit:contain;padding:7px}
 .tu-card-name{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:2px}
 .tu-card-meta{font-size:12.5px;color:var(--gray)}
 .tu-card-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -735,7 +735,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             <span class="dd-item-icon">🏅</span>
             <div>
               <div style="font-weight:600;font-size:14px;color:var(--navy)">Top Universities</div>
-              <div style="font-size:12px;color:var(--gray);margin-top:1px">43 QS Top-1000 ranked schools</div>
+              <div style="font-size:12px;color:var(--gray);margin-top:1px">51 QS Top-1000 ranked schools</div>
             </div>
           </div>
         </div>
@@ -4749,11 +4749,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       <div class="tu-breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span><a href="#" onclick="showPage('universities');return false">Universities</a><span>›</span>Top Universities</div>
       <div class="tu-hero-label"><span></span>QS World Ranked</div>
       <h1 class="tu-hero-title">Top Chinese Universities</h1>
-      <p class="tu-hero-sub">43 QS Top-1000 ranked universities offering English-taught bachelor's programs — real tuition, requirements, and scholarships, all in one place.</p>
+      <p class="tu-hero-sub">51 QS Top-1000 ranked universities offering English-taught bachelor's programs — real tuition, requirements, and scholarships, all in one place.</p>
       <div class="tu-stats-row">
-        <div class="tu-stat"><div class="tu-stat-num">43</div><div class="tu-stat-lbl">Universities</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">51</div><div class="tu-stat-lbl">Universities</div></div>
         <div class="tu-stat"><div class="tu-stat-num">Top 1000</div><div class="tu-stat-lbl">QS World Ranking</div></div>
-        <div class="tu-stat"><div class="tu-stat-num">212+</div><div class="tu-stat-lbl">Programs Listed</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">263+</div><div class="tu-stat-lbl">Programs Listed</div></div>
         <div class="tu-stat"><div class="tu-stat-num">100%</div><div class="tu-stat-lbl">English-Taught</div></div>
       </div>
     </div>
@@ -4761,13 +4761,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 
   <section style="background:var(--off)">
     <div class="container">
-      <div class="tu-list">
-
-        <div class="tu-card" id="tuCard0">
+      <div class="tu-list"><div class="tu-card" id="tuCard0">
           <div class="tu-card-head" onclick="toggleTopUni(0)">
             <div class="tu-rank-gold">#26</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/fudan-logo.svg" alt="FDU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>FDU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="images/university-logos/fudan.webp" alt="" onerror="this.parentNode.innerHTML='FU'"></div>
               <div>
                 <div class="tu-card-name">Fudan University</div>
                 <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #26 &nbsp;·&nbsp; 4 Programs</div>
@@ -4832,12 +4830,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard1">
+<div class="tu-card" id="tuCard1">
           <div class="tu-card-head" onclick="toggleTopUni(1)">
             <div class="tu-rank-gold">#36</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/sjtu-logo.svg" alt="SJTU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SJTU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="images/university-logos/shanghai-jiaotong.png" alt="" onerror="this.parentNode.innerHTML='SH'"></div>
               <div>
                 <div class="tu-card-name">Shanghai Jiao Tong University</div>
                 <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #36 &nbsp;·&nbsp; 8 Programs</div>
@@ -4931,12 +4928,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard2">
+<div class="tu-card" id="tuCard2">
           <div class="tu-card-head" onclick="toggleTopUni(2)">
             <div class="tu-rank-gold">#47</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/zhejiang.svg" alt="ZJU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>ZJU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zju.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
               <div>
                 <div class="tu-card-name">Zhejiang University</div>
                 <div class="tu-card-meta">📍 Hangzhou, Zhejiang &nbsp;·&nbsp; QS World #47 &nbsp;·&nbsp; 2 Programs</div>
@@ -4987,12 +4983,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard3">
+<div class="tu-card" id="tuCard3">
           <div class="tu-card-head" onclick="toggleTopUni(3)">
             <div class="tu-rank-blue">#146</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/tongji.svg" alt="TJU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>TJU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/tongji.edu.cn" alt="" onerror="this.parentNode.innerHTML='TO'"></div>
               <div>
                 <div class="tu-card-name">Tongji University</div>
                 <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #146 &nbsp;·&nbsp; 2 Programs</div>
@@ -5043,12 +5038,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard4">
+<div class="tu-card" id="tuCard4">
           <div class="tu-card-head" onclick="toggleTopUni(4)">
             <div class="tu-rank-blue">#165</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/wuhan-logo.svg" alt="WHU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>WHU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/whu.edu.cn" alt="" onerror="this.parentNode.innerHTML='WU'"></div>
               <div>
                 <div class="tu-card-name">Wuhan University</div>
                 <div class="tu-card-meta">📍 Wuhan, Hubei &nbsp;·&nbsp; QS World #165 &nbsp;·&nbsp; 11 Programs</div>
@@ -5162,12 +5156,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard5">
+<div class="tu-card" id="tuCard5">
           <div class="tu-card-head" onclick="toggleTopUni(5)">
             <div class="tu-rank-blue">#190</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/hit-logo.svg" alt="HIT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>HIT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/hit.edu.cn" alt="" onerror="this.parentNode.innerHTML='HA'"></div>
               <div>
                 <div class="tu-card-name">Harbin Institute of Technology</div>
                 <div class="tu-card-meta">📍 Harbin, Heilongjiang &nbsp;·&nbsp; QS World #190 &nbsp;·&nbsp; 6 Programs</div>
@@ -5246,12 +5239,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard6">
+<div class="tu-card" id="tuCard6">
           <div class="tu-card-head" onclick="toggleTopUni(6)">
             <div class="tu-rank-blue">#235</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/tju-logo.svg" alt="TJU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>TJU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/tju.edu.cn" alt="" onerror="this.parentNode.innerHTML='TI'"></div>
               <div>
                 <div class="tu-card-name">Tianjin University</div>
                 <div class="tu-card-meta">📍 Tianjin &nbsp;·&nbsp; QS World #235 &nbsp;·&nbsp; 3 Programs</div>
@@ -5312,12 +5304,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard7">
+<div class="tu-card" id="tuCard7">
           <div class="tu-card-head" onclick="toggleTopUni(7)">
             <div class="tu-rank-blue">#243</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/bit-logo.svg" alt="BIT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>BIT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/bit.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
               <div>
                 <div class="tu-card-name">Beijing Institute of Technology</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #243 &nbsp;·&nbsp; 8 Programs</div>
@@ -5412,12 +5403,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard8">
+<div class="tu-card" id="tuCard8">
           <div class="tu-card-head" onclick="toggleTopUni(8)">
             <div class="tu-rank-blue">#296</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/xjtu-logo.svg" alt="XJTU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>XJTU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/xjtu.edu.cn" alt="" onerror="this.parentNode.innerHTML='XI'"></div>
               <div>
                 <div class="tu-card-name">Xi&#39;an Jiaotong University</div>
                 <div class="tu-card-meta">📍 Xi'an, Shaanxi &nbsp;·&nbsp; QS World #296 &nbsp;·&nbsp; 4 Programs</div>
@@ -5482,12 +5472,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard9">
+<div class="tu-card" id="tuCard9">
           <div class="tu-card-head" onclick="toggleTopUni(9)">
             <div class="tu-rank-blue">#300</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/sichuan.svg" alt="SCU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SCU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/scu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SI'"></div>
               <div>
                 <div class="tu-card-name">Sichuan University</div>
                 <div class="tu-card-meta">📍 Chengdu, Sichuan &nbsp;·&nbsp; QS World #300 &nbsp;·&nbsp; 4 Programs</div>
@@ -5552,12 +5541,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard10">
+<div class="tu-card" id="tuCard10">
           <div class="tu-card-head" onclick="toggleTopUni(10)">
             <div class="tu-rank-blue">#303</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/xiamen-logo.svg" alt="XMU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>XMU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/xmu.edu.cn" alt="" onerror="this.parentNode.innerHTML='XI'"></div>
               <div>
                 <div class="tu-card-name">Xiamen University</div>
                 <div class="tu-card-meta">📍 Xiamen, Fujian &nbsp;·&nbsp; QS World #303 &nbsp;·&nbsp; 3 Programs</div>
@@ -5615,12 +5603,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard11">
+<div class="tu-card" id="tuCard11">
           <div class="tu-card-head" onclick="toggleTopUni(11)">
             <div class="tu-rank-blue">#307</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/hust-logo.svg" alt="HUST" onerror="this.style.display='none';this.parentNode.innerHTML='<span>HUST</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/hust.edu.cn" alt="" onerror="this.parentNode.innerHTML='HU'"></div>
               <div>
                 <div class="tu-card-name">Huazhong University of Science & Technology</div>
                 <div class="tu-card-meta">📍 Wuhan, Hubei &nbsp;·&nbsp; QS World #307 &nbsp;·&nbsp; 4 Programs</div>
@@ -5685,12 +5672,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard12">
+<div class="tu-card" id="tuCard12">
           <div class="tu-card-head" onclick="toggleTopUni(12)">
             <div class="tu-rank-blue">#309</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/shandong-logo.svg" alt="SDU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SDU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/sdu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SH'"></div>
               <div>
                 <div class="tu-card-name">Shandong University</div>
                 <div class="tu-card-meta">📍 Jinan, Shandong &nbsp;·&nbsp; QS World #309 &nbsp;·&nbsp; 4 Programs</div>
@@ -5755,12 +5741,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard13">
+<div class="tu-card" id="tuCard13">
           <div class="tu-card-head" onclick="toggleTopUni(13)">
             <div class="tu-rank-blue">#335</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/southeast-logo.svg" alt="SEU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SEU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/seu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SO'"></div>
               <div>
                 <div class="tu-card-name">Southeast University</div>
                 <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #335 &nbsp;·&nbsp; 4 Programs</div>
@@ -5825,12 +5810,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard14">
+<div class="tu-card" id="tuCard14">
           <div class="tu-card-head" onclick="toggleTopUni(14)">
             <div class="tu-rank-blue">#342</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/scut-logo.svg" alt="SCUT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SCUT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/scut.edu.cn" alt="" onerror="this.parentNode.innerHTML='SO'"></div>
               <div>
                 <div class="tu-card-name">South China University of Technology</div>
                 <div class="tu-card-meta">📍 Guangzhou, Guangdong &nbsp;·&nbsp; QS World #342 &nbsp;·&nbsp; 8 Programs</div>
@@ -5924,12 +5908,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard15">
+<div class="tu-card" id="tuCard15">
           <div class="tu-card-head" onclick="toggleTopUni(15)">
             <div class="tu-rank-blue">#349</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/beihang-logo.svg" alt="BUAA" onerror="this.style.display='none';this.parentNode.innerHTML='<span>BUAA</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/buaa.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
               <div>
                 <div class="tu-card-name">Beihang University</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #349 &nbsp;·&nbsp; 11 Programs</div>
@@ -6045,12 +6028,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard16">
+<div class="tu-card" id="tuCard16">
           <div class="tu-card-head" onclick="toggleTopUni(16)">
             <div class="tu-rank-blue">#416</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/shenzhen-logo.svg" alt="SZU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SZU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/szu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SH'"></div>
               <div>
                 <div class="tu-card-name">Shenzhen University</div>
                 <div class="tu-card-meta">📍 Shenzhen, Guangdong &nbsp;·&nbsp; QS World #416 &nbsp;·&nbsp; 2 Programs</div>
@@ -6103,12 +6085,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard17">
+<div class="tu-card" id="tuCard17">
           <div class="tu-card-head" onclick="toggleTopUni(17)">
             <div class="tu-rank-blue">#425</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/nwpu-logo.svg" alt="NPU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>NPU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/nwpu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NO'"></div>
               <div>
                 <div class="tu-card-name">Northwestern Polytechnical University</div>
                 <div class="tu-card-meta">📍 Xi'an, Shaanxi &nbsp;·&nbsp; QS World #425 &nbsp;·&nbsp; 10 Programs</div>
@@ -6216,12 +6197,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard18">
+<div class="tu-card" id="tuCard18">
           <div class="tu-card-head" onclick="toggleTopUni(18)">
             <div class="tu-rank-blue">#443</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/shu-logo.svg" alt="SHU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SHU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/shu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SH'"></div>
               <div>
                 <div class="tu-card-name">Shanghai University</div>
                 <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #443 &nbsp;·&nbsp; 4 Programs</div>
@@ -6286,12 +6266,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard19">
+<div class="tu-card" id="tuCard19">
           <div class="tu-card-head" onclick="toggleTopUni(19)">
             <div class="tu-rank-blue">#443</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/ustb-logo.svg" alt="USTB" onerror="this.style.display='none';this.parentNode.innerHTML='<span>USTB</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ustb.edu.cn" alt="" onerror="this.parentNode.innerHTML='UN'"></div>
               <div>
                 <div class="tu-card-name">University of Science and Technology Beijing</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #443 &nbsp;·&nbsp; 2 Programs</div>
@@ -6342,12 +6321,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard20">
+<div class="tu-card" id="tuCard20">
           <div class="tu-card-head" onclick="toggleTopUni(20)">
             <div class="tu-rank-blue">#463</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/dlut-logo.svg" alt="DUT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>DUT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/dlut.edu.cn" alt="" onerror="this.parentNode.innerHTML='DA'"></div>
               <div>
                 <div class="tu-card-name">Dalian University of Technology</div>
                 <div class="tu-card-meta">📍 Dalian, Liaoning &nbsp;·&nbsp; QS World #463 &nbsp;·&nbsp; 3 Programs</div>
@@ -6405,12 +6383,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard21">
+<div class="tu-card" id="tuCard21">
           <div class="tu-card-head" onclick="toggleTopUni(21)">
             <div class="tu-rank-blue">#465</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/chongqing-logo.svg" alt="CQU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>CQU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/cqu.edu.cn" alt="" onerror="this.parentNode.innerHTML='CH'"></div>
               <div>
                 <div class="tu-card-name">Chongqing University</div>
                 <div class="tu-card-meta">📍 Chongqing &nbsp;·&nbsp; QS World #465 &nbsp;·&nbsp; 5 Programs</div>
@@ -6482,12 +6459,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard22">
+<div class="tu-card" id="tuCard22">
           <div class="tu-card-head" onclick="toggleTopUni(22)">
             <div class="tu-rank-blue">#488</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/jilin-logo.svg" alt="JLU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>JLU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/jlu.edu.cn" alt="" onerror="this.parentNode.innerHTML='JI'"></div>
               <div>
                 <div class="tu-card-name">Jilin University</div>
                 <div class="tu-card-meta">📍 Changchun, Jilin &nbsp;·&nbsp; QS World #488 &nbsp;·&nbsp; 4 Programs</div>
@@ -6552,12 +6528,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard23">
+<div class="tu-card" id="tuCard23">
           <div class="tu-card-head" onclick="toggleTopUni(23)">
             <div class="tu-rank-blue">#488</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/uestc-logo.svg" alt="UESTC" onerror="this.style.display='none';this.parentNode.innerHTML='<span>UEST</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/uestc.edu.cn" alt="" onerror="this.parentNode.innerHTML='UN'"></div>
               <div>
                 <div class="tu-card-name">University of Electronic Science and Technology of China</div>
                 <div class="tu-card-meta">📍 Chengdu, Sichuan &nbsp;·&nbsp; QS World #488 &nbsp;·&nbsp; 3 Programs</div>
@@ -6615,12 +6590,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard24">
+<div class="tu-card" id="tuCard24">
           <div class="tu-card-head" onclick="toggleTopUni(24)">
             <div class="tu-rank-blue">#521</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/ruc-logo.svg" alt="RUC" onerror="this.style.display='none';this.parentNode.innerHTML='<span>RUC</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ruc.edu.cn" alt="" onerror="this.parentNode.innerHTML='RE'"></div>
               <div>
                 <div class="tu-card-name">Renmin University of China</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #521 &nbsp;·&nbsp; 1 Program</div>
@@ -6664,12 +6638,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard25">
+<div class="tu-card" id="tuCard25">
           <div class="tu-card-head" onclick="toggleTopUni(25)">
             <div class="tu-rank-blue">#560</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/zjut-logo.svg" alt="ZJUT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>ZJUT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zjut.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
               <div>
                 <div class="tu-card-name">Zhejiang University of Technology</div>
                 <div class="tu-card-meta">📍 Hangzhou, Zhejiang &nbsp;·&nbsp; QS World #560 &nbsp;·&nbsp; 12 Programs</div>
@@ -6791,12 +6764,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard26">
+<div class="tu-card" id="tuCard26">
           <div class="tu-card-head" onclick="toggleTopUni(26)">
             <div class="tu-rank-blue">#581</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/zhengzhou-logo.svg" alt="ZZU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>ZZU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zzu.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
               <div>
                 <div class="tu-card-name">Zhengzhou University</div>
                 <div class="tu-card-meta">📍 Zhengzhou, Henan &nbsp;·&nbsp; QS World #581 &nbsp;·&nbsp; 7 Programs</div>
@@ -6883,11 +6855,94 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard27">
+        <div class="tu-card" id="tuCard43">
+          <div class="tu-card-head" onclick="toggleTopUni(43)">
+            <div class="tu-rank-blue">#590</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/yzu.edu.cn" alt="" onerror="this.parentNode.innerHTML='YA'"></div>
+              <div>
+                <div class="tu-card-name">Yangzhou University</div>
+                <div class="tu-card-meta">📍 Yangzhou, Jiangsu &nbsp;·&nbsp; QS World #590 &nbsp;·&nbsp; 6 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody43">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double / Triple / Quad Room · approx. 3,000–6,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Microelectronics Science & Engineering</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+            <tr>
+              <td>Software Engineering</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+            <tr>
+              <td>Biotechnology</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+            <tr>
+              <td>International Business</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+            <tr>
+              <td>Tourism Management</td>
+              <td style="color:#059669;font-weight:700">10,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <p style="font-size:13px;color:var(--gray);margin:0">No scholarship listed for this university — contact us for current funding options.</p>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Yangzhou University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard27">
           <div class="tu-card-head" onclick="toggleTopUni(27)">
             <div class="tu-rank-blue">#600</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/cup-logo.svg" alt="CUP" onerror="this.style.display='none';this.parentNode.innerHTML='<span>CUP</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/cup.edu.cn" alt="" onerror="this.parentNode.innerHTML='CH'"></div>
               <div>
                 <div class="tu-card-name">China University of Petroleum, Beijing</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #600 &nbsp;·&nbsp; 4 Programs</div>
@@ -6952,12 +7007,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard28">
+<div class="tu-card" id="tuCard28">
           <div class="tu-card-head" onclick="toggleTopUni(28)">
             <div class="tu-rank-blue">#649</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/buct-logo.svg" alt="BUCT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>BUCT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/buct.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
               <div>
                 <div class="tu-card-name">Beijing University of Chemical Technology</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #649 &nbsp;·&nbsp; 5 Programs</div>
@@ -7029,12 +7083,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard29">
+<div class="tu-card" id="tuCard29">
           <div class="tu-card-head" onclick="toggleTopUni(29)">
             <div class="tu-rank-blue">#659</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/cumt-logo.svg" alt="CUMT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>CUMT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/cumt.edu.cn" alt="" onerror="this.parentNode.innerHTML='CH'"></div>
               <div>
                 <div class="tu-card-name">China University of Mining and Technology (Xuzhou)</div>
                 <div class="tu-card-meta">📍 Xuzhou, Jiangsu &nbsp;·&nbsp; QS World #659 &nbsp;·&nbsp; 3 Programs</div>
@@ -7093,11 +7146,67 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard30">
+        <div class="tu-card" id="tuCard44">
+          <div class="tu-card-head" onclick="toggleTopUni(44)">
+            <div class="tu-rank-blue">#660</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/gdut.edu.cn" alt="" onerror="this.parentNode.innerHTML='GU'"></div>
+              <div>
+                <div class="tu-card-name">Guangdong University of Technology</div>
+                <div class="tu-card-meta">📍 Guangzhou, Guangdong &nbsp;·&nbsp; QS World #660 &nbsp;·&nbsp; 2 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody44">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 8,000 RMB · Quad Room · approx. 4,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>International Economics and Trade</td>
+              <td style="color:#059669;font-weight:700">23,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Government Scholarship — 10,000 RMB/Year</li>
+<li>GDUT Scholarship — 10,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Guangdong University of Technology →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard30">
           <div class="tu-card-head" onclick="toggleTopUni(30)">
             <div class="tu-rank-blue">#670</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/ecust-logo.svg" alt="ECUST" onerror="this.style.display='none';this.parentNode.innerHTML='<span>ECUS</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ecust.edu.cn" alt="" onerror="this.parentNode.innerHTML='EA'"></div>
               <div>
                 <div class="tu-card-name">East China University of Science and Technology</div>
                 <div class="tu-card-meta">📍 Shanghai &nbsp;·&nbsp; QS World #670 &nbsp;·&nbsp; 7 Programs</div>
@@ -7183,12 +7292,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard31">
+<div class="tu-card" id="tuCard31">
           <div class="tu-card-head" onclick="toggleTopUni(31)">
             <div class="tu-rank-blue">#675</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/njust-logo.svg" alt="NJUST" onerror="this.style.display='none';this.parentNode.innerHTML='<span>NJUS</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/njust.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
               <div>
                 <div class="tu-card-name">Nanjing University of Science and Technology</div>
                 <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #675 &nbsp;·&nbsp; 3 Programs</div>
@@ -7246,12 +7354,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard32">
+<div class="tu-card" id="tuCard32">
           <div class="tu-card-head" onclick="toggleTopUni(32)">
             <div class="tu-rank-blue">#677</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/cug-logo.svg" alt="CUG" onerror="this.style.display='none';this.parentNode.innerHTML='<span>CUG</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/cug.edu.cn" alt="" onerror="this.parentNode.innerHTML='CH'"></div>
               <div>
                 <div class="tu-card-name">China University of Geosciences (Wuhan)</div>
                 <div class="tu-card-meta">📍 Wuhan, Hubei &nbsp;·&nbsp; QS World #677 &nbsp;·&nbsp; 1 Program</div>
@@ -7296,11 +7403,67 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard33">
+        <div class="tu-card" id="tuCard45">
+          <div class="tu-card-head" onclick="toggleTopUni(45)">
+            <div class="tu-rank-blue">#700</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/njfu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
+              <div>
+                <div class="tu-card-name">Nanjing Forestry University</div>
+                <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #700 &nbsp;·&nbsp; 2 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody45">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 360 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Forestry</td>
+              <td style="color:#059669;font-weight:700">16,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Wood Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">16,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Nanjing Forestry University Scholarship — Tuition & Medical Insurance</li>
+<li>Nanjing Municipal Government Scholarship — 10,000 RMB</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Nanjing Forestry University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard33">
           <div class="tu-card-head" onclick="toggleTopUni(33)">
             <div class="tu-rank-blue">#701</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/jiangsu-logo.svg" alt="UJS" onerror="this.style.display='none';this.parentNode.innerHTML='<span>UJS</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ujs.edu.cn" alt="" onerror="this.parentNode.innerHTML='JI'"></div>
               <div>
                 <div class="tu-card-name">Jiangsu University</div>
                 <div class="tu-card-meta">📍 Zhenjiang, Jiangsu &nbsp;·&nbsp; QS World #701 &nbsp;·&nbsp; 18 Programs</div>
@@ -7464,11 +7627,109 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard34">
+        <div class="tu-card" id="tuCard46">
+          <div class="tu-card-head" onclick="toggleTopUni(46)">
+            <div class="tu-rank-blue">#710</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/njtech.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
+              <div>
+                <div class="tu-card-name">Nanjing Tech University</div>
+                <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #710 &nbsp;·&nbsp; 8 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 20th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody46">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 4,000 RMB · Quad Room · approx. 2,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>International Economy and Trade</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Chemical Engineering and Technics</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Mechanical Engineering</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Traffic Engineering</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Automation</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+            <tr>
+              <td>Pharmacy</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Nanjing Tech University Scholarship — First Year: 20,000 RMB/Year; Second Year: 1st Class 20,000 RMB/Year, 2nd Class 16,000 RMB/Year, 3rd Class 8,000 RMB/Year</li>
+<li>Nanjing City Government Scholarship — 10,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Nanjing Tech University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard34">
           <div class="tu-card-head" onclick="toggleTopUni(34)">
             <div class="tu-rank-blue">#721</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/nuaa-logo.svg" alt="NUAA" onerror="this.style.display='none';this.parentNode.innerHTML='<span>NUAA</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/nuaa.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
               <div>
                 <div class="tu-card-name">Nanjing University of Aeronautics and Astronautics</div>
                 <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #721 &nbsp;·&nbsp; 6 Programs</div>
@@ -7548,12 +7809,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard35">
+<div class="tu-card" id="tuCard35">
           <div class="tu-card-head" onclick="toggleTopUni(35)">
             <div class="tu-rank-blue">#731</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/bjut-logo.svg" alt="BJUT" onerror="this.style.display='none';this.parentNode.innerHTML='<span>BJUT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/bjut.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
               <div>
                 <div class="tu-card-name">Beijing University of Technology</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #731 &nbsp;·&nbsp; 1 Program</div>
@@ -7598,11 +7858,109 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard36">
+        <div class="tu-card" id="tuCard47">
+          <div class="tu-card-head" onclick="toggleTopUni(47)">
+            <div class="tu-rank-blue">#750</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zjnu.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
+              <div>
+                <div class="tu-card-name">Zhejiang Normal University</div>
+                <div class="tu-card-meta">📍 Jinhua, Zhejiang &nbsp;·&nbsp; QS World #750 &nbsp;·&nbsp; 8 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 15th July 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron47" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody47">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#b8860b;font-weight:700">Optional</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 600 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Environmental Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Mechanical Design, Manufacturing and Automation</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Transportation</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>International Economics & Trade</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Electronic and Information Engineering</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+            <tr>
+              <td>Applied Psychology</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th July 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Zhejiang Normal University Scholarship — Type A: 18,000 RMB/Year; Type B: 9,000 RMB/Year; Type C: 4,500 RMB</li>
+<li>Zhejiang Provincial Government Scholarship — 20,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Zhejiang Normal University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard36">
           <div class="tu-card-head" onclick="toggleTopUni(36)">
             <div class="tu-rank-blue">#771</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/bjtu-logo.svg" alt="BJTU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>BJTU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/bjtu.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
               <div>
                 <div class="tu-card-name">Beijing Jiaotong University</div>
                 <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; QS World #771 &nbsp;·&nbsp; 7 Programs</div>
@@ -7688,12 +8046,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard37">
+<div class="tu-card" id="tuCard37">
           <div class="tu-card-head" onclick="toggleTopUni(37)">
             <div class="tu-rank-blue">#780</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/jiangnan-logo.svg" alt="JNU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>JNU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/jiangnan.edu.cn" alt="" onerror="this.parentNode.innerHTML='JI'"></div>
               <div>
                 <div class="tu-card-name">Jiangnan University</div>
                 <div class="tu-card-meta">📍 Wuxi, Jiangsu &nbsp;·&nbsp; QS World #780 &nbsp;·&nbsp; 2 Programs</div>
@@ -7744,12 +8101,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard38">
+<div class="tu-card" id="tuCard38">
           <div class="tu-card-head" onclick="toggleTopUni(38)">
             <div class="tu-rank-blue">#801</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/ouc-logo.svg" alt="OUC" onerror="this.style.display='none';this.parentNode.innerHTML='<span>OUC</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ouc.edu.cn" alt="" onerror="this.parentNode.innerHTML='OC'"></div>
               <div>
                 <div class="tu-card-name">Ocean University of China</div>
                 <div class="tu-card-meta">📍 Qingdao, Shandong &nbsp;·&nbsp; QS World #801 &nbsp;·&nbsp; 4 Programs</div>
@@ -7814,12 +8170,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard39">
+<div class="tu-card" id="tuCard39">
           <div class="tu-card-head" onclick="toggleTopUni(39)">
             <div class="tu-rank-blue">#870</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/swjtu-logo.svg" alt="SWJTU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SWJT</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/swjtu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SO'"></div>
               <div>
                 <div class="tu-card-name">Southwest Jiaotong University</div>
                 <div class="tu-card-meta">📍 Chengdu, Sichuan &nbsp;·&nbsp; QS World #870 &nbsp;·&nbsp; 5 Programs</div>
@@ -7837,7 +8192,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
               <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
               <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
               <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
-              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Jiuli Campus · Double Room approx. 600 RMB/Month · Xipu Campus · Single approx. 1,000 RMB/Month, Triple approx. 600 RMB/Month</div></div>
             </div>
             <div class="tu-table-wrap">
               <table class="tu-table">
@@ -7891,12 +8246,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard40">
+<div class="tu-card" id="tuCard40">
           <div class="tu-card-head" onclick="toggleTopUni(40)">
             <div class="tu-rank-blue">#900</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/xidian-logo.svg" alt="XDU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>XDU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/xidian.edu.cn" alt="" onerror="this.parentNode.innerHTML='XI'"></div>
               <div>
                 <div class="tu-card-name">Xidian University</div>
                 <div class="tu-card-meta">📍 Xi'an, Shaanxi &nbsp;·&nbsp; QS World #900 &nbsp;·&nbsp; 3 Programs</div>
@@ -7954,12 +8308,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard41">
+<div class="tu-card" id="tuCard41">
           <div class="tu-card-head" onclick="toggleTopUni(41)">
             <div class="tu-rank-blue">#901</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/nanjing-normal-logo.svg" alt="NJNU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>NJNU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/njnu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
               <div>
                 <div class="tu-card-name">Nanjing Normal University</div>
                 <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #901 &nbsp;·&nbsp; 1 Program</div>
@@ -8004,11 +8357,88 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard42">
+        <div class="tu-card" id="tuCard48">
+          <div class="tu-card-head" onclick="toggleTopUni(48)">
+            <div class="tu-rank-blue">#910</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/nuist.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
+              <div>
+                <div class="tu-card-name">Nanjing University of Information Science and Technology</div>
+                <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; QS World #910 &nbsp;·&nbsp; 5 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 31st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody48">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Single Room · approx. 4,000 RMB · Double Room · approx. 3,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Electronic Information Engineering</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>International Economy and Trade</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+            <tr>
+              <td>Atmospheric Science</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>31st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>NUIST Excellent Freshmen Scholarship — Full or Partial Tuition</li>
+<li>Nanjing Government Scholarship — 10,000 RMB/Year (plus 5,000 RMB/Year from the university)</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Nanjing University of Information Science and Technology →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard42">
           <div class="tu-card-head" onclick="toggleTopUni(42)">
             <div class="tu-rank-blue">#951</div>
             <div class="tu-card-head-main">
-              <div class="tu-card-logo"><img loading="lazy" src="images/logos/southwest-logo.svg" alt="SWU" onerror="this.style.display='none';this.parentNode.innerHTML='<span>SWU</span>'"></div>
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/swu.edu.cn" alt="" onerror="this.parentNode.innerHTML='SO'"></div>
               <div>
                 <div class="tu-card-name">Southwest University</div>
                 <div class="tu-card-meta">📍 Chongqing &nbsp;·&nbsp; QS World #951 &nbsp;·&nbsp; 3 Programs</div>
@@ -8066,7 +8496,232 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="tu-card" id="tuCard49">
+          <div class="tu-card-head" onclick="toggleTopUni(49)">
+            <div class="tu-rank-blue">#970</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/wzu.edu.cn" alt="" onerror="this.parentNode.innerHTML='WE'"></div>
+              <div>
+                <div class="tu-card-name">Wenzhou University</div>
+                <div class="tu-card-meta">📍 Wenzhou, Zhejiang &nbsp;·&nbsp; QS World #970 &nbsp;·&nbsp; 13 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron49" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody49">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 4,000 RMB · Triple Room · approx. 2,900 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Law</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Mechanical Engineering</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>International Economics and Trade</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Biotechnology</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Applied Psychology</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Materials Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Electrical Engineering and Automation</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Electronic Information Science and Technology</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Music Education (Normal)</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Wenzhou University Scholarship — Type A: 18,000 RMB; Type B: 10,000 RMB; Type C: 6,000 RMB</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Wenzhou University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard50">
+          <div class="tu-card-head" onclick="toggleTopUni(50)">
+            <div class="tu-rank-blue">#980</div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/zjgsu.edu.cn" alt="" onerror="this.parentNode.innerHTML='ZH'"></div>
+              <div>
+                <div class="tu-card-name">Zhejiang Gongshang University</div>
+                <div class="tu-card-meta">📍 Hangzhou, Zhejiang &nbsp;·&nbsp; QS World #980 &nbsp;·&nbsp; 7 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 1st May 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody50">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 650 RMB/Month · Quad Room · approx. 250 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Hospitality Management</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Accounting</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>International Business</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Law</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>E-Commerce</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Logistics Management</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+            <tr>
+              <td>Finance</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>1st May 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Zhejiang Provincial Government Scholarship</li>
+<li>Zhejiang Gongshang University Scholarship — 1st Class: Full Tuition; 2nd Class: 70% Tuition; 3rd Class: 40% Tuition</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Zhejiang Gongshang University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
       <div class="tu-bottom-cta">
         <div>
           <div style="font-size:19px;font-weight:800;color:var(--navy);margin-bottom:4px">Not sure which university fits you?</div>
