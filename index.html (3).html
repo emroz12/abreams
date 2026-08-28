@@ -622,6 +622,9 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
 .tu-card:hover{box-shadow:0 8px 28px rgba(10,22,40,.08)}
 .tu-card-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;flex-wrap:wrap}
 .tu-rank-gold,.tu-rank-blue{flex-shrink:0;min-width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;padding:0 8px}
+.tu-rank-usnews{flex-shrink:0;min-width:52px;height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 6px;background:#EEF2FF;border:1.5px solid #C7D2FE;color:#4338CA}
+.tu-rank-usnews-label{font-size:7px;font-weight:800;letter-spacing:.04em;line-height:1;margin-bottom:2px}
+.tu-rank-usnews-num{font-size:13px;font-weight:800;line-height:1}
 .tu-rank-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
 .tu-rank-blue{background:var(--off);color:var(--navy);border:1.5px solid var(--gray2)}
 .tu-card-head-main{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
@@ -735,7 +738,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             <span class="dd-item-icon">🏅</span>
             <div>
               <div style="font-weight:600;font-size:14px;color:var(--navy)">Top Universities</div>
-              <div style="font-size:12px;color:var(--gray);margin-top:1px">51 QS Top-1000 ranked schools</div>
+              <div style="font-size:12px;color:var(--gray);margin-top:1px">61 top-ranked schools</div>
             </div>
           </div>
         </div>
@@ -4749,11 +4752,11 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
       <div class="tu-breadcrumb"><a href="#" onclick="showPage('home');return false">Home</a><span>›</span><a href="#" onclick="showPage('universities');return false">Universities</a><span>›</span>Top Universities</div>
       <div class="tu-hero-label"><span></span>World's Top Ranked</div>
       <h1 class="tu-hero-title">Top Chinese Universities</h1>
-      <p class="tu-hero-sub">51 QS Top-1000 ranked universities offering English-taught bachelor's programs — real tuition, requirements, and scholarships, all in one place.</p>
+      <p class="tu-hero-sub">61 top-ranked universities offering English-taught bachelor's programs — real tuition, requirements, and scholarships, all in one place.</p>
       <div class="tu-stats-row">
-        <div class="tu-stat"><div class="tu-stat-num">51</div><div class="tu-stat-lbl">Universities</div></div>
-        <div class="tu-stat"><div class="tu-stat-num">Top 1000</div><div class="tu-stat-lbl">QS,THE World Ranking</div></div>
-        <div class="tu-stat"><div class="tu-stat-num">263+</div><div class="tu-stat-lbl">Programs Listed</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">61</div><div class="tu-stat-lbl">Universities</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">Top 1000</div><div class="tu-stat-lbl">QS, THE & US News</div></div>
+        <div class="tu-stat"><div class="tu-stat-num">298+</div><div class="tu-stat-lbl">Programs Listed</div></div>
         <div class="tu-stat"><div class="tu-stat-num">100%</div><div class="tu-stat-lbl">English-Taught</div></div>
       </div>
     </div>
@@ -6590,6 +6593,98 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
+
+        <div class="tu-card" id="tuCard56">
+          <div class="tu-card-head" onclick="toggleTopUni(56)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#511</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ncu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
+              <div>
+                <div class="tu-card-name">Nanchang University</div>
+                <div class="tu-card-meta">📍 Nanchang, Jiangxi &nbsp;·&nbsp; US News World #511 &nbsp;·&nbsp; 7 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody56">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, NCU Test</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">420 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Qianhu Campus · approx. 3,750–7,500 RMB · South Campus · approx. 3,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Software Engineering</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Materials Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Civil Engineering</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Hydraulic Engineering</td>
+              <td style="color:#059669;font-weight:700">19,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Nanchang Freshman Scholarship</li>
+<li>Jiangxi Government Scholarship — 20,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Nanchang University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
 <div class="tu-card" id="tuCard24">
           <div class="tu-card-head" onclick="toggleTopUni(24)">
             <div class="tu-rank-blue">#521</div>
@@ -6634,6 +6729,55 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
             <div style="margin-top:20px;text-align:right">
               <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Renmin University of China →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard58">
+          <div class="tu-card-head" onclick="toggleTopUni(58)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#524</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/bupt.edu.cn" alt="" onerror="this.parentNode.innerHTML='BE'"></div>
+              <div>
+                <div class="tu-card-name">Beijing University of Posts and Telecommunications</div>
+                <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; US News World #524 &nbsp;·&nbsp; 1 Program</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 20th April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody58">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">approx. 50 RMB/Bed/Day</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">24,600 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>20th April 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Beijing Government Scholarship</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Beijing University of Posts and Telecommunications →</a>
             </div>
             </div>
           </div>
@@ -6854,8 +6998,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard43">
+<div class="tu-card" id="tuCard43">
           <div class="tu-card-head" onclick="toggleTopUni(43)">
             <div class="tu-rank-blue">#590</div>
             <div class="tu-card-head-main">
@@ -7007,6 +7150,148 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
+
+        <div class="tu-card" id="tuCard59">
+          <div class="tu-card-head" onclick="toggleTopUni(59)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#605</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/hznu.edu.cn" alt="" onerror="this.parentNode.innerHTML='HA'"></div>
+              <div>
+                <div class="tu-card-name">Hangzhou Normal University</div>
+                <div class="tu-card-meta">📍 Hangzhou, Zhejiang &nbsp;·&nbsp; US News World #605 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron59" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody59">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 7,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Nursing</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Economics (International Digital Trade)</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>International Business (Cross-Border E-commerce)</td>
+              <td style="color:#059669;font-weight:700">25,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Zhejiang Provincial Government Scholarship — 20,000 RMB/Year</li>
+<li>Hangzhou Municipal Government Scholarship — 20,000 RMB/Year</li>
+<li>Hangzhou Normal University Scholarship — Type A: 20,000 RMB/Year; Type B: 10,000 RMB/Year</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Hangzhou Normal University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard60">
+          <div class="tu-card-head" onclick="toggleTopUni(60)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#633</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/swufe.edu.cn" alt="" onerror="this.parentNode.innerHTML='SO'"></div>
+              <div>
+                <div class="tu-card-name">Southwestern University of Finance and Economics</div>
+                <div class="tu-card-meta">📍 Chengdu, Sichuan &nbsp;·&nbsp; US News World #633 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody60">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, Duolingo</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Accounting</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+            <tr>
+              <td>Economics</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+            <tr>
+              <td>Finance</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Belt and Road Scholarship — Full: Tuition, Accommodation & Stipend (1,500 RMB/Month); Partial: Tuition Only</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Southwestern University of Finance and Economics →</a>
+            </div>
+            </div>
+          </div>
+        </div>
 <div class="tu-card" id="tuCard28">
           <div class="tu-card-head" onclick="toggleTopUni(28)">
             <div class="tu-rank-blue">#649</div>
@@ -7145,8 +7430,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard44">
+<div class="tu-card" id="tuCard44">
           <div class="tu-card-head" onclick="toggleTopUni(44)">
             <div class="tu-rank-blue">#660</div>
             <div class="tu-card-head-main">
@@ -7403,7 +7687,77 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard45">
+        <div class="tu-card" id="tuCard53">
+          <div class="tu-card-head" onclick="toggleTopUni(53)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#688</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/njupt.edu.cn" alt="" onerror="this.parentNode.innerHTML='NA'"></div>
+              <div>
+                <div class="tu-card-name">Nanjing University of Posts and Telecommunications</div>
+                <div class="tu-card-meta">📍 Nanjing, Jiangsu &nbsp;·&nbsp; US News World #688 &nbsp;·&nbsp; 4 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 16th June 2024</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron53" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody53">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">800 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Quad Room · approx. 1,500 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Electronic Information Engineering</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>16th June 2024</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">14,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>16th June 2024</td>
+            </tr>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">15,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>16th June 2024</td>
+            </tr>
+            <tr>
+              <td>Electronic Commerce</td>
+              <td style="color:#059669;font-weight:700">14,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>16th June 2024</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Nanjing Government Scholarship — 10,000 RMB/Year</li>
+<li>NJUPT International Student Scholarship — Tuition Fee Waiver</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Nanjing University of Posts and Telecommunications →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard45">
           <div class="tu-card-head" onclick="toggleTopUni(45)">
             <div class="tu-rank-blue">#700</div>
             <div class="tu-card-head-main">
@@ -7626,8 +7980,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard46">
+<div class="tu-card" id="tuCard46">
           <div class="tu-card-head" onclick="toggleTopUni(46)">
             <div class="tu-rank-blue">#710</div>
             <div class="tu-card-head-main">
@@ -7858,7 +8211,56 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
           </div>
         </div>
 
-        <div class="tu-card" id="tuCard47">
+        <div class="tu-card" id="tuCard52">
+          <div class="tu-card-head" onclick="toggleTopUni(52)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#744</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ynu.edu.cn" alt="" onerror="this.parentNode.innerHTML='YU'"></div>
+              <div>
+                <div class="tu-card-name">Yunnan University</div>
+                <div class="tu-card-meta">📍 Kunming, Yunnan &nbsp;·&nbsp; US News World #744 &nbsp;·&nbsp; 1 Program</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th April 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody52">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">600 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Contact us for accommodation options</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Software Engineering</td>
+              <td style="color:#059669;font-weight:700">16,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th April 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Yunnan University Scholarship — Full: Tuition & Accommodation; Half: Partial Tuition & Accommodation</li>
+<li>Yunnan Provincial Government Scholarship — Tuition, Accommodation & Stipend</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Yunnan University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+<div class="tu-card" id="tuCard47">
           <div class="tu-card-head" onclick="toggleTopUni(47)">
             <div class="tu-rank-blue">#750</div>
             <div class="tu-card-head-main">
@@ -7952,6 +8354,70 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
             <div style="margin-top:20px;text-align:right">
               <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Zhejiang Normal University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard55">
+          <div class="tu-card-head" onclick="toggleTopUni(55)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#751</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/ncepu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NO'"></div>
+              <div>
+                <div class="tu-card-name">North China Electric Power University</div>
+                <div class="tu-card-meta">📍 Beijing &nbsp;·&nbsp; US News World #751 &nbsp;·&nbsp; 3 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 25th February 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody55">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Quad Room · approx. 750 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>New Energy Science and Engineering</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>25th February 2026</td>
+            </tr>
+            <tr>
+              <td>Electrical Engineering and its Automation</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>25th February 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">22,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>25th February 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Beijing Government Scholarship — Full or Partial Tuition</li>
+<li>International Education Scholarship — Same coverage as Beijing Government Scholarship</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to North China Electric Power University →</a>
             </div>
             </div>
           </div>
@@ -8170,6 +8636,69 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
+
+        <div class="tu-card" id="tuCard51">
+          <div class="tu-card-head" onclick="toggleTopUni(51)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#802</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/gzu.edu.cn" alt="" onerror="this.parentNode.innerHTML='GU'"></div>
+              <div>
+                <div class="tu-card-name">Guizhou University</div>
+                <div class="tu-card-meta">📍 Guiyang, Guizhou &nbsp;·&nbsp; US News World #802 &nbsp;·&nbsp; 3 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 15th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron51" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody51">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 400 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Computer Science and Technology</td>
+              <td style="color:#059669;font-weight:700">21,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Chemical Biology</td>
+              <td style="color:#059669;font-weight:700">21,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+            <tr>
+              <td>Veterinary Medicine</td>
+              <td style="color:#059669;font-weight:700">21,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>15th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>University Scholarship — Tuition & Accommodation Fee</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Guizhou University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
 <div class="tu-card" id="tuCard39">
           <div class="tu-card-head" onclick="toggleTopUni(39)">
             <div class="tu-rank-blue">#870</div>
@@ -8356,8 +8885,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard48">
+<div class="tu-card" id="tuCard48">
           <div class="tu-card-head" onclick="toggleTopUni(48)">
             <div class="tu-rank-blue">#910</div>
             <div class="tu-card-head-main">
@@ -8496,8 +9024,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard49">
+<div class="tu-card" id="tuCard49">
           <div class="tu-card-head" onclick="toggleTopUni(49)">
             <div class="tu-rank-blue">#970</div>
             <div class="tu-card-head-main">
@@ -8629,8 +9156,7 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
           </div>
         </div>
-
-        <div class="tu-card" id="tuCard50">
+<div class="tu-card" id="tuCard50">
           <div class="tu-card-head" onclick="toggleTopUni(50)">
             <div class="tu-rank-blue">#980</div>
             <div class="tu-card-head-main">
@@ -8717,6 +9243,134 @@ footer{background:var(--navy);color:#fff;padding:60px 24px 30px}
             </div>
             <div style="margin-top:20px;text-align:right">
               <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Zhejiang Gongshang University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard54">
+          <div class="tu-card-head" onclick="toggleTopUni(54)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#991</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/nbu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NI'"></div>
+              <div>
+                <div class="tu-card-name">Ningbo University</div>
+                <div class="tu-card-meta">📍 Ningbo, Zhejiang &nbsp;·&nbsp; US News World #991 &nbsp;·&nbsp; 5 Programs</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody54">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">500 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Meishan Campus · Double Room approx. 3,500 RMB · Yong Jiang Campus · Double Room approx. 4,000 RMB</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>Mechanical Design, Manufacturing and Automation</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Financial Engineering</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>Business Administration</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>International Economics and Trade</td>
+              <td style="color:#059669;font-weight:700">18,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td style="color:#059669;font-weight:700">20,000 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>Ningbo Government Scholarship — 20,000 RMB</li>
+<li>Ningbo University Scholarship — 20,000 RMB</li>
+<li>Zhejiang Government Scholarship — 20,000 RMB</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Ningbo University →</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tu-card" id="tuCard57">
+          <div class="tu-card-head" onclick="toggleTopUni(57)">
+            <div class="tu-rank-usnews"><div class="tu-rank-usnews-label">US NEWS</div><div class="tu-rank-usnews-num">#1061</div></div>
+            <div class="tu-card-head-main">
+              <div class="tu-card-logo"><img loading="lazy" src="https://logo.clearbit.com/nefu.edu.cn" alt="" onerror="this.parentNode.innerHTML='NO'"></div>
+              <div>
+                <div class="tu-card-name">Northeast Forestry University</div>
+                <div class="tu-card-meta">📍 Harbin, Heilongjiang &nbsp;·&nbsp; US News World #1061 &nbsp;·&nbsp; 1 Program</div>
+              </div>
+            </div>
+            <div class="tu-card-badges">
+              <span class="tu-badge tu-badge-green">🏅 Scholarship Available</span>
+              <span class="tu-badge tu-badge-outline">📅 30th June 2026</span>
+            </div>
+            <svg class="tu-chevron" id="tuChevron57" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="tu-card-body" id="tuBody57">
+            <div class="tu-card-body-inner">
+            <div class="tu-req-grid">
+              <div class="tu-req-item"><div class="tu-req-label">English Tests Accepted</div><div class="tu-req-val">IELTS, TOEFL, MOI</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">SAT</div><div class="tu-req-val" style="color:#059669;font-weight:700">Not Required</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Application Fee</div><div class="tu-req-val">400 RMB</div></div>
+              <div class="tu-req-item"><div class="tu-req-label">Accommodation</div><div class="tu-req-val">Double Room · approx. 500 RMB/Month</div></div>
+            </div>
+            <div class="tu-table-wrap">
+              <table class="tu-table">
+                <thead><tr><th>Program</th><th>Tuition Fee</th><th>Duration</th><th>Language</th><th>Deadline</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>International Economics and Trade</td>
+              <td style="color:#059669;font-weight:700">21,500 RMB/Year</td>
+              <td>4 Years</td>
+              <td>English</td>
+              <td>30th June 2026</td>
+            </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tu-sch-box">
+              <div class="tu-req-label" style="margin-bottom:8px">🏅 Scholarship Details</div>
+              <ul class="tu-sch-list"><li>NEFU President Scholarship — First Class: Tuition & Accommodation; Second Class: Tuition; Third Class: Half Tuition</li></ul>
+            </div>
+            <div style="margin-top:20px;text-align:right">
+              <a href="#" class="btn btn-primary" onclick="showApplyModal();return false">Apply to Northeast Forestry University →</a>
             </div>
             </div>
           </div>
